@@ -8,6 +8,14 @@
   <meta property="og:title" content="Enterprise AI Studio">
   <meta property="og:description" content="Production AI implementation for enterprise workflows.">
   <meta property="og:type" content="website">
+  <!-- Google tag (gtag.js) — replace G-XXXXXXXXXX with real Measurement ID from GA4 Admin -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -378,5 +386,62 @@
   </div>
 </footer>
 
+
+<script>
+  /* Enterprise AI Studio — custom GA4 event tracking */
+  (function() {
+    function track(eventName, params) {
+      if (typeof gtag === 'function') gtag('event', eventName, params);
+    }
+
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a[href]');
+      if (!el) return;
+
+      var href = el.getAttribute('href') || '';
+      var text = (el.textContent || '').trim();
+      var classes = el.className || '';
+
+      /* Contact email click */
+      if (href.startsWith('mailto:')) {
+        track('contact_email_click', { link_text: text, link_url: href });
+        return;
+      }
+
+      /* CTA clicks — primary and secondary buttons */
+      if (classes.indexOf('btn-primary') !== -1 || classes.indexOf('btn-secondary') !== -1 || classes.indexOf('btn-nav') !== -1) {
+        track('cta_click', { cta_text: text, cta_destination: href, cta_class: classes });
+        return;
+      }
+
+      /* Service section anchor links (Scope a sprint, Discuss retainer, etc.) */
+      if (href === '#contact') {
+        var section = el.closest('section');
+        var sectionId = section ? (section.id || 'unknown') : 'unknown';
+        track('service_section_click', { link_text: text, source_section: sectionId });
+        return;
+      }
+    });
+
+    /* Section visibility — track which sections enterprise buyers engage with */
+    if ('IntersectionObserver' in window) {
+      var sections = ['services', 'process', 'about', 'contact'];
+      var seen = {};
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !seen[entry.target.id]) {
+            seen[entry.target.id] = true;
+            track('section_view', { section_id: entry.target.id });
+          }
+        });
+      }, { threshold: 0.4 });
+
+      sections.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    }
+  })();
+</script>
 </body>
 </html>
