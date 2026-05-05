@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Implementation Sprints | Enterprise AI Studio</title>
+  <meta name="description" content="Fixed-scope AI projects delivered in 4-8 weeks. We handle the full cycle: scoping, architecture, build, integration, and production launch.">
+  <meta property="og:title" content="AI Implementation Sprints | Enterprise AI Studio">
+  <meta property="og:description" content="Fixed-scope AI projects delivered in 4-8 weeks. We handle the full cycle: scoping, architecture, build, integration, and production launch.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/services/ai-implementation-sprints">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Implementation Sprints | Enterprise AI Studio">
+  <meta name="twitter:description" content="Fixed-scope AI projects delivered in 4-8 weeks. We handle the full cycle: scoping, architecture, build, integration, and production launch.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/services/ai-implementation-sprints">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DPS2MFLM6Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0a0e1a;
+      background: #fafbfc;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 251, 252, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e8eaed;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav {
+      padding: 8px 18px; background: #0a0e1a; color: white !important;
+      border-radius: 8px; font-weight: 600 !important;
+    }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    /* Hero */
+    .hero { padding: 120px 0 100px; }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+    .hero p.subhead {
+      font-size: clamp(18px, 2vw, 22px);
+      color: #4b5563;
+      margin-bottom: 40px;
+      max-width: 720px;
+    }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: white;
+      color: #0a0e1a;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      transition: border-color 0.15s;
+    }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    /* Section base */
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    /* Detail sections */
+    .detail-section { margin-top: 48px; padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; }
+    .detail-section h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .detail-section p { color: #4b5563; font-size: 16px; margin-bottom: 12px; }
+
+    /* Process list */
+    .process-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .process-list { grid-template-columns: 1fr; } }
+    .process-item { padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .process-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .process-item p { color: #4b5563; font-size: 15px; }
+
+    /* FAQ */
+    .faq-list { margin-top: 48px; max-width: 760px; }
+    .faq-item { border-bottom: 1px solid #e8eaed; padding: 24px 0; }
+    .faq-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { color: #4b5563; font-size: 16px; }
+
+    /* Contact form */
+    .contact-form-wrap { max-width: 680px; margin: 0 auto; }
+    .contact-form { display: grid; gap: 20px; margin-top: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label { font-size: 14px; font-weight: 600; color: #374151; }
+    .form-field input, .form-field select, .form-field textarea {
+      padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 8px;
+      font-family: inherit; font-size: 15px; color: #0a0e1a; background: white;
+      transition: border-color 0.15s, box-shadow 0.15s; outline: none;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .form-field textarea { resize: vertical; min-height: 120px; }
+    .form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-submit { text-align: center; margin-top: 8px; }
+    .btn-form-submit {
+      padding: 14px 40px; background: #2563eb; color: white; border: none;
+      font-family: inherit; font-size: 16px; font-weight: 600; border-radius: 10px;
+      cursor: pointer; transition: background 0.15s, transform 0.15s;
+    }
+    .btn-form-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-form-submit:disabled { background: #9ca3af; transform: none; cursor: not-allowed; }
+    .form-status { margin-top: 16px; padding: 14px 18px; border-radius: 8px; font-size: 15px; font-weight: 500; display: none; }
+    .form-status.success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .form-status.error { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    /* Footer */
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://enterpriseaistudio.com/services/ai-implementation-sprints",
+    "name": "AI Implementation Sprints",
+    "description": "A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4-8 weeks, fixed scope. We bring engineering, evals, and production discipline; you bring workflow knowledge.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Enterprise AI Studio",
+      "url": "https://enterpriseaistudio.com"
+    },
+    "serviceType": "AI Implementation",
+    "areaServed": "US",
+    "priceRange": "$40,000 - $120,000",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "40000 - 120000"
+    }
+  }
+  </script>
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do AI Implementation Sprints take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in the pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle integration with our existing systems?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our team wants to maintain the system after launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the discovery process work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if requirements change mid-sprint?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you cover compliance and governance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every system we build includes audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has specific compliance needs (SOC 2, HIPAA, etc.), we design the system to support them."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#process">Process</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>AI Implementation Sprints.</h1>
+    <p class="subhead">A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4-8 weeks. Fixed scope. Production-grade.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-primary">Scope a sprint</a>
+      <a href="/" class="btn-secondary">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">The Model</div>
+    <h2 class="section-headline">Fixed scope, fixed timeline, fixed price.</h2>
+    <p class="section-body">We work differently from typical consulting engagements. You bring the problem. We handle the full cycle: architecture, build, integration, evals, and production launch. The scope is locked in the scoping phase — no surprises, no moving targets.</p>
+
+    <div class="detail-section">
+      <h3>What's Included</h3>
+      <p><strong>Discovery call (free, 30 min):</strong> Map your use case, technical constraints, and success metrics.</p>
+      <p><strong>Scoping phase (free, 1 week):</strong> Detailed scope document with architecture, milestones, pricing, and team composition.</p>
+      <p><strong>Sprint execution (4-8 weeks):</strong> Full-cycle delivery: system design, build, integration, evals, production launch.</p>
+      <p><strong>Production launch:</strong> System live with monitoring, runbook documentation, and dashboards.</p>
+      <p><strong>Post-launch support (30 days):</strong> On-call for issues, handoff documentation, and team training.</p>
+    </div>
+
+    <div class="detail-section" style="margin-top: 24px;">
+      <h3>Pricing</h3>
+      <p><strong>$40,000 - $120,000</strong> depending on complexity. Typical breakdown:</p>
+      <p><strong>$40K-$60K:</strong> Narrow, well-defined use cases (e.g., single workflow, document classification, basic Q&A).</p>
+      <p><strong>$60K-$80K:</strong> Multi-step workflows, moderate integration, evals on 2-3 models.</p>
+      <p><strong>$80K-$120K:</strong> Complex integrations, multiple systems, custom eval frameworks, governance design.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">What We Build</div>
+    <h2 class="section-headline">Common sprint examples.</h2>
+    <div class="process-list">
+      <div class="process-item">
+        <h4>Customer support agents</h4>
+        <p>AI handles tier-1 tickets, escalates intelligently, learns from feedback. Integrated with ticketing system.</p>
+      </div>
+      <div class="process-item">
+        <h4>Document intelligence systems</h4>
+        <p>Review, classify, route inbound documents. Full audit trail, compliance-ready.</p>
+      </div>
+      <div class="process-item">
+        <h4>Internal knowledge assistants</h4>
+        <p>Answer employee questions from policies, SOPs, customer history, contracts.</p>
+      </div>
+      <div class="process-item">
+        <h4>Sales workflow assistants</h4>
+        <p>Call analysis, follow-up drafting, CRM hygiene, deal guidance.</p>
+      </div>
+      <div class="process-item">
+        <h4>Content generation systems</h4>
+        <p>Batch or real-time content creation: proposals, reports, email drafts, with human review loops.</p>
+      </div>
+      <div class="process-item">
+        <h4>Workflow automation</h4>
+        <p>Multi-step processes across email, CRM, ticketing, billing, or custom APIs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #0a0e1a; color: white;">
+  <div class="container">
+    <div class="section-eyebrow" style="color: #60a5fa;">Our Approach</div>
+    <h2 class="section-headline">How we ship.</h2>
+    <div class="process-list" style="margin-top: 48px;">
+      <div class="process-item" style="background: #1f2937; border-color: #374151;">
+        <h4 style="color: white;">Week 1-2: Architecture & Planning</h4>
+        <p style="color: #d1d5db;">System design, eval plan, data pipeline, integration points, risk assessment.</p>
+      </div>
+      <div class="process-item" style="background: #1f2937; border-color: #374151;">
+        <h4 style="color: white;">Week 2-4: Build & Integration</h4>
+        <p style="color: #d1d5db;">Core system development, integration with your infrastructure, evals running in parallel.</p>
+      </div>
+      <div class="process-item" style="background: #1f2937; border-color: #374151;">
+        <h4 style="color: white;">Week 4-6: Evals & Hardening</h4>
+        <p style="color: #d1d5db;">Run production simulation, stress test, error handling, fallback paths, monitoring.</p>
+      </div>
+      <div class="process-item" style="background: #1f2937; border-color: #374151;">
+        <h4 style="color: white;">Week 6-8: Production Launch</h4>
+        <p style="color: #d1d5db;">Live deployment, monitoring dashboards, runbooks, team training, 30 days post-launch support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-headline">Common questions.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>How long do sprints take?</h4>
+        <p>Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's included in the pricing?</h4>
+        <p>Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you handle integration with our existing systems?</h4>
+        <p>Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if our team wants to maintain the system after launch?</h4>
+        <p>We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How does discovery work?</h4>
+        <p>We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if requirements change mid-sprint?</h4>
+        <p>We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you cover compliance and governance?</h4>
+        <p>Yes. Every system we build includes audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has specific compliance needs (SOC 2, HIPAA, etc.), we design the system to support them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-form-wrap">
+      <div class="section-eyebrow" style="text-align:center;">Ready to Build?</div>
+      <h2 class="section-headline" style="text-align:center;max-width:100%;">Let's scope your sprint.</h2>
+      <p class="section-body" style="text-align:center;margin:0 auto 0;">A quick discovery call to map constraints and timeline. No sales pitch, just a direct conversation.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Work email *</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp">
+          </div>
+          <div class="form-field">
+            <label for="service">Service interested in</label>
+            <select id="service" name="service">
+              <option value="" selected>AI Implementation Sprint</option>
+              <option value="fractional-engineering">Fractional AI Engineering (Retainer)</option>
+              <option value="governance">Enterprise AI Governance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about your use case *</label>
+          <textarea id="message" name="message" placeholder="What workflow or problem are you trying to solve with AI? What's the constraint — team capacity, expertise, timeline, governance?" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New AI Implementation Sprint Inquiry">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-submit">
+          <button type="submit" class="btn-form-submit" id="submitBtn">Send message</button>
+          <div class="form-status success" id="formSuccess">✓ Message sent. We'll be in touch within one business day.</div>
+          <div class="form-status error" id="formError">Something went wrong. Please email directly: <a href="mailto:kevin.a.owens@gmail.com" style="color:inherit;text-decoration:underline;">kevin.a.owens@gmail.com</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#process">Process</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    function track(eventName, params) {
+      if (typeof gtag === 'function') gtag('event', eventName, params);
+    }
+
+    var form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        var btn = document.getElementById('submitBtn');
+        var successEl = document.getElementById('formSuccess');
+        var errorEl = document.getElementById('formError');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            successEl.style.display = 'block';
+            form.reset();
+            track('form_submit', { form_id: 'sprint_contact', status: 'success' });
+          } else {
+            errorEl.style.display = 'block';
+            track('form_submit', { form_id: 'sprint_contact', status: 'error' });
+          }
+        }).catch(function() {
+          errorEl.style.display = 'block';
+          track('form_submit', { form_id: 'sprint_contact', status: 'network_error' });
+        }).finally(function() {
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        });
+      });
+    }
+  })();
+</script>
+</body>
+</html>

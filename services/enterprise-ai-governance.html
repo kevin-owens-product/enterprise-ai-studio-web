@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Governance | Enterprise AI Studio</title>
+  <meta name="description" content="AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.">
+  <meta property="og:title" content="Enterprise AI Governance | Enterprise AI Studio">
+  <meta property="og:description" content="AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/services/enterprise-ai-governance">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enterprise AI Governance | Enterprise AI Studio">
+  <meta name="twitter:description" content="AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/services/enterprise-ai-governance">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DPS2MFLM6Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0a0e1a;
+      background: #fafbfc;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(250, 251, 252, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e8eaed; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    .hero { padding: 120px 0 100px; }
+    .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 900px; }
+    .hero p.subhead { font-size: clamp(18px, 2vw, 22px); color: #4b5563; margin-bottom: 40px; max-width: 720px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; font-weight: 600; border-radius: 10px; transition: background 0.15s, transform 0.15s; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary { display: inline-block; padding: 14px 28px; background: white; color: #0a0e1a; text-decoration: none; font-weight: 600; border-radius: 10px; border: 1px solid #d1d5db; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    .detail-section { margin-top: 48px; padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; }
+    .detail-section h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .detail-section p { color: #4b5563; font-size: 16px; margin-bottom: 12px; }
+
+    .process-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .process-list { grid-template-columns: 1fr; } }
+    .process-item { padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .process-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .process-item p { color: #4b5563; font-size: 15px; }
+
+    .faq-list { margin-top: 48px; max-width: 760px; }
+    .faq-item { border-bottom: 1px solid #e8eaed; padding: 24px 0; }
+    .faq-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { color: #4b5563; font-size: 16px; }
+
+    .contact-form-wrap { max-width: 680px; margin: 0 auto; }
+    .contact-form { display: grid; gap: 20px; margin-top: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label { font-size: 14px; font-weight: 600; color: #374151; }
+    .form-field input, .form-field select, .form-field textarea { padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-family: inherit; font-size: 15px; color: #0a0e1a; background: white; transition: border-color 0.15s, box-shadow 0.15s; outline: none; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    .form-field textarea { resize: vertical; min-height: 120px; }
+    .form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-submit { text-align: center; margin-top: 8px; }
+    .btn-form-submit { padding: 14px 40px; background: #2563eb; color: white; border: none; font-family: inherit; font-size: 16px; font-weight: 600; border-radius: 10px; cursor: pointer; transition: background 0.15s, transform 0.15s; }
+    .btn-form-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-form-submit:disabled { background: #9ca3af; transform: none; cursor: not-allowed; }
+    .form-status { margin-top: 16px; padding: 14px 18px; border-radius: 8px; font-size: 15px; font-weight: 500; display: none; }
+    .form-status.success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .form-status.error { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://enterpriseaistudio.com/services/enterprise-ai-governance",
+    "name": "Enterprise AI Governance",
+    "description": "AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Enterprise AI Studio",
+      "url": "https://enterpriseaistudio.com"
+    },
+    "serviceType": "AI Governance",
+    "areaServed": "US",
+    "priceRange": "$25,000 - $60,000",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "25000 - 60000"
+    }
+  }
+  </script>
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do we need AI governance now, or later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an engagement take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in governance design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle SOC 2 or HIPAA compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with vendor evaluation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the output of a governance engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#process">Process</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Enterprise AI Governance.</h1>
+    <p class="subhead">Design governance, security, and operating-model readiness so your AI work survives audit and scales without surprises. 4-6 weeks.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-primary">Review readiness</a>
+      <a href="/" class="btn-secondary">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">The Problem</div>
+    <h2 class="section-headline">Your AI work won't survive security review without governance.</h2>
+    <p class="section-body">Most enterprises ship their first AI system, then security and compliance flag it. No audit trail. No eval framework. Data handling unclear. Vendor risks unmitigated. Now you're rewriting production code to satisfy compliance.</p>
+    <p class="section-body" style="margin-top: 16px;">We help you design governance first, so your AI infrastructure is security-ready, audit-ready, and compliant from day one. No rewrites. No surprises.</p>
+
+    <div class="detail-section">
+      <h3>What's Included</h3>
+      <p><strong>Risk assessment (Week 1):</strong> Map your current AI systems, data flows, vendor dependencies, and compliance requirements.</p>
+      <p><strong>Policy framework (Week 2-3):</strong> Design AI governance: vendor selection criteria, data handling policies, audit trails, escalation protocols, role-based access control.</p>
+      <p><strong>Security review (Week 3):</strong> Review your systems against NIST AI RMF, CIS controls, and your compliance requirements (SOC 2, HIPAA, etc.).</p>
+      <p><strong>Eval infrastructure (Week 4):</strong> Design and build eval frameworks so you measure quality, cost, and safety continuously.</p>
+      <p><strong>Operations manual (Week 5):</strong> How to deploy, monitor, and scale AI systems safely. For your ops team and leadership.</p>
+      <p><strong>Executive briefing (Week 6):</strong> AI risks, governance model, and compliance readiness. For your board and CISO.</p>
+    </div>
+
+    <div class="detail-section" style="margin-top: 24px;">
+      <h3>Pricing</h3>
+      <p><strong>$25,000 - $60,000</strong> depending on scope and system complexity.</p>
+      <p><strong>$25K-$35K:</strong> Single system, basic governance, no specific compliance requirements.</p>
+      <p><strong>$35K-$50K:</strong> Multiple systems, SOC 2 or similar compliance needs, custom eval frameworks.</p>
+      <p><strong>$50K-$60K:</strong> Complex integrations, HIPAA or financial regulation, vendor audit deep-dive, policy evolution consulting.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">What You Get</div>
+    <h2 class="section-headline">Governance deliverables.</h2>
+    <div class="process-list">
+      <div class="process-item">
+        <h4>AI Policy Framework</h4>
+        <p>Vendor selection criteria, data handling, audit trails, escalation, RBAC, retention policies.</p>
+      </div>
+      <div class="process-item">
+        <h4>Risk Register</h4>
+        <p>Current risks, mitigation strategies, compliance gaps, vendor risks.</p>
+      </div>
+      <div class="process-item">
+        <h4>Eval Infrastructure</h4>
+        <p>Code-ready evals for quality, cost, safety, bias, and compliance.</p>
+      </div>
+      <div class="process-item">
+        <h4>Operations Manual</h4>
+        <p>Deploy, monitor, scale, respond to incidents. For your ops and leadership team.</p>
+      </div>
+      <div class="process-item">
+        <h4>Vendor Evaluation Matrix</h4>
+        <p>How to evaluate and compare vendors (Claude, OpenAI, open-weight, etc.) against your requirements.</p>
+      </div>
+      <div class="process-item">
+        <h4>Executive Briefing</h4>
+        <p>Risks, governance model, compliance readiness. For your board and CISO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #0a0e1a; color: white;">
+  <div class="container">
+    <div class="section-eyebrow" style="color: #60a5fa;">The Engagement</div>
+    <h2 class="section-headline">How governance work unfolds.</h2>
+    <div style="margin-top: 48px; color: #d1d5db;">
+      <p style="margin-bottom: 16px;"><strong>Week 1: Assessment</strong> — We understand your current systems, data flows, vendor choices, and compliance requirements. Interviews with engineering, security, compliance, and leadership.</p>
+      <p style="margin-bottom: 16px;"><strong>Weeks 2-3: Design</strong> — AI policy framework, vendor criteria, data handling policies, audit infrastructure, escalation protocols.</p>
+      <p style="margin-bottom: 16px;"><strong>Week 4: Evals</strong> — Build and integrate eval frameworks to measure quality, cost, bias, and compliance continuously.</p>
+      <p style="margin-bottom: 16px;"><strong>Week 5: Documentation</strong> — Operations manual, security review findings, risk register with mitigations.</p>
+      <p style="margin-bottom: 0;"><strong>Week 6: Leadership</strong> — Executive briefing and Q&A. Your team now has a clear governance model to scale AI safely.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-headline">Common questions.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Do we need AI governance now, or later?</h4>
+        <p>Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How long does an engagement take?</h4>
+        <p>Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's included in governance design?</h4>
+        <p>Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you handle SOC 2 or HIPAA compliance?</h4>
+        <p>Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can you help with vendor evaluation?</h4>
+        <p>Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's the output of a governance engagement?</h4>
+        <p>You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-form-wrap">
+      <div class="section-eyebrow" style="text-align:center;">Let's Build Governance</div>
+      <h2 class="section-headline" style="text-align:center;max-width:100%;">Design for scale.</h2>
+      <p class="section-body" style="text-align:center;margin:0 auto 0;">Tell us about your current AI systems and compliance requirements. We'll assess and scope the engagement.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Work email *</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp">
+          </div>
+          <div class="form-field">
+            <label for="service">Service interested in</label>
+            <select id="service" name="service">
+              <option value="implementation-sprint">AI Implementation Sprint (4-8 weeks)</option>
+              <option value="fractional-engineering">Fractional AI Engineering (Retainer)</option>
+              <option value="" selected>Enterprise AI Governance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about your systems and compliance requirements *</label>
+          <textarea id="message" name="message" placeholder="What AI systems are you running? What compliance requirements do you need to meet? What's your biggest governance concern?" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New Enterprise AI Governance Inquiry">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-submit">
+          <button type="submit" class="btn-form-submit" id="submitBtn">Send message</button>
+          <div class="form-status success" id="formSuccess">✓ Message sent. We'll be in touch within one business day.</div>
+          <div class="form-status error" id="formError">Something went wrong. Please email directly: <a href="mailto:kevin.a.owens@gmail.com" style="color:inherit;text-decoration:underline;">kevin.a.owens@gmail.com</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#process">Process</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    function track(eventName, params) {
+      if (typeof gtag === 'function') gtag('event', eventName, params);
+    }
+
+    var form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        var btn = document.getElementById('submitBtn');
+        var successEl = document.getElementById('formSuccess');
+        var errorEl = document.getElementById('formError');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            successEl.style.display = 'block';
+            form.reset();
+            track('form_submit', { form_id: 'governance_contact', status: 'success' });
+          } else {
+            errorEl.style.display = 'block';
+            track('form_submit', { form_id: 'governance_contact', status: 'error' });
+          }
+        }).catch(function() {
+          errorEl.style.display = 'block';
+          track('form_submit', { form_id: 'governance_contact', status: 'network_error' });
+        }).finally(function() {
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        });
+      });
+    }
+  })();
+</script>
+</body>
+</html>
