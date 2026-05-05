@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Studio — Production AI Implementation for Enterprise Workflows</title>
+  <meta name="description" content="We design, build, and operate production AI systems for enterprise teams. Implementation sprints, fractional AI engineering, and governance frameworks.">
+  <meta property="og:title" content="Enterprise AI Studio">
+  <meta property="og:description" content="Production AI implementation for enterprise workflows.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0a0e1a;
+      background: #fafbfc;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 251, 252, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e8eaed;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav {
+      padding: 8px 18px; background: #0a0e1a; color: white !important;
+      border-radius: 8px; font-weight: 600 !important;
+    }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    /* Hero */
+    .hero { padding: 120px 0 100px; }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+    .hero p.subhead {
+      font-size: clamp(18px, 2vw, 22px);
+      color: #4b5563;
+      margin-bottom: 40px;
+      max-width: 720px;
+    }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: white;
+      color: #0a0e1a;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      transition: border-color 0.15s;
+    }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    /* Section base */
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    /* Problem section */
+    .problem { background: #0a0e1a; color: white; }
+    .problem .section-eyebrow { color: #60a5fa; }
+    .problem .section-headline { color: white; }
+    .problem .section-body { color: #9ca3af; }
+
+    /* Services grid */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+    .service-card {
+      background: white;
+      border: 1px solid #e8eaed;
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .service-card:hover { border-color: #2563eb; transform: translateY(-2px); }
+    .service-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .service-card .subhead { color: #2563eb; font-weight: 600; font-size: 14px; margin-bottom: 16px; }
+    .service-card p { color: #4b5563; font-size: 15px; margin-bottom: 16px; }
+    .service-card .examples { font-size: 14px; color: #6b7280; margin-bottom: 24px; }
+    .service-card a { color: #2563eb; font-weight: 600; text-decoration: none; font-size: 15px; }
+    .service-card a::after { content: ' →'; }
+
+    /* Process timeline */
+    .process-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .process-list { grid-template-columns: 1fr; } }
+    .process-step { padding: 24px; border-left: 3px solid #2563eb; }
+    .process-step .num { color: #2563eb; font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+    .process-step h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: #4b5563; font-size: 15px; }
+
+    /* Use cases */
+    .usecases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
+    @media (max-width: 768px) { .usecases-grid { grid-template-columns: 1fr; } }
+    .usecase-card { padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .usecase-card h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .usecase-card p { color: #4b5563; font-size: 14px; }
+
+    /* Differentiation */
+    .diff-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
+    @media (max-width: 768px) { .diff-list { grid-template-columns: 1fr; } }
+    .diff-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .diff-item p { color: #4b5563; font-size: 15px; }
+
+    /* FAQ */
+    .faq-list { margin-top: 48px; max-width: 760px; }
+    .faq-item { border-bottom: 1px solid #e8eaed; padding: 24px 0; }
+    .faq-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { color: #4b5563; font-size: 16px; }
+
+    /* CTA banner */
+    .cta-banner { background: #2563eb; color: white; text-align: center; padding: 80px 24px; border-radius: 24px; margin: 40px 0; }
+    .cta-banner h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .cta-banner p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-banner .btn-primary { background: white; color: #2563eb; }
+    .cta-banner .btn-primary:hover { background: #f3f4f6; }
+
+    /* Footer */
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo">Enterprise<span>AI</span>Studio</div>
+    <ul class="nav-links cta-only">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Production AI for enterprise workflows.</h1>
+    <p class="subhead">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-primary">Book a discovery call</a>
+      <a href="#services" class="btn-secondary">See our services</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <div class="section-eyebrow">The Problem</div>
+    <h2 class="section-headline">AI is no longer the bottleneck. Implementation is.</h2>
+    <p class="section-body">Most enterprise AI projects stall in the same place: the strategy is clear, the use case is real, but no one in the building can ship a production-grade system. Your engineering team is fully booked. Generic agencies hand you a demo. In-house "AI initiatives" don't survive their first compliance review. Enterprise AI Studio is the implementation team you bring in when the strategy is decided and you need it built — properly, securely, and in production.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-headline">Three ways to work with us.</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>AI Implementation Sprints</h3>
+        <div class="subhead">4-8 weeks · Fixed scope</div>
+        <p>A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.</p>
+        <p class="examples"><strong>Examples:</strong> support agents, document review, internal Q&A, sales call analysis, workflow automation.</p>
+        <a href="#contact">Scope a sprint</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Fractional AI Engineering</h3>
+        <div class="subhead">Ongoing retainer · 20-80 hrs/mo</div>
+        <p>Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.</p>
+        <p class="examples"><strong>Includes:</strong> engineering hours, monthly evals, quarterly reviews, on-call coverage.</p>
+        <a href="#contact">Discuss retainer</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Enterprise AI Governance</h3>
+        <div class="subhead">4-6 weeks · Fixed fee</div>
+        <p>AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.</p>
+        <p class="examples"><strong>Includes:</strong> governance design, security review, vendor policy, eval infrastructure, executive briefing.</p>
+        <a href="#contact">Review your readiness</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Our Process</div>
+    <h2 class="section-headline">Our process is the product.</h2>
+    <div class="process-list">
+      <div class="process-step">
+        <div class="num">01</div>
+        <h4>Discovery (free, 30 min)</h4>
+        <p>One call to map the use case, technical constraints, and success metrics.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <h4>Scoping (free, 1 week)</h4>
+        <p>A detailed scope document: architecture, milestones, pricing, team.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">03</div>
+        <h4>Sprint kickoff</h4>
+        <p>Architecture, eval plan, and production criteria locked in.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <h4>Build &amp; integrate</h4>
+        <p>Weekly stakeholder checkpoints; live demo at every milestone.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">05</div>
+        <h4>Production launch</h4>
+        <p>System live with monitoring, runbook, and 30 days of post-launch support.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">06</div>
+        <h4>Handoff or retainer</h4>
+        <p>Knowledge transfer to your team, or transition to a fractional engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">Use Cases</div>
+    <h2 class="section-headline">What we build.</h2>
+    <div class="usecases-grid">
+      <div class="usecase-card"><h4>Internal knowledge assistants</h4><p>Answer questions from policies, SOPs, customer history, and contracts.</p></div>
+      <div class="usecase-card"><h4>Document intelligence</h4><p>Review, classify, and route inbound documents with audit trails.</p></div>
+      <div class="usecase-card"><h4>Customer support agents</h4><p>Handle tier-1 tickets, escalate intelligently, learn from feedback.</p></div>
+      <div class="usecase-card"><h4>Sales workflow assistants</h4><p>Call analysis, follow-up drafting, CRM hygiene.</p></div>
+      <div class="usecase-card"><h4>Internal Q&amp;A bots</h4><p>Onboarding, IT, HR, and finance support across the organization.</p></div>
+      <div class="usecase-card"><h4>Workflow automation</h4><p>Multi-step processes across email, CRM, ticketing, billing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Why Us</div>
+    <h2 class="section-headline">Why teams choose us.</h2>
+    <div class="diff-list">
+      <div class="diff-item">
+        <h4>Strategy + execution under one roof</h4>
+        <p>Through our partnership with <a href="https://productexec.co" style="color:#2563eb;">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
+      </div>
+      <div class="diff-item">
+        <h4>Production-grade, not demo-grade</h4>
+        <p>Every system ships with evals, monitoring, fallback paths, and runbooks. No magic prompts that break next week.</p>
+      </div>
+      <div class="diff-item">
+        <h4>Workflow durability</h4>
+        <p>Designed for thousands of repeated runs, not impressive single demos.</p>
+      </div>
+      <div class="diff-item">
+        <h4>Enterprise governance baked in</h4>
+        <p>Audit trails, security review, escalation, and compliance from day one.</p>
+      </div>
+      <div class="diff-item">
+        <h4>Model-agnostic</h4>
+        <p>Claude, OpenAI, open-weight; routed by task criticality, not vendor loyalty.</p>
+      </div>
+      <div class="diff-item">
+        <h4>Built by operators</h4>
+        <p>We've shipped AI systems that survive Monday. We know what production really means.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-eyebrow">About</div>
+    <h2 class="section-headline">Built by operators who've shipped AI in production.</h2>
+    <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co" style="color:#2563eb;">ProductExec</a> and bring in specialist engineers for each engagement.</p>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-headline">Common questions.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>How is this different from working with ProductExec?</h4>
+        <p>ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you replace our internal engineering team?</h4>
+        <p>No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Which models do you use?</h4>
+        <p>We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's a typical engagement size?</h4>
+        <p>Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can you sign an NDA?</h4>
+        <p>Yes. We sign mutual NDAs before any scoping conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to ship AI that actually works?</h2>
+      <p>Book a 30-minute discovery call. We'll map your use case, technical constraints, and the fastest path to production.</p>
+      <a href="mailto:hello@enterpriseaistudio.com" class="btn-primary">hello@enterpriseaistudio.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · hello@enterpriseaistudio.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
