@@ -155,6 +155,35 @@
     .cta-banner .btn-primary { background: white; color: #2563eb; }
     .cta-banner .btn-primary:hover { background: #f3f4f6; }
 
+    /* Contact form */
+    .contact-form-wrap { max-width: 680px; margin: 0 auto; }
+    .contact-form { display: grid; gap: 20px; margin-top: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label { font-size: 14px; font-weight: 600; color: #374151; }
+    .form-field input, .form-field select, .form-field textarea {
+      padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 8px;
+      font-family: inherit; font-size: 15px; color: #0a0e1a; background: white;
+      transition: border-color 0.15s, box-shadow 0.15s; outline: none;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .form-field textarea { resize: vertical; min-height: 120px; }
+    .form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-submit { text-align: center; margin-top: 8px; }
+    .btn-form-submit {
+      padding: 14px 40px; background: #2563eb; color: white; border: none;
+      font-family: inherit; font-size: 16px; font-weight: 600; border-radius: 10px;
+      cursor: pointer; transition: background 0.15s, transform 0.15s;
+    }
+    .btn-form-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-form-submit:disabled { background: #9ca3af; transform: none; cursor: not-allowed; }
+    .form-status { margin-top: 16px; padding: 14px 18px; border-radius: 8px; font-size: 15px; font-weight: 500; display: none; }
+    .form-status.success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .form-status.error { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+
     /* Footer */
     footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
     .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
@@ -359,10 +388,50 @@
 
 <section id="contact">
   <div class="container">
-    <div class="cta-banner">
-      <h2>Ready to ship AI that actually works?</h2>
-      <p>Book a 30-minute discovery call. We'll map your use case, technical constraints, and the fastest path to production.</p>
-      <a href="mailto:hello@enterpriseaistudio.com" class="btn-primary">hello@enterpriseaistudio.com</a>
+    <div class="contact-form-wrap">
+      <div class="section-eyebrow" style="text-align:center;">Get in Touch</div>
+      <h2 class="section-headline" style="text-align:center;max-width:100%;">Ready to ship AI that actually works?</h2>
+      <p class="section-body" style="text-align:center;margin:0 auto 0;">Tell us about your use case. We'll map the constraints and the fastest path to production — no sales deck, just a direct conversation.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Work email *</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp">
+          </div>
+          <div class="form-field">
+            <label for="service">Service interested in</label>
+            <select id="service" name="service">
+              <option value="">Select one...</option>
+              <option value="implementation-sprint">AI Implementation Sprint (4-8 weeks)</option>
+              <option value="fractional-engineering">Fractional AI Engineering (Retainer)</option>
+              <option value="governance">Enterprise AI Governance</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about your use case *</label>
+          <textarea id="message" name="message" placeholder="What workflow or problem are you trying to solve with AI? What's the constraint — team capacity, expertise, timeline, governance?" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New Enterprise AI Studio Inquiry">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-submit">
+          <button type="submit" class="btn-form-submit" id="submitBtn">Send message</button>
+          <div class="form-status success" id="formSuccess">✓ Message sent. We'll be in touch within one business day.</div>
+          <div class="form-status error" id="formError">Something went wrong. Please email directly: <a href="mailto:kevin.a.owens@gmail.com" style="color:inherit;text-decoration:underline;">kevin.a.owens@gmail.com</a></div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -382,7 +451,7 @@
         <a href="https://productexec.co" target="_blank">ProductExec</a>
       </div>
     </div>
-    <p class="footer-tagline">© 2026 Enterprise AI Studio · hello@enterpriseaistudio.com</p>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
   </div>
 </footer>
 
@@ -401,6 +470,41 @@
       var href = el.getAttribute('href') || '';
       var text = (el.textContent || '').trim();
       var classes = el.className || '';
+
+      /* Contact form submit */
+      var form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(evt) {
+          evt.preventDefault();
+          var btn = document.getElementById('submitBtn');
+          var successEl = document.getElementById('formSuccess');
+          var errorEl = document.getElementById('formError');
+          btn.disabled = true;
+          btn.textContent = 'Sending…';
+          successEl.style.display = 'none';
+          errorEl.style.display = 'none';
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.ok) {
+              successEl.style.display = 'block';
+              form.reset();
+              track('form_submit', { form_id: 'contact', status: 'success' });
+            } else {
+              errorEl.style.display = 'block';
+              track('form_submit', { form_id: 'contact', status: 'error' });
+            }
+          }).catch(function() {
+            errorEl.style.display = 'block';
+            track('form_submit', { form_id: 'contact', status: 'network_error' });
+          }).finally(function() {
+            btn.disabled = false;
+            btn.textContent = 'Send message';
+          });
+        });
+      }
 
       /* Contact email click */
       if (href.startsWith('mailto:')) {
