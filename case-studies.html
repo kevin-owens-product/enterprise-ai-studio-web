@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Cases | Enterprise AI Studio — Production AI in Real Workflows</title>
+  <meta name="description" content="Illustrative use cases for production AI in enterprise workflows: customer support agents, document intelligence, sales workflow analysis, internal knowledge assistants, and audit-grade governance.">
+  <meta property="og:title" content="Use Cases | Enterprise AI Studio">
+  <meta property="og:description" content="See how production AI shows up inside real enterprise workflows — support, documents, sales motion, internal knowledge, and governance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/case-studies">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Use Cases | Enterprise AI Studio">
+  <meta name="twitter:description" content="Illustrative production AI use cases across support, document review, sales workflow, knowledge, and governance.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/case-studies">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DPS2MFLM6Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #0a0e1a; background: #fafbfc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(250, 251, 252, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e8eaed; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    .hero { padding: 120px 0 80px; }
+    .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 900px; }
+    .hero p.subhead { font-size: clamp(18px, 2vw, 22px); color: #4b5563; margin-bottom: 40px; max-width: 720px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; font-weight: 600; border-radius: 10px; transition: background 0.15s, transform 0.15s; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary { display: inline-block; padding: 14px 28px; background: white; color: #0a0e1a; text-decoration: none; font-weight: 600; border-radius: 10px; border: 1px solid #d1d5db; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    .case-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
+    .case-card { padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; }
+    .case-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .case-card .meta { color: #2563eb; font-weight: 600; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px; }
+    .case-card p { color: #4b5563; font-size: 16px; margin-bottom: 14px; }
+    .case-card .label { font-weight: 700; color: #0a0e1a; }
+    .case-card .results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e8eaed; }
+    @media (max-width: 700px) { .case-card .results { grid-template-columns: 1fr; } }
+    .case-card .result-stat { font-size: 13px; color: #6b7280; }
+    .case-card .result-stat strong { display: block; font-size: 18px; color: #0a0e1a; font-weight: 700; margin-bottom: 4px; }
+
+    .stack-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .stack-tag { padding: 4px 10px; background: #eff6ff; color: #1d4ed8; border-radius: 6px; font-size: 12px; font-weight: 600; }
+
+    .disclaimer { margin-top: 32px; padding: 16px 20px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; color: #9a3412; font-size: 14px; }
+
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+  <!-- Structured Data: CollectionPage with illustrative cases -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "url": "https://enterpriseaistudio.com/case-studies",
+    "name": "Enterprise AI Studio — Use Cases",
+    "description": "Illustrative production AI use cases across customer support, document intelligence, sales workflow analysis, internal knowledge assistants, and AI governance.",
+    "isPartOf": {
+      "@type": "Organization",
+      "name": "Enterprise AI Studio",
+      "url": "https://enterpriseaistudio.com"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/case-studies">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Use cases for production AI.</h1>
+    <p class="subhead">Five illustrative engagement patterns that show what a production AI system looks like inside an enterprise workflow — from scope to architecture to the metrics that prove it's working.</p>
+    <div class="cta-row">
+      <a href="/#contact" class="btn-primary">Discuss your use case</a>
+      <a href="/#services" class="btn-secondary">See services</a>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Note:</strong> Use cases below are illustrative engagement patterns drawn from common enterprise AI workflows. Named client case studies will be added as customers approve disclosure.
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Engagement patterns</div>
+    <h2 class="section-headline">What production AI looks like in real workflows.</h2>
+
+    <div class="case-grid">
+
+      <article class="case-card">
+        <div class="meta">Customer Support · Implementation Sprint</div>
+        <h3>Tier-1 support agent for a B2B SaaS platform</h3>
+        <p><span class="label">Problem:</span> Support team handling thousands of repetitive how-to and account-state tickets per week. Agent fatigue and slow time-to-first-response on simple cases.</p>
+        <p><span class="label">What we built:</span> A retrieval-augmented support agent that handles tier-1 issues end-to-end inside the existing helpdesk. Confidence-thresholded escalation to humans, full audit trail, and customer-state grounding (account, plan, recent activity) so answers reflect the actual user.</p>
+        <p><span class="label">How it ships safely:</span> Eval suite of 250+ representative tickets. Shadow-mode launch reviewing every response against a human reply for two weeks. Gated rollout per ticket category with rollback runbook.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Retrieval</span>
+          <span class="stack-tag">Eval-driven rollout</span>
+          <span class="stack-tag">Helpdesk integration</span>
+          <span class="stack-tag">Audit trail</span>
+        </div>
+        <div class="results">
+          <div class="result-stat"><strong>~60%</strong> tier-1 tickets handled without escalation</div>
+          <div class="result-stat"><strong>&lt; 30s</strong> typical first-response time</div>
+          <div class="result-stat"><strong>100%</strong> responses logged with retrieval citations</div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="meta">Document Intelligence · Implementation Sprint</div>
+        <h3>Contract review and clause extraction for a procurement team</h3>
+        <p><span class="label">Problem:</span> Procurement reviewing hundreds of vendor contracts per quarter. Manual clause extraction, redline drafting, and risk flagging consuming senior legal hours.</p>
+        <p><span class="label">What we built:</span> A document intelligence pipeline that ingests PDFs and DOCX, extracts a fixed set of clauses (term, renewal, indemnity, liability cap, data handling, AI use), flags policy deviations against the company's standard playbook, and routes flagged items to a human reviewer with a redline draft.</p>
+        <p><span class="label">How it ships safely:</span> Per-clause precision/recall evals on a 200-document gold set. Reviewer-in-the-loop UI with confidence badges. Full provenance from extracted clause back to source page.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Doc parsing</span>
+          <span class="stack-tag">Clause extraction</span>
+          <span class="stack-tag">Policy diffing</span>
+          <span class="stack-tag">Reviewer UI</span>
+        </div>
+        <div class="results">
+          <div class="result-stat"><strong>~70%</strong> review hours reclaimed on standard contracts</div>
+          <div class="result-stat"><strong>&gt; 95%</strong> precision on flagged risk clauses</div>
+          <div class="result-stat"><strong>0</strong> auto-approvals — human always confirms risk</div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="meta">Sales Workflow · Fractional Engagement</div>
+        <h3>Sales call analysis and follow-up drafting</h3>
+        <p><span class="label">Problem:</span> Sales reps losing context across multi-call deal cycles. Inconsistent CRM hygiene and slow follow-up drafting after discovery calls.</p>
+        <p><span class="label">What we built:</span> Post-call analysis that pulls transcripts from the call platform, extracts buyer signals, generates a structured summary into the CRM, and drafts a tailored follow-up email per call. Reps review and send; the model never auto-sends.</p>
+        <p><span class="label">How it ships safely:</span> Reps grade outputs in-app for ongoing eval. Quarterly comparison of follow-up quality vs. baseline. CRM writes are reversible and logged.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Transcripts</span>
+          <span class="stack-tag">CRM sync</span>
+          <span class="stack-tag">Draft-only output</span>
+          <span class="stack-tag">In-app grading</span>
+        </div>
+        <div class="results">
+          <div class="result-stat"><strong>~3x</strong> follow-up speed vs. manual drafting</div>
+          <div class="result-stat"><strong>~80%</strong> drafts sent with light edits only</div>
+          <div class="result-stat"><strong>0</strong> auto-sent emails to customers</div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="meta">Internal Knowledge · Implementation Sprint</div>
+        <h3>Internal knowledge assistant over policies and SOPs</h3>
+        <p><span class="label">Problem:</span> New hires and existing staff repeatedly asking IT, HR, and operations the same set of policy and process questions. Tribal knowledge stuck in PDFs and wikis.</p>
+        <p><span class="label">What we built:</span> Internal Q&amp;A assistant grounded in approved policies, SOPs, and FAQs. Answers always cite the source document and section. RBAC-aware so HR-confidential content is only available to authorized employees. Slack and intranet entry points.</p>
+        <p><span class="label">How it ships safely:</span> Pre-launch eval against a 300-question gold set across IT, HR, finance, and ops. Confidence threshold with "I don't know — talk to [team]" fallback. Monthly content freshness audit.</p>
+        <div class="stack-row">
+          <span class="stack-tag">RAG</span>
+          <span class="stack-tag">RBAC</span>
+          <span class="stack-tag">Slack</span>
+          <span class="stack-tag">Source citations</span>
+        </div>
+        <div class="results">
+          <div class="result-stat"><strong>~50%</strong> repeat questions deflected from team inboxes</div>
+          <div class="result-stat"><strong>100%</strong> answers carry source citations</div>
+          <div class="result-stat"><strong>&lt; 1%</strong> "I don't know" responses without follow-up route</div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="meta">Governance · Enterprise AI Governance Engagement</div>
+        <h3>AI governance and security review for a regulated enterprise</h3>
+        <p><span class="label">Problem:</span> Enterprise launching its first wave of AI features and unsure how to clear security review, compliance, and board-level oversight. Engineering shipping faster than governance can keep up.</p>
+        <p><span class="label">What we built:</span> A governance program covering AI policy, vendor and model approval, eval and monitoring requirements per use case, an internal "AI launch checklist," and a quarterly executive briefing format. We staged it as a 4–6 week engagement so engineering didn't lose momentum.</p>
+        <p><span class="label">How it ships safely:</span> Policy aligned with existing security and compliance frameworks (SOC 2, HIPAA where applicable). Launch checklist piloted on two real systems before company-wide rollout.</p>
+        <div class="stack-row">
+          <span class="stack-tag">AI policy</span>
+          <span class="stack-tag">Vendor review</span>
+          <span class="stack-tag">Eval gating</span>
+          <span class="stack-tag">Exec briefing</span>
+        </div>
+        <div class="results">
+          <div class="result-stat"><strong>4–6 weeks</strong> to a documented governance program</div>
+          <div class="result-stat"><strong>2 systems</strong> piloted through the new launch checklist</div>
+          <div class="result-stat"><strong>1 quarterly</strong> exec briefing format adopted</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">What's next</div>
+    <h2 class="section-headline">Have a workflow that looks like one of these?</h2>
+    <p class="section-body">Tell us what you're trying to change. We'll be honest about whether AI is the right answer, what would have to be true to ship it safely, and which engagement shape fits.</p>
+    <div class="cta-row" style="margin-top: 32px;">
+      <a href="/#contact" class="btn-primary">Book a call</a>
+      <a href="/resources" class="btn-secondary">Get the readiness checklist</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/case-studies">Use Cases</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+
+</body>
+</html>

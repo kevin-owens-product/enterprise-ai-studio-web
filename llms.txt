@@ -39,6 +39,18 @@ Includes: governance design, security review, vendor policy, eval infrastructure
 ## Leadership
 Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work.
 
+## Key Pages
+- Home: https://enterpriseaistudio.com/
+- About / Founder bio: https://enterpriseaistudio.com/about
+- Use cases (illustrative engagement patterns): https://enterpriseaistudio.com/case-studies
+- Resources (AI Implementation Readiness Checklist): https://enterpriseaistudio.com/resources
+- Service: AI Implementation Sprints — https://enterpriseaistudio.com/services/ai-implementation-sprints
+- Service: Fractional AI Engineering — https://enterpriseaistudio.com/services/fractional-ai-engineering
+- Service: Enterprise AI Governance — https://enterpriseaistudio.com/services/enterprise-ai-governance
+
+## Free Resources
+- AI Implementation Readiness Checklist — 25 questions across workflow & ROI, data, evals, governance, and change management. Available at https://enterpriseaistudio.com/resources.
+
 ## Contact & Engagement
 For discovery calls and scoping conversations, visit https://enterpriseaistudio.com
 

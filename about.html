@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Enterprise AI Studio — Production AI Implementation Team</title>
+  <meta name="description" content="Enterprise AI Studio is led by Kevin Owens, a CPO-level operator with deep experience shipping production AI for enterprise workflows. Operator-first model, model-agnostic builds, governance built in.">
+  <meta property="og:title" content="About | Enterprise AI Studio">
+  <meta property="og:description" content="Operators who ship production AI. Led by Kevin Owens, four-time Chief Product Officer with a track record of AI-enabled operating models in enterprise B2B SaaS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/about">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About | Enterprise AI Studio">
+  <meta name="twitter:description" content="Operators who ship production AI. Led by Kevin Owens, four-time Chief Product Officer.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/about">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DPS2MFLM6Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #0a0e1a; background: #fafbfc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(250, 251, 252, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e8eaed; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    .hero { padding: 120px 0 80px; }
+    .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 900px; }
+    .hero p.subhead { font-size: clamp(18px, 2vw, 22px); color: #4b5563; margin-bottom: 40px; max-width: 720px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; font-weight: 600; border-radius: 10px; transition: background 0.15s, transform 0.15s; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary { display: inline-block; padding: 14px 28px; background: white; color: #0a0e1a; text-decoration: none; font-weight: 600; border-radius: 10px; border: 1px solid #d1d5db; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    .bio-card { padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; margin-top: 32px; }
+    .bio-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .bio-card p { color: #4b5563; font-size: 16px; margin-bottom: 12px; }
+    .bio-card ul { margin: 12px 0 12px 22px; color: #4b5563; }
+    .bio-card li { margin-bottom: 8px; }
+
+    .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .pillar-grid { grid-template-columns: 1fr; } }
+    .pillar { padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .pillar h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .pillar p { color: #4b5563; font-size: 15px; }
+
+    .partners { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .partners { grid-template-columns: 1fr; } }
+    .partner-card { padding: 28px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .partner-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .partner-card p { color: #4b5563; font-size: 15px; margin-bottom: 12px; }
+    .partner-card a { color: #2563eb; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .partner-card a:hover { text-decoration: underline; }
+
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+  <!-- Structured Data: AboutPage + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://enterpriseaistudio.com/about",
+    "name": "About Enterprise AI Studio",
+    "description": "Enterprise AI Studio is a specialized AI implementation and engineering firm led by Kevin Owens, a CPO-level operator focused on production AI for enterprise workflows.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Enterprise AI Studio",
+      "url": "https://enterpriseaistudio.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Kevin Owens",
+        "jobTitle": "Founder & Principal",
+        "url": "https://kevinowens.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/kevinaowens/",
+          "https://productexec.co"
+        ],
+        "knowsAbout": [
+          "Production AI systems",
+          "AI evaluations and observability",
+          "Enterprise AI governance",
+          "B2B SaaS product strategy",
+          "AI-enabled operating models"
+        ]
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/case-studies">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Operators who ship production AI.</h1>
+    <p class="subhead">Enterprise AI Studio is a specialized implementation firm led by Kevin Owens, a four-time Chief Product Officer with a track record of taking AI from prototype to production inside enterprise B2B SaaS, healthcare workflow, and operating-model transformations.</p>
+    <div class="cta-row">
+      <a href="/#contact" class="btn-primary">Talk to us</a>
+      <a href="/#services" class="btn-secondary">See services</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Founder</div>
+    <h2 class="section-headline">Kevin Owens — Founder &amp; Principal.</h2>
+    <p class="section-body">Kevin is a product, engineering, and transformation executive who has been building software for two decades and AI-enabled systems for the last several years. He has held CPO roles across four B2B SaaS companies and is a graduate of USC's Marshall School of Business.</p>
+
+    <div class="bio-card">
+      <h3>Background</h3>
+      <p>Kevin's career spans hands-on engineering, product leadership, and operating-model design. He has personally led product organizations through cloud, mobile, data platform, and now AI transitions — and has shipped AI systems that survive production load, audit, and a Monday morning.</p>
+      <ul>
+        <li><strong>Four-time CPO</strong> across enterprise B2B SaaS, productivity, healthcare workflow, and AI tooling.</li>
+        <li><strong>Operator-first</strong>: he scopes work the way an executive does, then implements like an engineer who has been on call.</li>
+        <li><strong>Model-agnostic</strong>: production experience with frontier models (Claude, OpenAI), open-weight stacks, and retrieval/eval infrastructure.</li>
+        <li><strong>USC Marshall</strong> graduate; based in Los Angeles, working with teams across the US, UK, and EU.</li>
+      </ul>
+    </div>
+
+    <div class="bio-card">
+      <h3>How Kevin works</h3>
+      <p>Kevin is hands-on. He scopes engagements directly with the customer, owns the architecture and eval design, and stays accountable through production launch. For longer engagements he assembles a dedicated team of senior AI engineers around a single point of accountability — him.</p>
+      <p>What he refuses: vague pilots, demo-grade systems shipped to real users, governance bolted on after launch, and "innovation theatre" that doesn't move a real workflow metric.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">How we work</div>
+    <h2 class="section-headline">Three principles that shape every engagement.</h2>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <h4>Production from day one</h4>
+        <p>Every system we build is designed for thousands of repeated runs — with evals, monitoring, fallback paths, and runbooks. No demo-grade code in production paths.</p>
+      </div>
+      <div class="pillar">
+        <h4>Governance baked in</h4>
+        <p>Audit trails, RBAC, escalation protocols, and security review are designed into the architecture, not bolted on. SOC 2 / HIPAA contexts welcomed.</p>
+      </div>
+      <div class="pillar">
+        <h4>Operator accountability</h4>
+        <p>One senior owner per engagement. We answer to your operating-model goals, not just feature velocity. Engagements close with a real handoff or roll into retainer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Team Model</div>
+    <h2 class="section-headline">A senior owner, plus the right specialists for each engagement.</h2>
+    <p class="section-body">Enterprise AI Studio operates a partner-and-specialist model. Kevin is the senior owner across every engagement; the specialist team flexes around the work.</p>
+
+    <div class="partners">
+      <div class="partner-card">
+        <h4>Senior AI engineers (specialist bench)</h4>
+        <p>Production AI builders with deep experience in evals, retrieval, agent orchestration, and platform-level reliability. We bring in the right specialist for each engagement rather than billing one shape of engineer for every problem.</p>
+      </div>
+      <div class="partner-card">
+        <h4>ProductExec — strategy partner</h4>
+        <p>For clients who need to decide <em>what</em> AI to build before they build it, we partner with ProductExec on AI operating-model design and roadmap work. Many clients run strategy with ProductExec, then implementation with Enterprise AI Studio.</p>
+        <a href="https://productexec.co" target="_blank">productexec.co →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">What's next</div>
+    <h2 class="section-headline">If you're moving AI into production, we should talk.</h2>
+    <p class="section-body">Most engagements start with a single 30-minute conversation. We'll listen to the workflow you're trying to change, name the constraints, and tell you whether a sprint, retainer, or governance engagement is the fastest path to production.</p>
+    <div class="cta-row" style="margin-top: 32px;">
+      <a href="/#contact" class="btn-primary">Book a call</a>
+      <a href="/case-studies" class="btn-secondary">See use cases</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/case-studies">Use Cases</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+
+</body>
+</html>

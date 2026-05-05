@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Enterprise AI Studio — AI Implementation Readiness Checklist</title>
+  <meta name="description" content="Free resources for enterprise AI buyers: the AI Implementation Readiness Checklist — 25 questions across data, evals, governance, change management, and ops to know before scoping a production AI project.">
+  <meta property="og:title" content="Resources | Enterprise AI Studio">
+  <meta property="og:description" content="Free resources for enterprise AI buyers, including the AI Implementation Readiness Checklist — 25 questions you should answer before scoping a production AI project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/resources">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resources | Enterprise AI Studio">
+  <meta name="twitter:description" content="Free resources for enterprise AI buyers — readiness checklist, scoping guide, governance templates.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/resources">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DPS2MFLM6Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #0a0e1a; background: #fafbfc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(250, 251, 252, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e8eaed; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+
+    .hero { padding: 120px 0 80px; }
+    .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 900px; }
+    .hero p.subhead { font-size: clamp(18px, 2vw, 22px); color: #4b5563; margin-bottom: 40px; max-width: 720px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; font-weight: 600; border-radius: 10px; transition: background 0.15s, transform 0.15s; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary { display: inline-block; padding: 14px 28px; background: white; color: #0a0e1a; text-decoration: none; font-weight: 600; border-radius: 10px; border: 1px solid #d1d5db; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: #0a0e1a; }
+
+    section { padding: 80px 0; }
+    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
+    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
+
+    .checklist-card { padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; margin-top: 32px; }
+    .checklist-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .checklist-pillar { margin-top: 24px; }
+    .checklist-pillar h4 { font-size: 16px; font-weight: 700; color: #2563eb; letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 12px; }
+    .checklist-pillar ul { list-style: none; padding: 0; }
+    .checklist-pillar li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f3f4f6; color: #1f2937; font-size: 15px; line-height: 1.5; }
+    .checklist-pillar li:last-child { border-bottom: none; }
+    .checklist-pillar li::before { content: ""; flex: 0 0 18px; height: 18px; margin-top: 3px; border: 1.5px solid #d1d5db; border-radius: 4px; background: white; }
+
+    .resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 900px) { .resource-grid { grid-template-columns: 1fr; } }
+    .resource-card { padding: 28px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
+    .resource-card .meta { color: #2563eb; font-weight: 600; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .resource-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .resource-card p { color: #4b5563; font-size: 15px; margin-bottom: 12px; }
+    .resource-card a { color: #2563eb; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .resource-card a:hover { text-decoration: underline; }
+    .resource-card.coming { opacity: 0.7; }
+
+    @media print {
+      header, .hero .cta-row, footer, section.cta-section { display: none !important; }
+      body { background: white; }
+      .checklist-card { border: none; box-shadow: none; }
+    }
+
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+  </style>
+  <!-- Structured Data: CollectionPage with HowTo for the checklist -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "url": "https://enterpriseaistudio.com/resources",
+        "name": "Enterprise AI Studio — Resources",
+        "description": "Free resources for enterprise AI buyers: readiness checklist and scoping guidance for production AI projects.",
+        "isPartOf": { "@type": "Organization", "name": "Enterprise AI Studio", "url": "https://enterpriseaistudio.com" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "AI Implementation Readiness Checklist",
+        "description": "A 25-question readiness checklist across data, evals, governance, change management, and operations — to use before scoping a production enterprise AI project.",
+        "totalTime": "PT30M",
+        "step": [
+          { "@type": "HowToStep", "name": "Workflow & ROI", "text": "Confirm a single workflow, the metric you want to move, and the financial case." },
+          { "@type": "HowToStep", "name": "Data & Inputs", "text": "Confirm you have the data the model needs, where it lives, and how reliably you can access it." },
+          { "@type": "HowToStep", "name": "Evals & Quality", "text": "Decide what 'good enough' means and how you'll measure it before launch." },
+          { "@type": "HowToStep", "name": "Governance & Risk", "text": "Map compliance, security, and audit requirements that the system must satisfy." },
+          { "@type": "HowToStep", "name": "Change Management & Ops", "text": "Plan rollout, training, monitoring, and a rollback path." }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/case-studies">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/#contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Resources for enterprise AI buyers.</h1>
+    <p class="subhead">Practical tools, checklists, and guidance for teams scoping production AI work — written by operators who've shipped these systems and lived with them.</p>
+    <div class="cta-row">
+      <a href="#readiness-checklist" class="btn-primary">Readiness checklist</a>
+      <a href="/#contact" class="btn-secondary">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<section id="readiness-checklist" style="background: white;">
+  <div class="container">
+    <div class="section-eyebrow">Free Resource</div>
+    <h2 class="section-headline">AI Implementation Readiness Checklist.</h2>
+    <p class="section-body">Twenty-five questions across five pillars. If you can confidently answer most of them before kickoff, your project is ready to be scoped. If you can't, that's where scoping should start.</p>
+
+    <div class="checklist-card">
+      <h3>The 25-question readiness checklist</h3>
+
+      <div class="checklist-pillar">
+        <h4>1. Workflow &amp; ROI (5)</h4>
+        <ul>
+          <li>Have you named the single workflow this AI system will change — not a category, a workflow?</li>
+          <li>Is there one metric that will tell you the system is working (e.g. time-to-resolve, deflection rate, hours saved)?</li>
+          <li>Do you know the current baseline of that metric, measured today, not estimated?</li>
+          <li>Have you sized the value (annual hours, dollars, or revenue) of moving that metric by a realistic amount?</li>
+          <li>Is there a named executive sponsor who owns the metric, not just the AI initiative?</li>
+        </ul>
+      </div>
+
+      <div class="checklist-pillar">
+        <h4>2. Data &amp; Inputs (5)</h4>
+        <ul>
+          <li>Does the data the model needs exist today, in a system you can access programmatically?</li>
+          <li>Is the data permissioned correctly — for users, for the AI service, and for any sub-processors?</li>
+          <li>Do you have a representative sample (50–500 examples) you could hand a vendor on day one?</li>
+          <li>Is there a "ground truth" anywhere (resolved tickets, signed contracts, reviewed documents) that can power evals?</li>
+          <li>How fresh does data need to be in production — minutes, hours, or daily-batch?</li>
+        </ul>
+      </div>
+
+      <div class="checklist-pillar">
+        <h4>3. Evals &amp; Quality (5)</h4>
+        <ul>
+          <li>Have you defined what "good enough" looks like, in a way an engineer could write a test for?</li>
+          <li>Who will judge outputs during the build phase — a domain expert, ops lead, or end users?</li>
+          <li>Will the system fail gracefully (escalate, ask, or refuse) when it isn't confident?</li>
+          <li>Have you decided what kinds of errors are unacceptable (e.g. wrong dollar amounts, wrong customer)?</li>
+          <li>Will you track quality continuously after launch, or only at sprint review?</li>
+        </ul>
+      </div>
+
+      <div class="checklist-pillar">
+        <h4>4. Governance &amp; Risk (5)</h4>
+        <ul>
+          <li>Do you know which compliance frameworks (SOC 2, HIPAA, GDPR, sector-specific) the system must satisfy?</li>
+          <li>Have you decided whether customer or regulated data can be sent to a third-party model provider?</li>
+          <li>Is there an audit-trail requirement — every prompt, response, retrieval, and decision logged?</li>
+          <li>Has security review been pre-briefed, with a path to approval, or is it a post-build surprise?</li>
+          <li>Do you have a documented escalation and incident protocol for AI-driven errors?</li>
+        </ul>
+      </div>
+
+      <div class="checklist-pillar">
+        <h4>5. Change Management &amp; Ops (5)</h4>
+        <ul>
+          <li>Will end users be trained, paid, or measured differently because of this system?</li>
+          <li>Is there an internal champion close to the workflow who will adopt and defend the system early?</li>
+          <li>Is there a rollback plan if quality drops or behaviour drifts?</li>
+          <li>Who owns the system in production — engineering, ops, or a shared on-call?</li>
+          <li>Have you budgeted for ongoing tuning and evals, not just the build?</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section-body" style="margin-top: 32px;">Most teams pass on three pillars and have real gaps in two. That's normal. The work in scoping is to either close those gaps fast or design the engagement around them.</p>
+
+    <div class="cta-row" style="margin-top: 24px;">
+      <a href="/#contact" class="btn-primary">Walk the checklist with us</a>
+      <a href="/case-studies" class="btn-secondary">See use cases</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">More resources</div>
+    <h2 class="section-headline">Coming soon.</h2>
+    <p class="section-body">We're publishing additional resources as engagements turn into reusable templates and patterns.</p>
+
+    <div class="resource-grid">
+      <div class="resource-card coming">
+        <div class="meta">Coming soon</div>
+        <h4>Enterprise AI Scoping Guide</h4>
+        <p>How we run a 30-minute scoping conversation: the questions we ask, the outputs we produce, and the decisions you should be ready to make.</p>
+      </div>
+      <div class="resource-card coming">
+        <div class="meta">Coming soon</div>
+        <h4>AI Governance Starter Pack</h4>
+        <p>Policy template, vendor review template, eval-gating template, and an executive briefing format. Pulled from real governance engagements.</p>
+      </div>
+      <div class="resource-card coming">
+        <div class="meta">Coming soon</div>
+        <h4>Eval Patterns for Production AI</h4>
+        <p>Patterns we use for ground-truth datasets, judge prompts, regression suites, and shadow-mode rollouts.</p>
+      </div>
+      <div class="resource-card coming">
+        <div class="meta">Coming soon</div>
+        <h4>Production AI Architecture Reference</h4>
+        <p>Reference architecture for retrieval, agent orchestration, observability, and rollback in regulated enterprise environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #0a0e1a; color: white;" class="cta-section">
+  <div class="container">
+    <div class="section-eyebrow" style="color: #60a5fa;">Want it live, not on a slide?</div>
+    <h2 class="section-headline">We can run the checklist with you in 30 minutes.</h2>
+    <p style="font-size: 18px; color: #d1d5db; max-width: 720px; margin-bottom: 40px;">Bring a workflow you'd like to AI-enable. We'll walk the 25 questions live and tell you whether it's a sprint, a retainer, a governance engagement, or not yet ready.</p>
+    <div class="cta-row">
+      <a href="/#contact" class="btn-primary">Book the conversation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <div class="logo">Enterprise<span>AI</span>Studio</div>
+        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/case-studies">Use Cases</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://productexec.co" target="_blank">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
