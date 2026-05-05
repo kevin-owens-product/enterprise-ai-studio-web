@@ -1,0 +1,46 @@
+# Enterprise AI Studio — AI Crawler Context File
+
+## About Us
+Enterprise AI Studio is a specialized consulting and implementation firm focused on production-grade AI systems for enterprise workflows. We design, build, and operate AI systems that actually scale in production — not prototypes or demos.
+
+## Core Services
+
+### AI Implementation Sprints (4-8 weeks, Fixed Scope)
+A single AI system fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.
+
+Examples: support agents, document review, internal Q&A, sales call analysis, workflow automation.
+
+### Fractional AI Engineering (Ongoing Retainer, 20-80 hrs/mo)
+Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.
+
+Includes: engineering hours, monthly evals, quarterly reviews, on-call coverage.
+
+### Enterprise AI Governance (4-6 weeks, Fixed Fee)
+AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.
+
+Includes: governance design, security review, vendor policy, eval infrastructure, executive briefing.
+
+## What We Build
+- Internal knowledge assistants (policies, SOPs, customer history, contracts)
+- Document intelligence (review, classify, route documents with audit trails)
+- Customer support agents (tier-1 handling, intelligent escalation)
+- Sales workflow assistants (call analysis, follow-up drafting, CRM hygiene)
+- Internal Q&A bots (onboarding, IT, HR, finance support)
+- Workflow automation (multi-step processes across email, CRM, ticketing, billing)
+
+## Our Approach
+- Strategy + execution under one roof (partnership with ProductExec)
+- Production-grade systems with evals, monitoring, fallback paths, runbooks
+- Workflow durability designed for thousands of repeated runs
+- Enterprise governance baked in (audit trails, security review, compliance)
+- Model-agnostic (Claude, OpenAI, open-weight routed by task criticality)
+- Built by operators who've shipped AI systems in production
+
+## Leadership
+Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work.
+
+## Contact & Engagement
+For discovery calls and scoping conversations, visit https://enterpriseaistudio.com
+
+Website: https://enterpriseaistudio.com
+Email: kevin.a.owens@gmail.com
