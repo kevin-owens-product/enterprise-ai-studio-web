@@ -25,9 +25,15 @@
     gtag('js', new Date());
     gtag('config', 'G-DPS2MFLM6Q');
   </script>
+  <script type="module">
+    import {onLCP,onCLS,onINP,onFCP,onTTFB} from 'https://unpkg.com/web-vitals@4?module';
+    function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}
+    onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -54,14 +60,14 @@
     .btn-secondary:hover { border-color: #0a0e1a; }
 
     section { padding: 80px 0; }
-    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-eyebrow { color: #1d4ed8; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
     .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
     .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
 
     .checklist-card { padding: 32px; background: white; border: 1px solid #e8eaed; border-radius: 16px; margin-top: 32px; }
     .checklist-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
     .checklist-pillar { margin-top: 24px; }
-    .checklist-pillar h4 { font-size: 16px; font-weight: 700; color: #2563eb; letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 12px; }
+    .checklist-pillar h4 { font-size: 16px; font-weight: 700; color: #1d4ed8; letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 12px; }
     .checklist-pillar ul { list-style: none; padding: 0; }
     .checklist-pillar li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f3f4f6; color: #1f2937; font-size: 15px; line-height: 1.5; }
     .checklist-pillar li:last-child { border-bottom: none; }
@@ -70,8 +76,8 @@
     .resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
     @media (max-width: 900px) { .resource-grid { grid-template-columns: 1fr; } }
     .resource-card { padding: 28px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
-    .resource-card .meta { color: #2563eb; font-weight: 600; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
-    .resource-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .resource-card .meta { color: #1d4ed8; font-weight: 600; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .resource-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
     .resource-card p { color: #4b5563; font-size: 15px; margin-bottom: 12px; }
     .resource-card a { color: #2563eb; text-decoration: none; font-weight: 600; font-size: 14px; }
     .resource-card a:hover { text-decoration: underline; }
@@ -134,6 +140,8 @@
     </ul>
   </nav>
 </header>
+
+<main>
 
 <section class="hero">
   <div class="container">
@@ -229,22 +237,22 @@
     <div class="resource-grid">
       <div class="resource-card coming">
         <div class="meta">Coming soon</div>
-        <h4>Enterprise AI Scoping Guide</h4>
+        <h3>Enterprise AI Scoping Guide</h3>
         <p>How we run a 30-minute scoping conversation: the questions we ask, the outputs we produce, and the decisions you should be ready to make.</p>
       </div>
       <div class="resource-card coming">
         <div class="meta">Coming soon</div>
-        <h4>AI Governance Starter Pack</h4>
+        <h3>AI Governance Starter Pack</h3>
         <p>Policy template, vendor review template, eval-gating template, and an executive briefing format. Pulled from real governance engagements.</p>
       </div>
       <div class="resource-card coming">
         <div class="meta">Coming soon</div>
-        <h4>Eval Patterns for Production AI</h4>
+        <h3>Eval Patterns for Production AI</h3>
         <p>Patterns we use for ground-truth datasets, judge prompts, regression suites, and shadow-mode rollouts.</p>
       </div>
       <div class="resource-card coming">
         <div class="meta">Coming soon</div>
-        <h4>Production AI Architecture Reference</h4>
+        <h3>Production AI Architecture Reference</h3>
         <p>Reference architecture for retrieval, agent orchestration, observability, and rollback in regulated enterprise environments.</p>
       </div>
     </div>
@@ -261,6 +269,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container">
