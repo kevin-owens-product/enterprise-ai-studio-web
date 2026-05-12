@@ -151,6 +151,32 @@
     .usecase-card h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
     .usecase-card p { color: #4b5563; font-size: 14px; }
 
+    /* Proof and case studies */
+    .proof-band { padding: 40px 0; background: white; border-top: 1px solid #e8eaed; border-bottom: 1px solid #e8eaed; }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .proof-grid { grid-template-columns: 1fr; } }
+    .proof-card { padding: 20px; border: 1px solid #e8eaed; border-radius: 14px; background: #fafbfc; }
+    .proof-card strong { display: block; font-size: 28px; line-height: 1; letter-spacing: -0.02em; color: #0a0e1a; margin-bottom: 8px; }
+    .proof-card span { display: block; font-size: 13px; color: #6b7280; font-weight: 600; line-height: 1.45; }
+    .credibility-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .credibility-pill { padding: 8px 12px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 13px; font-weight: 700; }
+    .case-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 980px) { .case-study-grid { grid-template-columns: 1fr; } }
+    .case-study-card { display: flex; flex-direction: column; min-height: 420px; padding: 28px; background: white; border: 1px solid #e8eaed; border-radius: 16px; }
+    .case-study-card .meta { color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .case-study-card h3 { font-size: 22px; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .case-study-card p { color: #4b5563; font-size: 15px; margin-bottom: 16px; }
+    .case-proof-list { list-style: none; display: grid; gap: 8px; margin-top: 4px; }
+    .case-proof-list li { font-size: 14px; color: #374151; padding-left: 22px; position: relative; }
+    .case-proof-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #2563eb; font-weight: 800; }
+    .case-outcome { margin-top: auto; padding-top: 18px; border-top: 1px solid #e8eaed; font-size: 14px; color: #0a0e1a; font-weight: 700; }
+    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+    @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
+    .quote-card { padding: 24px; border-radius: 16px; background: #0a0e1a; color: white; }
+    .quote-card p { color: #d1d5db; font-size: 15px; }
+    .quote-card strong { display: block; margin-top: 18px; color: #60a5fa; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
+
     /* Differentiation */
     .diff-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
     @media (max-width: 768px) { .diff-list { grid-template-columns: 1fr; } }
@@ -342,6 +368,8 @@
     <div class="logo">Enterprise<span>AI</span>Studio</div>
     <ul class="nav-links cta-only">
       <li><a href="#services">Services</a></li>
+      <li><a href="#proof">Proof</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
       <li><a href="/case-studies">Use Cases</a></li>
       <li><a href="/resources">Resources</a></li>
       <li><a href="/about">About</a></li>
@@ -361,11 +389,98 @@
   </div>
 </section>
 
+<section id="proof" class="proof-band">
+  <div class="container">
+    <div class="proof-grid">
+      <div class="proof-card"><strong>4-8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
+      <div class="proof-card"><strong>250+</strong><span>representative eval examples targeted before regulated or customer-facing launch.</span></div>
+      <div class="proof-card"><strong>0</strong><span>auto-send or auto-approve defaults for sensitive customer, legal, or compliance workflows.</span></div>
+      <div class="proof-card"><strong>30 days</strong><span>post-launch support included with sprint handoff and production runbook.</span></div>
+    </div>
+    <div class="credibility-row" aria-label="Credibility signals">
+      <span class="credibility-pill">CPO-level operating background</span>
+      <span class="credibility-pill">ProductExec strategy partner</span>
+      <span class="credibility-pill">Model-agnostic architecture</span>
+      <span class="credibility-pill">Audit trails and evals by default</span>
+      <span class="credibility-pill">Human approval gates</span>
+    </div>
+  </div>
+</section>
+
 <section class="problem">
   <div class="container">
     <div class="section-eyebrow">The Problem</div>
     <h2 class="section-headline">AI is no longer the bottleneck. Implementation is.</h2>
     <p class="section-body">Most enterprise AI projects stall in the same place: the strategy is clear, the use case is real, but no one in the building can ship a production-grade system. Your engineering team is fully booked. Generic agencies hand you a demo. In-house "AI initiatives" don't survive their first compliance review. Enterprise AI Studio is the implementation team you bring in when the strategy is decided and you need it built — properly, securely, and in production.</p>
+  </div>
+</section>
+
+<section id="case-studies" style="background: #f3f6fb;">
+  <div class="container">
+    <div class="section-eyebrow">Case Studies</div>
+    <h2 class="section-headline">Proof patterns from production AI workflows.</h2>
+    <p class="section-body">These are anonymized and representative case-study patterns. Named customer stories are published only after customers approve disclosure.</p>
+
+    <div class="case-study-grid">
+      <article class="case-study-card">
+        <div class="meta">Customer Support · Implementation Sprint</div>
+        <h3>Tier-1 support agent with human escalation</h3>
+        <p>A B2B support workflow that answers repeat questions from approved knowledge, customer account state, and policy constraints while escalating low-confidence cases to humans.</p>
+        <ul class="case-proof-list">
+          <li>Shadow-mode rollout before customer exposure</li>
+          <li>Retrieval citations on every answer</li>
+          <li>Confidence thresholds and rollback runbook</li>
+          <li>Helpdesk integration instead of a separate chatbot island</li>
+        </ul>
+        <div class="case-outcome">Target result: faster first response with fewer tier-1 tickets reaching senior agents.</div>
+      </article>
+
+      <article class="case-study-card">
+        <div class="meta">Document Intelligence · Legal/Procurement</div>
+        <h3>Contract review and policy deviation detection</h3>
+        <p>A document pipeline that extracts key clauses, compares them against a company playbook, and routes exceptions to legal with source-page provenance.</p>
+        <ul class="case-proof-list">
+          <li>Clause-level precision and recall evals</li>
+          <li>Reviewer-in-the-loop interface</li>
+          <li>No auto-approval on risky language</li>
+          <li>Source trace from risk flag to original document</li>
+        </ul>
+        <div class="case-outcome">Target result: reduce manual review hours while preserving legal control over final decisions.</div>
+      </article>
+
+      <article class="case-study-card">
+        <div class="meta">Sales Workflow · Fractional AI Engineering</div>
+        <h3>Call analysis, CRM hygiene, and follow-up drafts</h3>
+        <p>A post-call workflow that turns transcripts into buyer signals, CRM updates, and sales follow-up drafts while keeping reps in charge of what gets sent.</p>
+        <ul class="case-proof-list">
+          <li>Draft-only outbound messaging</li>
+          <li>CRM writes logged and reversible</li>
+          <li>Rep grading loop for ongoing evals</li>
+          <li>Quarterly quality review against baseline</li>
+        </ul>
+        <div class="case-outcome">Target result: cleaner CRM data and faster follow-up without risky automated sending.</div>
+      </article>
+    </div>
+
+    <div class="quote-grid">
+      <div class="quote-card">
+        <p>"The useful proof is not a flashy demo. It is a working workflow with evals, escalation, and a runbook."</p>
+        <strong>Production launch principle</strong>
+      </div>
+      <div class="quote-card">
+        <p>"Governance belongs in the build, not in a cleanup meeting after the prototype already spread."</p>
+        <strong>Governance principle</strong>
+      </div>
+      <div class="quote-card">
+        <p>"The model is one component. The operating system around it decides whether the AI work survives Monday."</p>
+        <strong>Operating principle</strong>
+      </div>
+    </div>
+
+    <div class="cta-row" style="margin-top: 36px;">
+      <a href="/case-studies" class="btn-secondary">Read the full use-case library</a>
+      <a href="#contact" class="btn-primary">Map your workflow</a>
+    </div>
   </div>
 </section>
 
@@ -705,7 +820,7 @@
 
     /* Section visibility — track which sections enterprise buyers engage with */
     if ('IntersectionObserver' in window) {
-      var sections = ['services', 'process', 'about', 'contact'];
+      var sections = ['proof', 'case-studies', 'services', 'process', 'about', 'contact'];
       var seen = {};
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
