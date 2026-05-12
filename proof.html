@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Proof and Production Readiness | Enterprise AI Studio</title>
+  <meta name="description" content="How Enterprise AI Studio proves AI workflows are production ready with evals, auditability, escalation, monitoring, and launch criteria.">
+  <meta property="og:title" content="AI Proof and Production Readiness | Enterprise AI Studio">
+  <meta property="og:description" content="How Enterprise AI Studio proves AI workflows are production ready with evals, auditability, escalation, monitoring, and launch criteria.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/proof">
+  <meta name="twitter:title" content="AI Proof and Production Readiness | Enterprise AI Studio">
+  <meta name="twitter:description" content="How Enterprise AI Studio proves AI workflows are production ready with evals, auditability, escalation, monitoring, and launch criteria.">
+  <link rel="canonical" href="https://enterpriseaistudio.com/proof">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #0a0e1a; background: #fafbfc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(250, 251, 252, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e8eaed; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { color: #2563eb; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #0a0e1a; }
+    .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
+    @media (max-width: 768px) { .nav { align-items: flex-start; flex-direction: column; gap: 14px; } .nav-links, .nav-links.cta-only { display: flex; flex-wrap: wrap; gap: 10px 16px; width: 100%; } .nav-links a { font-size: 13px; } .btn-nav { padding: 7px 12px; } }
+    .hero { padding: 110px 0 76px; }
+    .eyebrow { color: #2563eb; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 920px; }
+    .subhead { font-size: clamp(18px, 2vw, 22px); color: #4b5563; max-width: 760px; margin-bottom: 34px; }
+    section { padding: 76px 0; }
+    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; line-height: 1.16; letter-spacing: -0.02em; margin-bottom: 18px; max-width: 820px; }
+    .section-body { color: #4b5563; font-size: 18px; max-width: 760px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary, .btn-secondary { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 700; border-radius: 10px; }
+    .btn-primary { background: #2563eb; color: white; }
+    .btn-secondary { background: white; color: #0a0e1a; border: 1px solid #d1d5db; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 42px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 42px; }
+    @media (max-width: 900px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+    .card { background: white; border: 1px solid #e8eaed; border-radius: 16px; padding: 28px; }
+    .card h2, .card h3 { font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+    .card p, .card li { color: #4b5563; font-size: 15px; }
+    .card ul { padding-left: 20px; display: grid; gap: 8px; margin-top: 14px; }
+    .metric { font-size: 34px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: #0a0e1a; margin-bottom: 8px; }
+    .band { background: white; border-top: 1px solid #e8eaed; border-bottom: 1px solid #e8eaed; }
+    .form { display: grid; gap: 18px; max-width: 720px; margin-top: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; color: #374151; }
+    input, select, textarea { width: 100%; padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; background: white; color: #0a0e1a; }
+    textarea { min-height: 140px; resize: vertical; }
+    button { border: 0; cursor: pointer; font: inherit; }
+    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
+    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+    .footer-content .logo { color: white; }
+    .footer-content .logo span { color: #60a5fa; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
+    .footer-links a:hover { color: white; }
+    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you prove an AI workflow is production ready?","acceptedAnswer":{"@type":"Answer","text":"Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria."}},{"@type":"Question","name":"Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?","acceptedAnswer":{"@type":"Answer","text":"No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved."}}]}</script>
+</head>
+<body>
+<header>
+  <nav class="nav container">
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
+    <ul class="nav-links cta-only">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/proof">Proof</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="btn-nav">Book a call</a></li>
+    </ul>
+  </nav>
+</header>
+<main><section class="hero"><div class="container"><div class="eyebrow">Proof</div><h1>How we prove an AI workflow is ready for production.</h1><p class="subhead">Enterprise AI should not be judged by a polished demo. It should be judged by representative evals, source-grounded behavior, human escalation, audit trails, and launch criteria.</p><div class="cta-row"><a class="btn-primary" href="/contact">Review your workflow</a><a class="btn-secondary" href="/case-studies">See case studies</a></div></div></section><section class="band"><div class="container"><h2 class="section-headline">Production readiness signals.</h2><div class="grid-3"><article class="card"><div class="metric">250+</div><h3>Representative eval examples</h3><p>We build workflow-specific eval sets around real business cases, edge cases, and escalation conditions.</p></article><article class="card"><div class="metric">0</div><h3>Unsafe auto-approval defaults</h3><p>Sensitive customer, legal, financial, and compliance flows stay reviewable until explicit approval gates are designed.</p></article><article class="card"><div class="metric">30d</div><h3>Post-launch support window</h3><p>Sprint handoffs include support, runbooks, and launch monitoring instead of leaving teams with a fragile prototype.</p></article></div></div></section><section><div class="container"><div class="eyebrow">AEO answers</div><h2 class="section-headline">What makes an enterprise AI implementation credible?</h2><div class="grid-2"><article class="card"><h3>It is grounded in approved data.</h3><p>Answers cite source systems, documents, or workflow state. Retrieval and permissions are tested before launch.</p></article><article class="card"><h3>It can say no.</h3><p>Low confidence, missing context, and policy-sensitive requests route to humans rather than creating false certainty.</p></article><article class="card"><h3>It is observable.</h3><p>Inputs, outputs, tools, approvals, and failure modes are logged in a way operators can inspect.</p></article><article class="card"><h3>It has a rollback path.</h3><p>Launch plans include ramp criteria, monitoring, and a clear path to disable or narrow behavior.</p></article></div></div></section></main>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div><div class="logo">Enterprise<span>AI</span>Studio</div><p style="margin-top:8px;font-size:14px;">Production AI for the workflows that matter.</p></div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/proof">Proof</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="https://productexec.co" target="_blank" rel="noopener">ProductExec</a>
+      </div>
+    </div>
+    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+  </div>
+</footer>
+</body>
+</html>

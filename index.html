@@ -248,7 +248,7 @@
       "@type": "ContactPoint",
       "contactType": "Customer Service",
       "email": "kevin.a.owens@gmail.com",
-      "url": "https://enterpriseaistudio.com/#contact"
+      "url": "https://enterpriseaistudio.com/contact"
     },
     "sameAs": [
       "https://productexec.co"
@@ -365,15 +365,14 @@
 
 <header>
   <nav class="nav container">
-    <div class="logo">Enterprise<span>AI</span>Studio</div>
+    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
     <ul class="nav-links cta-only">
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#proof">Proof</a></li>
-      <li><a href="/#case-studies">Case Studies</a></li>
-      <li><a href="/case-studies">Use Cases</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/proof">Proof</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/resources">Resources</a></li>
       <li><a href="/about">About</a></li>
-      <li><a href="/#contact" class="btn-nav">Book a call</a></li>
+      <li><a href="/contact" class="btn-nav">Book a call</a></li>
     </ul>
   </nav>
 </header>
@@ -383,8 +382,8 @@
     <h1>Production AI for enterprise workflows.</h1>
     <p class="subhead">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
     <div class="cta-row">
-      <a href="#contact" class="btn-primary">Book a discovery call</a>
-      <a href="#services" class="btn-secondary">See our services</a>
+      <a href="/contact" class="btn-primary">Book a discovery call</a>
+      <a href="/services" class="btn-secondary">See our services</a>
     </div>
   </div>
 </section>
@@ -478,8 +477,8 @@
     </div>
 
     <div class="cta-row" style="margin-top: 36px;">
-      <a href="/case-studies" class="btn-secondary">Read the full use-case library</a>
-      <a href="#contact" class="btn-primary">Map your workflow</a>
+      <a href="/case-studies" class="btn-secondary">Read the full case-study library</a>
+      <a href="/contact" class="btn-primary">Map your workflow</a>
     </div>
   </div>
 </section>
@@ -734,13 +733,12 @@
       </div>
       <div class="footer-links">
         <a href="/">Home</a>
-        <a href="/#services">Services</a>
-        <a href="/#proof">Proof</a>
-        <a href="/#case-studies">Case Studies</a>
-        <a href="/case-studies">Use Cases</a>
+        <a href="/services">Services</a>
+        <a href="/proof">Proof</a>
+        <a href="/case-studies">Case Studies</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
-        <a href="/#contact">Contact</a>
+        <a href="/contact">Contact</a>
         <a href="https://productexec.co" target="_blank" rel="noopener">ProductExec</a>
       </div>
     </div>
@@ -812,7 +810,7 @@
       }
 
       /* Service section anchor links (Scope a sprint, Discuss retainer, etc.) */
-      if (href === '#contact' || href === '/#contact') {
+      if (href === '/contact') {
         var section = el.closest('section');
         var sectionId = section ? (section.id || 'unknown') : 'unknown';
         track('service_section_click', { link_text: text, source_section: sectionId });
