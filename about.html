@@ -48,7 +48,7 @@
     .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
     .nav-links a:hover { color: #0a0e1a; }
     .btn-nav { padding: 8px 18px; background: #0a0e1a; color: white !important; border-radius: 8px; font-weight: 600 !important; }
-    @media (max-width: 768px) { .nav-links { display: none; } .nav-links.cta-only { display: flex; } .nav-links.cta-only li:not(:last-child) { display: none; } }
+    @media (max-width: 768px) { .nav { align-items: flex-start; flex-direction: column; gap: 14px; } .nav-links, .nav-links.cta-only { display: flex; flex-wrap: wrap; gap: 10px 16px; width: 100%; } .nav-links.cta-only li:not(:last-child) { display: list-item; } .nav-links a { font-size: 13px; } .btn-nav { padding: 7px 12px; } }
 
     .hero { padding: 120px 0 80px; }
     .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 900px; }
@@ -133,8 +133,11 @@
     <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
     <ul class="nav-links cta-only">
       <li><a href="/#services">Services</a></li>
+      <li><a href="/#proof">Proof</a></li>
+      <li><a href="/#case-studies">Case Studies</a></li>
       <li><a href="/case-studies">Use Cases</a></li>
       <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
       <li><a href="/#contact" class="btn-nav">Book a call</a></li>
     </ul>
   </nav>
@@ -239,11 +242,13 @@
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/#services">Services</a>
+        <a href="/#proof">Proof</a>
+        <a href="/#case-studies">Case Studies</a>
         <a href="/case-studies">Use Cases</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/#contact">Contact</a>
-        <a href="https://productexec.co" target="_blank">ProductExec</a>
+        <a href="https://productexec.co" target="_blank" rel="noopener">ProductExec</a>
       </div>
     </div>
     <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
