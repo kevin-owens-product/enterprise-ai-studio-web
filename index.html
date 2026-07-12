@@ -26,8 +26,8 @@
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'https://unpkg.com/web-vitals@4?module';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
   <link rel="stylesheet" href="/assets/site.css">
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
@@ -161,26 +161,75 @@
 
 <section class="hero">
   <div class="container">
-    <p class="eyebrow">Production AI implementation</p>
-    <h1>Production AI for enterprise workflows.</h1>
-    <p class="lede">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
-    <div class="cta-row">
-      <a href="/contact" class="btn btn-on-navy">Contact the studio</a>
-      <a href="/services" class="btn btn-ghost">See our services</a>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Production AI implementation</p>
+        <h1>Production AI for enterprise workflows.</h1>
+        <p class="lede">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
+        <div class="cta-row">
+          <a href="/contact" class="btn btn-on-navy">Contact the studio</a>
+          <a href="/services" class="btn btn-ghost">See our services</a>
+        </div>
+      </div>
+      <figure class="loop-figure">
+        <svg viewBox="0 0 440 396" role="img" aria-labelledby="loop-title loop-desc">
+          <title id="loop-title">The delivery loop</title>
+          <desc id="loop-desc">Schematic of how every engagement ships: workflow, then evals, then human gates, then production — with monitoring feeding back into evals.</desc>
+          <defs>
+            <marker id="loop-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#60A5FA"/>
+            </marker>
+          </defs>
+          <!-- connectors -->
+          <line x1="170" y1="76" x2="170" y2="103" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <line x1="170" y1="176" x2="170" y2="203" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <line x1="170" y1="276" x2="170" y2="303" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <!-- feedback loop: production monitoring feeds the eval set -->
+          <path d="M 324 343 C 384 343 408 331 408 296 L 408 190 C 408 155 384 143 336 143"
+                fill="none" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 5" marker-end="url(#loop-arrow)" opacity=".85"/>
+          <text x="421" y="243" fill="#A9B2C6" font-family="'JetBrains Mono', Menlo, monospace" font-size="10" letter-spacing=".08em" text-anchor="middle" transform="rotate(-90 421 243)">MONITORING FEEDS EVALS</text>
+          <!-- nodes -->
+          <g>
+            <rect x="16" y="10" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="34" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">01</text>
+            <text x="64" y="34" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Workflow</text>
+            <text x="64" y="56" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">One high-value workflow, scoped end to end</text>
+          </g>
+          <g>
+            <rect x="16" y="110" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="134" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">02</text>
+            <text x="64" y="134" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Evals</text>
+            <text x="64" y="156" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Representative examples set the launch bar</text>
+          </g>
+          <g>
+            <rect x="16" y="210" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="234" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">03</text>
+            <text x="64" y="234" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Human gates</text>
+            <text x="64" y="256" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Low-confidence and sensitive cases escalate</text>
+          </g>
+          <g>
+            <rect x="16" y="310" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="#5BC49A"/>
+            <text x="34" y="334" fill="#5BC49A" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">04</text>
+            <text x="64" y="334" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Production</text>
+            <text x="64" y="356" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Monitoring, runbook, and rollback criteria</text>
+          </g>
+        </svg>
+        <figcaption>The delivery loop — how every engagement ships.</figcaption>
+      </figure>
+    </div>
+    <div class="hero-stats" aria-label="Production readiness signals">
+      <div class="hero-stat"><strong>4–8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
+      <div class="hero-stat"><strong>250+</strong><span>representative eval examples before a regulated or customer-facing launch.</span></div>
+      <div class="hero-stat"><strong>Zero</strong><span>auto-send or auto-approve defaults on sensitive workflows — humans stay in the loop.</span></div>
+      <div class="hero-stat"><strong>30 days</strong><span>of post-launch support included with every sprint handoff and runbook.</span></div>
     </div>
   </div>
 </section>
 
-<section id="proof" class="band" style="padding: 48px 0;">
+<section id="proof" class="band" style="padding: 40px 0;">
   <div class="container">
-    <h2 class="visually-hidden">Production readiness signals</h2>
-    <div class="grid-4">
-      <div class="card card-sm stat-card"><strong>4–8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
-      <div class="card card-sm stat-card"><strong>250+</strong><span>representative eval examples before a regulated or customer-facing launch.</span></div>
-      <div class="card card-sm stat-card"><strong>Zero</strong><span>auto-send or auto-approve defaults on sensitive workflows — humans stay in the loop.</span></div>
-      <div class="card card-sm stat-card"><strong>30 days</strong><span>of post-launch support included with every sprint handoff and runbook.</span></div>
-    </div>
-    <div class="badge-row" aria-label="Credibility signals">
+    <h2 class="visually-hidden">Credibility signals</h2>
+    <div class="badge-row" style="margin-top:0;" aria-label="Credibility signals">
       <span class="badge">CPO-level operating background</span>
       <span class="badge">ProductExec strategy partner</span>
       <span class="badge">Model-agnostic architecture</span>
@@ -275,7 +324,7 @@
 
       <div class="card card-hover">
         <h3>AI Implementation Sprints</h3>
-        <p class="card-sub">4–8 weeks · Fixed scope</p>
+        <p class="card-sub">4–8 weeks · <span class="fixed-note">Fixed scope</span></p>
         <p style="margin-bottom:16px;">A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.</p>
         <p style="margin-bottom:24px;"><strong style="color:var(--ink);">Examples:</strong> support agents, document review, internal Q&amp;A, sales call analysis, workflow automation.</p>
         <a class="card-link" href="/services/ai-implementation-sprints">Scope a sprint</a>
@@ -291,12 +340,24 @@
 
       <div class="card card-hover">
         <h3>Enterprise AI Governance</h3>
-        <p class="card-sub">4–6 weeks · Fixed fee</p>
+        <p class="card-sub">4–6 weeks · <span class="fixed-note">Fixed fee</span></p>
         <p style="margin-bottom:16px;">AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.</p>
         <p style="margin-bottom:24px;"><strong style="color:var(--ink);">Includes:</strong> governance design, security review, vendor policy, eval infrastructure, executive briefing.</p>
         <a class="card-link" href="/services/enterprise-ai-governance">Review your readiness</a>
       </div>
 
+    </div>
+
+    <div class="usecase-strip" id="use-cases">
+      <h3>What we build</h3>
+      <ul class="chip-list">
+        <li>Internal knowledge assistants <span>· policies, SOPs, contracts</span></li>
+        <li>Document intelligence <span>· review, classify, route</span></li>
+        <li>Customer support agents <span>· tier-1 with escalation</span></li>
+        <li>Sales workflow assistants <span>· call analysis, CRM hygiene</span></li>
+        <li>Internal Q&amp;A bots <span>· IT, HR, finance, onboarding</span></li>
+        <li>Workflow automation <span>· email, CRM, ticketing, billing</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -340,51 +401,54 @@
   </div>
 </section>
 
-<section id="use-cases" class="band">
-  <div class="container">
-    <p class="section-eyebrow">Use Cases</p>
-    <h2 class="section-headline">What we build.</h2>
-    <div class="grid-2">
-      <div class="card card-sm"><h3>Internal knowledge assistants</h3><p>Answer questions from policies, SOPs, customer history, and contracts.</p></div>
-      <div class="card card-sm"><h3>Document intelligence</h3><p>Review, classify, and route inbound documents with audit trails.</p></div>
-      <div class="card card-sm"><h3>Customer support agents</h3><p>Handle tier-1 tickets, escalate intelligently, learn from feedback.</p></div>
-      <div class="card card-sm"><h3>Sales workflow assistants</h3><p>Call analysis, follow-up drafting, CRM hygiene.</p></div>
-      <div class="card card-sm"><h3>Internal Q&amp;A bots</h3><p>Onboarding, IT, HR, and finance support across the organization.</p></div>
-      <div class="card card-sm"><h3>Workflow automation</h3><p>Multi-step processes across email, CRM, ticketing, billing.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="why-us">
   <div class="container">
     <p class="section-eyebrow">Why Us</p>
     <h2 class="section-headline">Why teams choose us.</h2>
-    <div class="grid-2">
-      <div class="card card-sm">
-        <h3>Strategy + execution under one roof</h3>
-        <p>Through our partnership with <a href="https://productexec.co" style="color:var(--accent-text);">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
-      </div>
-      <div class="card card-sm">
-        <h3>Production-grade, not demo-grade</h3>
-        <p>Every system ships with evals, monitoring, fallback paths, and runbooks. No magic prompts that break next week.</p>
-      </div>
-      <div class="card card-sm">
-        <h3>Workflow durability</h3>
-        <p>Designed for thousands of repeated runs, not impressive single demos.</p>
-      </div>
-      <div class="card card-sm">
-        <h3>Enterprise governance baked in</h3>
-        <p>Audit trails, security review, escalation, and compliance from day one.</p>
-      </div>
-      <div class="card card-sm">
-        <h3>Model-agnostic</h3>
-        <p>Claude, OpenAI, open-weight; routed by task criticality, not vendor loyalty.</p>
-      </div>
-      <div class="card card-sm">
-        <h3>Built by operators</h3>
-        <p>We've run the systems we ship. We know what production really means.</p>
-      </div>
-    </div>
+    <ol class="why-list">
+      <li>
+        <span class="why-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Strategy + execution under one roof</h3>
+          <p>Through our partnership with <a href="https://productexec.co" style="color:var(--accent-text);">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Production-grade, not demo-grade</h3>
+          <p>Every system ships with evals, monitoring, fallback paths, and runbooks. No magic prompts that break next week.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Workflow durability</h3>
+          <p>Designed for thousands of repeated runs, not impressive single demos.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Enterprise governance baked in</h3>
+          <p>Audit trails, security review, escalation, and compliance from day one.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-num" aria-hidden="true">05</span>
+        <div>
+          <h3>Model-agnostic</h3>
+          <p>Claude, OpenAI, open-weight; routed by task criticality, not vendor loyalty.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-num" aria-hidden="true">06</span>
+        <div>
+          <h3>Built by operators</h3>
+          <p>We've run the systems we ship. We know what production really means.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 

@@ -26,8 +26,8 @@
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'https://unpkg.com/web-vitals@4?module';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
   <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you prove an AI workflow is production ready?","acceptedAnswer":{"@type":"Answer","text":"Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria."}},{"@type":"Question","name":"Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?","acceptedAnswer":{"@type":"Answer","text":"No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved."}}]}</script>
 </head>
@@ -59,12 +59,58 @@
 
 <section class="hero">
   <div class="container">
-    <p class="eyebrow">Proof</p>
-    <h1>How we prove an AI workflow is ready for production.</h1>
-    <p class="lede">Enterprise AI should not be judged by a polished demo. It should be judged by representative evals, source-grounded behavior, human escalation, audit trails, and launch criteria.</p>
-    <div class="cta-row">
-      <a class="btn btn-on-navy" href="/contact">Contact the studio</a>
-      <a class="btn btn-ghost" href="/case-studies">See case studies</a>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Proof</p>
+        <h1>How we prove an AI workflow is ready for production.</h1>
+        <p class="lede">Enterprise AI should not be judged by a polished demo. It should be judged by representative evals, source-grounded behavior, human escalation, audit trails, and launch criteria.</p>
+        <div class="cta-row">
+          <a class="btn btn-on-navy" href="/contact">Contact the studio</a>
+          <a class="btn btn-ghost" href="/case-studies">See case studies</a>
+        </div>
+      </div>
+      <figure class="loop-figure loop-compact">
+        <svg viewBox="0 0 440 396" role="img" aria-labelledby="loop-title loop-desc">
+          <title id="loop-title">The delivery loop</title>
+          <desc id="loop-desc">Schematic of how every engagement ships: workflow, then evals, then human gates, then production — with monitoring feeding back into evals.</desc>
+          <defs>
+            <marker id="loop-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#60A5FA"/>
+            </marker>
+          </defs>
+          <line x1="170" y1="76" x2="170" y2="103" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <line x1="170" y1="176" x2="170" y2="203" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <line x1="170" y1="276" x2="170" y2="303" stroke="#60A5FA" stroke-width="1.5" marker-end="url(#loop-arrow)"/>
+          <path d="M 324 343 C 384 343 408 331 408 296 L 408 190 C 408 155 384 143 336 143"
+                fill="none" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 5" marker-end="url(#loop-arrow)" opacity=".85"/>
+          <text x="421" y="243" fill="#A9B2C6" font-family="'JetBrains Mono', Menlo, monospace" font-size="10" letter-spacing=".08em" text-anchor="middle" transform="rotate(-90 421 243)">MONITORING FEEDS EVALS</text>
+          <g>
+            <rect x="16" y="10" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="34" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">01</text>
+            <text x="64" y="34" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Workflow</text>
+            <text x="64" y="56" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">One high-value workflow, scoped end to end</text>
+          </g>
+          <g>
+            <rect x="16" y="110" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="134" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">02</text>
+            <text x="64" y="134" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Evals</text>
+            <text x="64" y="156" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Representative examples set the launch bar</text>
+          </g>
+          <g>
+            <rect x="16" y="210" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)"/>
+            <text x="34" y="234" fill="#60A5FA" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">03</text>
+            <text x="64" y="234" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Human gates</text>
+            <text x="64" y="256" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Low-confidence and sensitive cases escalate</text>
+          </g>
+          <g>
+            <rect x="16" y="310" width="308" height="66" rx="12" fill="rgba(255,255,255,.04)" stroke="#5BC49A"/>
+            <text x="34" y="334" fill="#5BC49A" font-family="'JetBrains Mono', Menlo, monospace" font-size="12" font-weight="600">04</text>
+            <text x="64" y="334" fill="#EDEFF4" font-family="Inter, sans-serif" font-size="14" font-weight="600">Production</text>
+            <text x="64" y="356" fill="#A9B2C6" font-family="Inter, sans-serif" font-size="11.5">Monitoring, runbook, and rollback criteria</text>
+          </g>
+        </svg>
+        <figcaption>The delivery loop — how every engagement ships.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -88,6 +134,49 @@
         <h3 style="font-size:18px;">Post-launch support window</h3>
         <p>Sprint handoffs include support, runbooks, and launch monitoring instead of leaving teams with a fragile prototype.</p>
       </article>
+    </div>
+
+    <div class="card eval-excerpt">
+      <div class="eval-head">
+        <h3>A sprint's eval plan, in miniature</h3>
+        <span class="eval-tag">Sample artifact · excerpt</span>
+      </div>
+      <div class="eval-table-wrap">
+        <table class="eval-table">
+          <caption class="visually-hidden">Excerpt of the eval-plan structure every sprint ships with</caption>
+          <thead>
+            <tr><th scope="col">Eval dimension</th><th scope="col">What we test</th><th scope="col">Gate</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">"Good enough" definition</th>
+              <td>Written so an engineer can build a test for it — acceptance criteria per workflow step.</td>
+              <td><span class="gate">Pre-build</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Failure behavior</th>
+              <td>The system escalates, asks, or refuses when it isn't confident.</td>
+              <td><span class="gate">Launch gate</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Unacceptable errors</th>
+              <td>Defined up front (e.g. wrong dollar amounts, wrong customer) and blocked, not tolerated.</td>
+              <td><span class="gate block">Hard block</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Output judgment</th>
+              <td>A named domain expert, ops lead, or end users grade outputs during the build phase.</td>
+              <td><span class="gate">Build phase</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Post-launch quality</th>
+              <td>Quality tracked continuously after launch, not only at sprint review.</td>
+              <td><span class="gate">Post-launch</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="eval-foot">Structure shown, not results — the examples, thresholds, and error classes are defined per engagement during scoping. The <a href="/resources">readiness checklist</a> asks the same questions this plan answers.</p>
     </div>
   </div>
 </section>
