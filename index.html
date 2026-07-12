@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise AI Studio — Production AI Implementation for Enterprise Workflows</title>
+  <title>Enterprise AI Studio — Production AI implementation</title>
   <meta name="description" content="We design, build, and operate production AI systems for enterprise teams. Implementation sprints, fractional AI engineering, and governance frameworks.">
-  <meta property="og:title" content="Enterprise AI Studio">
+  <meta property="og:title" content="Enterprise AI Studio — Production AI implementation">
   <meta property="og:description" content="Production AI implementation for enterprise workflows.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/">
@@ -13,228 +13,22 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Enterprise AI Studio — Production AI Implementation">
+  <meta name="twitter:title" content="Enterprise AI Studio — Production AI implementation">
   <meta name="twitter:description" content="We design, build, and operate production AI systems for enterprise teams.">
   <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
   <link rel="canonical" href="https://enterpriseaistudio.com/">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DPS2MFLM6Q');
-  </script>
-  <script type="module">
-    import {onLCP,onCLS,onINP,onFCP,onTTFB} from 'https://unpkg.com/web-vitals@4?module';
-    function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}
-    onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'https://unpkg.com/web-vitals@4?module';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #0a0e1a;
-      background: #fafbfc;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-
-    /* Header */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(250, 251, 252, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e8eaed;
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
-    .logo span { color: #2563eb; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { color: #4b5563; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
-    .nav-links a:hover { color: #0a0e1a; }
-    .btn-nav {
-      padding: 8px 18px; background: #0a0e1a; color: white !important;
-      border-radius: 8px; font-weight: 600 !important;
-    }
-    @media (max-width: 768px) { .nav { align-items: flex-start; flex-direction: column; gap: 14px; } .nav-links, .nav-links.cta-only { display: flex; flex-wrap: wrap; gap: 10px 16px; width: 100%; } .nav-links.cta-only li:not(:last-child) { display: list-item; } .nav-links a { font-size: 13px; } .btn-nav { padding: 7px 12px; } }
-
-    /* Hero */
-    .hero { padding: 120px 0 100px; }
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-      max-width: 900px;
-    }
-    .hero p.subhead {
-      font-size: clamp(18px, 2vw, 22px);
-      color: #4b5563;
-      margin-bottom: 40px;
-      max-width: 720px;
-    }
-    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 10px;
-      transition: background 0.15s, transform 0.15s;
-    }
-    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-block;
-      padding: 14px 28px;
-      background: white;
-      color: #0a0e1a;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      transition: border-color 0.15s;
-    }
-    .btn-secondary:hover { border-color: #0a0e1a; }
-
-    /* Section base */
-    section { padding: 80px 0; }
-    .section-eyebrow { color: #2563eb; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
-    .section-headline { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 24px; max-width: 800px; }
-    .section-body { font-size: 18px; color: #4b5563; max-width: 720px; }
-
-    /* Problem section */
-    .problem { background: #0a0e1a; color: white; }
-    .problem .section-eyebrow { color: #60a5fa; }
-    .problem .section-headline { color: white; }
-    .problem .section-body { color: #9ca3af; }
-
-    /* Services grid */
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
-    .service-card {
-      background: white;
-      border: 1px solid #e8eaed;
-      border-radius: 16px;
-      padding: 32px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .service-card:hover { border-color: #2563eb; transform: translateY(-2px); }
-    .service-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em; }
-    .service-card .subhead { color: #2563eb; font-weight: 600; font-size: 14px; margin-bottom: 16px; }
-    .service-card p { color: #4b5563; font-size: 15px; margin-bottom: 16px; }
-    .service-card .examples { font-size: 14px; color: #6b7280; margin-bottom: 24px; }
-    .service-card a { color: #2563eb; font-weight: 600; text-decoration: none; font-size: 15px; }
-    .service-card a::after { content: ' →'; }
-
-    /* Process timeline */
-    .process-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    @media (max-width: 900px) { .process-list { grid-template-columns: 1fr; } }
-    .process-step { padding: 24px; border-left: 3px solid #2563eb; }
-    .process-step .num { color: #2563eb; font-weight: 700; font-size: 14px; margin-bottom: 8px; }
-    .process-step h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .process-step p { color: #4b5563; font-size: 15px; }
-
-    /* Use cases */
-    .usecases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
-    @media (max-width: 768px) { .usecases-grid { grid-template-columns: 1fr; } }
-    .usecase-card { padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px; }
-    .usecase-card h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-    .usecase-card p { color: #4b5563; font-size: 14px; }
-
-    /* Proof and case studies */
-    .proof-band { padding: 40px 0; background: white; border-top: 1px solid #e8eaed; border-bottom: 1px solid #e8eaed; }
-    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    @media (max-width: 900px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .proof-grid { grid-template-columns: 1fr; } }
-    .proof-card { padding: 20px; border: 1px solid #e8eaed; border-radius: 14px; background: #fafbfc; }
-    .proof-card strong { display: block; font-size: 28px; line-height: 1; letter-spacing: -0.02em; color: #0a0e1a; margin-bottom: 8px; }
-    .proof-card span { display: block; font-size: 13px; color: #6b7280; font-weight: 600; line-height: 1.45; }
-    .credibility-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .credibility-pill { padding: 8px 12px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 13px; font-weight: 700; }
-    .case-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    @media (max-width: 980px) { .case-study-grid { grid-template-columns: 1fr; } }
-    .case-study-card { display: flex; flex-direction: column; min-height: 420px; padding: 28px; background: white; border: 1px solid #e8eaed; border-radius: 16px; }
-    .case-study-card .meta { color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
-    .case-study-card h3 { font-size: 22px; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 14px; }
-    .case-study-card p { color: #4b5563; font-size: 15px; margin-bottom: 16px; }
-    .case-proof-list { list-style: none; display: grid; gap: 8px; margin-top: 4px; }
-    .case-proof-list li { font-size: 14px; color: #374151; padding-left: 22px; position: relative; }
-    .case-proof-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #2563eb; font-weight: 800; }
-    .case-outcome { margin-top: auto; padding-top: 18px; border-top: 1px solid #e8eaed; font-size: 14px; color: #0a0e1a; font-weight: 700; }
-    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
-    @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
-    .quote-card { padding: 24px; border-radius: 16px; background: #0a0e1a; color: white; }
-    .quote-card p { color: #d1d5db; font-size: 15px; }
-    .quote-card strong { display: block; margin-top: 18px; color: #60a5fa; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
-
-    /* Differentiation */
-    .diff-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
-    @media (max-width: 768px) { .diff-list { grid-template-columns: 1fr; } }
-    .diff-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .diff-item p { color: #4b5563; font-size: 15px; }
-
-    /* FAQ */
-    .faq-list { margin-top: 48px; max-width: 760px; }
-    .faq-item { border-bottom: 1px solid #e8eaed; padding: 24px 0; }
-    .faq-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .faq-item p { color: #4b5563; font-size: 16px; }
-
-    /* CTA banner */
-    .cta-banner { background: #2563eb; color: white; text-align: center; padding: 80px 24px; border-radius: 24px; margin: 40px 0; }
-    .cta-banner h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
-    .cta-banner p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .cta-banner .btn-primary { background: white; color: #2563eb; }
-    .cta-banner .btn-primary:hover { background: #f3f4f6; }
-
-    /* Contact form */
-    .contact-form-wrap { max-width: 680px; margin: 0 auto; }
-    .contact-form { display: grid; gap: 20px; margin-top: 40px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
-    .form-field { display: flex; flex-direction: column; gap: 6px; }
-    .form-field label { font-size: 14px; font-weight: 600; color: #374151; }
-    .form-field input, .form-field select, .form-field textarea {
-      padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 8px;
-      font-family: inherit; font-size: 15px; color: #0a0e1a; background: white;
-      transition: border-color 0.15s, box-shadow 0.15s; outline: none;
-    }
-    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-      border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-    }
-    .form-field textarea { resize: vertical; min-height: 120px; }
-    .form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
-    .form-submit { text-align: center; margin-top: 8px; }
-    .btn-form-submit {
-      padding: 14px 40px; background: #2563eb; color: white; border: none;
-      font-family: inherit; font-size: 16px; font-weight: 600; border-radius: 10px;
-      cursor: pointer; transition: background 0.15s, transform 0.15s;
-    }
-    .btn-form-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
-    .btn-form-submit:disabled { background: #9ca3af; transform: none; cursor: not-allowed; }
-    .form-status { margin-top: 16px; padding: 14px 18px; border-radius: 8px; font-size: 15px; font-weight: 500; display: none; }
-    .form-status.success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
-    .form-status.error { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
-
-    /* Footer */
-    footer { background: #0a0e1a; color: #9ca3af; padding: 48px 0 32px; }
-    .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
-    .footer-content .logo { color: white; }
-    .footer-content .logo span { color: #60a5fa; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; }
-    .footer-links a:hover { color: white; }
-    .footer-tagline { font-size: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #1f2937; }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/assets/site.css">
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
@@ -242,16 +36,23 @@
     "@type": "Organization",
     "name": "Enterprise AI Studio",
     "url": "https://enterpriseaistudio.com",
-    "logo": "https://enterpriseaistudio.com/logo.png",
+    "logo": "https://enterpriseaistudio.com/og-image.png",
     "description": "Production AI implementation for enterprise workflows. We design, build, and operate AI systems that scale in production.",
+    "founder": {
+      "@type": "Person",
+      "name": "Kevin Owens",
+      "url": "https://kevinowens.com"
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
-      "email": "kevin.a.owens@gmail.com",
       "url": "https://enterpriseaistudio.com/contact"
     },
     "sameAs": [
-      "https://productexec.co"
+      "https://kevinowens.com",
+      "https://productexec.co",
+      "https://smartbizaihub.com",
+      "https://www.linkedin.com/in/kevinaowens"
     ],
     "foundingDate": "2025"
   }
@@ -263,24 +64,16 @@
     "@type": "LocalBusiness",
     "name": "Enterprise AI Studio",
     "url": "https://enterpriseaistudio.com",
-    "image": "https://enterpriseaistudio.com/logo.png",
+    "image": "https://enterpriseaistudio.com/og-image.png",
     "description": "Production AI implementation consulting for enterprise teams",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Remote",
-      "addressCountry": "US"
-    },
-    "email": "kevin.a.owens@gmail.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "Remote", "addressCountry": "US" },
     "offers": [
       {
         "@type": "Service",
         "@id": "https://enterpriseaistudio.com/services/ai-implementation-sprints",
         "name": "AI Implementation Sprints",
         "description": "A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4-8 weeks, fixed scope.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Enterprise AI Studio"
-        },
+        "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
         "priceRange": "$40,000 - $120,000",
         "areaServed": "US"
       },
@@ -289,10 +82,7 @@
         "@id": "https://enterpriseaistudio.com/services/fractional-ai-engineering",
         "name": "Fractional AI Engineering",
         "description": "Dedicated senior AI engineering bandwidth on retainer. Ongoing engagement, 20-80 hours per month.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Enterprise AI Studio"
-        },
+        "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
         "priceRange": "$8,000 - $30,000 per month",
         "areaServed": "US"
       },
@@ -301,10 +91,7 @@
         "@id": "https://enterpriseaistudio.com/services/enterprise-ai-governance",
         "name": "Enterprise AI Governance",
         "description": "AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure. 4-6 weeks, fixed fee.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Enterprise AI Studio"
-        },
+        "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
         "priceRange": "$25,000 - $60,000",
         "areaServed": "US"
       }
@@ -320,42 +107,27 @@
       {
         "@type": "Question",
         "name": "How is Enterprise AI Studio different from ProductExec?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation." }
       },
       {
         "@type": "Question",
         "name": "Do you replace our internal engineering team?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work." }
       },
       {
         "@type": "Question",
         "name": "Which models do you use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate." }
       },
       {
         "@type": "Question",
         "name": "What's a typical engagement size?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K." }
       },
       {
         "@type": "Question",
         "name": "Can you sign an NDA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We sign mutual NDAs before any scoping conversation."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We sign mutual NDAs before any scoping conversation." }
       }
     ]
   }
@@ -363,105 +135,117 @@
 </head>
 <body>
 
-<header>
-  <nav class="nav container">
-    <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">Enterprise<span>AI</span>Studio</a></div>
-    <ul class="nav-links cta-only">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Main">
+    <a class="logo" href="/">Enterprise<span>AI</span>Studio</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="visually-hidden">Menu</span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/resources">Resources</a></li>
       <li><a href="/about">About</a></li>
-      <li><a href="/contact" class="btn-nav">Book a call</a></li>
+      <li><a href="/contact" class="btn-nav">Contact the studio</a></li>
     </ul>
   </nav>
 </header>
 
+<main id="main">
+
 <section class="hero">
   <div class="container">
+    <p class="eyebrow">Production AI implementation</p>
     <h1>Production AI for enterprise workflows.</h1>
-    <p class="subhead">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
+    <p class="lede">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
     <div class="cta-row">
-      <a href="/contact" class="btn-primary">Book a discovery call</a>
-      <a href="/services" class="btn-secondary">See our services</a>
+      <a href="/contact" class="btn btn-on-navy">Contact the studio</a>
+      <a href="/services" class="btn btn-ghost">See our services</a>
     </div>
   </div>
 </section>
 
-<section id="proof" class="proof-band">
+<section id="proof" class="band" style="padding: 48px 0;">
   <div class="container">
-    <div class="proof-grid">
-      <div class="proof-card"><strong>4-8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
-      <div class="proof-card"><strong>250+</strong><span>representative eval examples targeted before regulated or customer-facing launch.</span></div>
-      <div class="proof-card"><strong>0</strong><span>auto-send or auto-approve defaults for sensitive customer, legal, or compliance workflows.</span></div>
-      <div class="proof-card"><strong>30 days</strong><span>post-launch support included with sprint handoff and production runbook.</span></div>
+    <h2 class="visually-hidden">Production readiness signals</h2>
+    <div class="grid-4">
+      <div class="card card-sm stat-card"><strong>4–8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
+      <div class="card card-sm stat-card"><strong>250+</strong><span>representative eval examples before a regulated or customer-facing launch.</span></div>
+      <div class="card card-sm stat-card"><strong>Zero</strong><span>auto-send or auto-approve defaults on sensitive workflows — humans stay in the loop.</span></div>
+      <div class="card card-sm stat-card"><strong>30 days</strong><span>of post-launch support included with every sprint handoff and runbook.</span></div>
     </div>
-    <div class="credibility-row" aria-label="Credibility signals">
-      <span class="credibility-pill">CPO-level operating background</span>
-      <span class="credibility-pill">ProductExec strategy partner</span>
-      <span class="credibility-pill">Model-agnostic architecture</span>
-      <span class="credibility-pill">Audit trails and evals by default</span>
-      <span class="credibility-pill">Human approval gates</span>
+    <div class="badge-row" aria-label="Credibility signals">
+      <span class="badge">CPO-level operating background</span>
+      <span class="badge">ProductExec strategy partner</span>
+      <span class="badge">Model-agnostic architecture</span>
+      <span class="badge">Audit trails and evals by default</span>
+      <span class="badge">Human approval gates</span>
     </div>
   </div>
 </section>
 
-<section class="problem">
+<section class="navy-band" id="problem">
   <div class="container">
-    <div class="section-eyebrow">The Problem</div>
+    <p class="section-eyebrow">The Problem</p>
     <h2 class="section-headline">AI is no longer the bottleneck. Implementation is.</h2>
     <p class="section-body">Most enterprise AI projects stall in the same place: the strategy is clear, the use case is real, but no one in the building can ship a production-grade system. Your engineering team is fully booked. Generic agencies hand you a demo. In-house "AI initiatives" don't survive their first compliance review. Enterprise AI Studio is the implementation team you bring in when the strategy is decided and you need it built — properly, securely, and in production.</p>
   </div>
 </section>
 
-<section id="case-studies" style="background: #f3f6fb;">
+<section id="case-studies">
   <div class="container">
-    <div class="section-eyebrow">Case Studies</div>
+    <p class="section-eyebrow">Case Studies</p>
     <h2 class="section-headline">Proof patterns from production AI workflows.</h2>
     <p class="section-body">These are anonymized and representative case-study patterns. Named customer stories are published only after customers approve disclosure.</p>
 
-    <div class="case-study-grid">
-      <article class="case-study-card">
-        <div class="meta">Customer Support · Implementation Sprint</div>
+    <div class="grid-3">
+      <article class="card case-card-flex">
+        <p class="case-meta">Customer Support · Implementation Sprint</p>
         <h3>Tier-1 support agent with human escalation</h3>
-        <p>A B2B support workflow that answers repeat questions from approved knowledge, customer account state, and policy constraints while escalating low-confidence cases to humans.</p>
+        <p style="margin-bottom:16px;">A B2B support workflow that answers repeat questions from approved knowledge, customer account state, and policy constraints while escalating low-confidence cases to humans.</p>
         <ul class="case-proof-list">
           <li>Shadow-mode rollout before customer exposure</li>
           <li>Retrieval citations on every answer</li>
           <li>Confidence thresholds and rollback runbook</li>
           <li>Helpdesk integration instead of a separate chatbot island</li>
         </ul>
-        <div class="case-outcome">Target result: faster first response with fewer tier-1 tickets reaching senior agents.</div>
+        <p class="case-outcome">Target result: faster first response with fewer tier-1 tickets reaching senior agents.</p>
       </article>
 
-      <article class="case-study-card">
-        <div class="meta">Document Intelligence · Legal/Procurement</div>
+      <article class="card case-card-flex">
+        <p class="case-meta">Document Intelligence · Legal/Procurement</p>
         <h3>Contract review and policy deviation detection</h3>
-        <p>A document pipeline that extracts key clauses, compares them against a company playbook, and routes exceptions to legal with source-page provenance.</p>
+        <p style="margin-bottom:16px;">A document pipeline that extracts key clauses, compares them against a company playbook, and routes exceptions to legal with source-page provenance.</p>
         <ul class="case-proof-list">
           <li>Clause-level precision and recall evals</li>
           <li>Reviewer-in-the-loop interface</li>
           <li>No auto-approval on risky language</li>
           <li>Source trace from risk flag to original document</li>
         </ul>
-        <div class="case-outcome">Target result: reduce manual review hours while preserving legal control over final decisions.</div>
+        <p class="case-outcome">Target result: reduce manual review hours while preserving legal control over final decisions.</p>
       </article>
 
-      <article class="case-study-card">
-        <div class="meta">Sales Workflow · Fractional AI Engineering</div>
+      <article class="card case-card-flex">
+        <p class="case-meta">Sales Workflow · Fractional AI Engineering</p>
         <h3>Call analysis, CRM hygiene, and follow-up drafts</h3>
-        <p>A post-call workflow that turns transcripts into buyer signals, CRM updates, and sales follow-up drafts while keeping reps in charge of what gets sent.</p>
+        <p style="margin-bottom:16px;">A post-call workflow that turns transcripts into buyer signals, CRM updates, and sales follow-up drafts while keeping reps in charge of what gets sent.</p>
         <ul class="case-proof-list">
           <li>Draft-only outbound messaging</li>
           <li>CRM writes logged and reversible</li>
           <li>Rep grading loop for ongoing evals</li>
           <li>Quarterly quality review against baseline</li>
         </ul>
-        <div class="case-outcome">Target result: cleaner CRM data and faster follow-up without risky automated sending.</div>
+        <p class="case-outcome">Target result: cleaner CRM data and faster follow-up without risky automated sending.</p>
       </article>
     </div>
 
-    <div class="quote-grid">
+    <div class="grid-3" style="margin-top: 24px;">
       <div class="quote-card">
         <p>"The useful proof is not a flashy demo. It is a working workflow with evals, escalation, and a runbook."</p>
         <strong>Production launch principle</strong>
@@ -471,239 +255,240 @@
         <strong>Governance principle</strong>
       </div>
       <div class="quote-card">
-        <p>"The model is one component. The operating system around it decides whether the AI work survives Monday."</p>
+        <p>"The model is one component. The operating system around it decides whether the AI work holds up in production."</p>
         <strong>Operating principle</strong>
       </div>
     </div>
 
     <div class="cta-row" style="margin-top: 36px;">
-      <a href="/case-studies" class="btn-secondary">Read the full case-study library</a>
-      <a href="/contact" class="btn-primary">Map your workflow</a>
+      <a href="/contact" class="btn btn-primary">Contact the studio</a>
+      <a href="/case-studies" class="btn btn-ghost">Read the full case-study library</a>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section id="services" class="band">
   <div class="container">
-    <div class="section-eyebrow">Services</div>
+    <p class="section-eyebrow">Services</p>
     <h2 class="section-headline">Three ways to work with us.</h2>
-    <div class="services-grid">
+    <div class="grid-3">
 
-      <div class="service-card">
+      <div class="card card-hover">
         <h3>AI Implementation Sprints</h3>
-        <div class="subhead">4-8 weeks · Fixed scope</div>
-        <p>A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.</p>
-        <p class="examples"><strong>Examples:</strong> support agents, document review, internal Q&A, sales call analysis, workflow automation.</p>
-        <a href="/services/ai-implementation-sprints">Scope a sprint</a>
+        <p class="card-sub">4–8 weeks · Fixed scope</p>
+        <p style="margin-bottom:16px;">A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.</p>
+        <p style="margin-bottom:24px;"><strong style="color:var(--ink);">Examples:</strong> support agents, document review, internal Q&amp;A, sales call analysis, workflow automation.</p>
+        <a class="card-link" href="/services/ai-implementation-sprints">Scope a sprint</a>
       </div>
 
-      <div class="service-card">
+      <div class="card card-hover">
         <h3>Fractional AI Engineering</h3>
-        <div class="subhead">Ongoing retainer · 20-80 hrs/mo</div>
-        <p>Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.</p>
-        <p class="examples"><strong>Includes:</strong> engineering hours, monthly evals, quarterly reviews, on-call coverage.</p>
-        <a href="/services/fractional-ai-engineering">Discuss retainer</a>
+        <p class="card-sub">Ongoing retainer · 20–80 hrs/mo</p>
+        <p style="margin-bottom:16px;">Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.</p>
+        <p style="margin-bottom:24px;"><strong style="color:var(--ink);">Includes:</strong> engineering hours, monthly evals, quarterly reviews, on-call coverage.</p>
+        <a class="card-link" href="/services/fractional-ai-engineering">Discuss a retainer</a>
       </div>
 
-      <div class="service-card">
+      <div class="card card-hover">
         <h3>Enterprise AI Governance</h3>
-        <div class="subhead">4-6 weeks · Fixed fee</div>
-        <p>AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.</p>
-        <p class="examples"><strong>Includes:</strong> governance design, security review, vendor policy, eval infrastructure, executive briefing.</p>
-        <a href="/services/enterprise-ai-governance">Review your readiness</a>
+        <p class="card-sub">4–6 weeks · Fixed fee</p>
+        <p style="margin-bottom:16px;">AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.</p>
+        <p style="margin-bottom:24px;"><strong style="color:var(--ink);">Includes:</strong> governance design, security review, vendor policy, eval infrastructure, executive briefing.</p>
+        <a class="card-link" href="/services/enterprise-ai-governance">Review your readiness</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="process" style="background: white;">
+<section id="process">
   <div class="container">
-    <div class="section-eyebrow">Our Process</div>
+    <p class="section-eyebrow">Our Process</p>
     <h2 class="section-headline">Our process is the product.</h2>
-    <div class="process-list">
+    <div class="grid-3">
       <div class="process-step">
-        <div class="num">01</div>
-        <h4>Discovery (free, 30 min)</h4>
+        <p class="num">01</p>
+        <h3>Discovery (free, 30 min)</h3>
         <p>One call to map the use case, technical constraints, and success metrics.</p>
       </div>
       <div class="process-step">
-        <div class="num">02</div>
-        <h4>Scoping (free, 1 week)</h4>
+        <p class="num">02</p>
+        <h3>Scoping (free, 1 week)</h3>
         <p>A detailed scope document: architecture, milestones, pricing, team.</p>
       </div>
       <div class="process-step">
-        <div class="num">03</div>
-        <h4>Sprint kickoff</h4>
+        <p class="num">03</p>
+        <h3>Sprint kickoff</h3>
         <p>Architecture, eval plan, and production criteria locked in.</p>
       </div>
       <div class="process-step">
-        <div class="num">04</div>
-        <h4>Build &amp; integrate</h4>
+        <p class="num">04</p>
+        <h3>Build &amp; integrate</h3>
         <p>Weekly stakeholder checkpoints; live demo at every milestone.</p>
       </div>
       <div class="process-step">
-        <div class="num">05</div>
-        <h4>Production launch</h4>
+        <p class="num">05</p>
+        <h3>Production launch</h3>
         <p>System live with monitoring, runbook, and 30 days of post-launch support.</p>
       </div>
       <div class="process-step">
-        <div class="num">06</div>
-        <h4>Handoff or retainer</h4>
+        <p class="num">06</p>
+        <h3>Handoff or retainer</h3>
         <p>Knowledge transfer to your team, or transition to a fractional engagement.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="use-cases" class="band">
   <div class="container">
-    <div class="section-eyebrow">Use Cases</div>
+    <p class="section-eyebrow">Use Cases</p>
     <h2 class="section-headline">What we build.</h2>
-    <div class="usecases-grid">
-      <div class="usecase-card"><h4>Internal knowledge assistants</h4><p>Answer questions from policies, SOPs, customer history, and contracts.</p></div>
-      <div class="usecase-card"><h4>Document intelligence</h4><p>Review, classify, and route inbound documents with audit trails.</p></div>
-      <div class="usecase-card"><h4>Customer support agents</h4><p>Handle tier-1 tickets, escalate intelligently, learn from feedback.</p></div>
-      <div class="usecase-card"><h4>Sales workflow assistants</h4><p>Call analysis, follow-up drafting, CRM hygiene.</p></div>
-      <div class="usecase-card"><h4>Internal Q&amp;A bots</h4><p>Onboarding, IT, HR, and finance support across the organization.</p></div>
-      <div class="usecase-card"><h4>Workflow automation</h4><p>Multi-step processes across email, CRM, ticketing, billing.</p></div>
+    <div class="grid-2">
+      <div class="card card-sm"><h3>Internal knowledge assistants</h3><p>Answer questions from policies, SOPs, customer history, and contracts.</p></div>
+      <div class="card card-sm"><h3>Document intelligence</h3><p>Review, classify, and route inbound documents with audit trails.</p></div>
+      <div class="card card-sm"><h3>Customer support agents</h3><p>Handle tier-1 tickets, escalate intelligently, learn from feedback.</p></div>
+      <div class="card card-sm"><h3>Sales workflow assistants</h3><p>Call analysis, follow-up drafting, CRM hygiene.</p></div>
+      <div class="card card-sm"><h3>Internal Q&amp;A bots</h3><p>Onboarding, IT, HR, and finance support across the organization.</p></div>
+      <div class="card card-sm"><h3>Workflow automation</h3><p>Multi-step processes across email, CRM, ticketing, billing.</p></div>
     </div>
   </div>
 </section>
 
-<section style="background: white;">
+<section id="why-us">
   <div class="container">
-    <div class="section-eyebrow">Why Us</div>
+    <p class="section-eyebrow">Why Us</p>
     <h2 class="section-headline">Why teams choose us.</h2>
-    <div class="diff-list">
-      <div class="diff-item">
-        <h4>Strategy + execution under one roof</h4>
-        <p>Through our partnership with <a href="https://productexec.co" style="color:#2563eb;">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
+    <div class="grid-2">
+      <div class="card card-sm">
+        <h3>Strategy + execution under one roof</h3>
+        <p>Through our partnership with <a href="https://productexec.co" style="color:var(--accent-text);">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
       </div>
-      <div class="diff-item">
-        <h4>Production-grade, not demo-grade</h4>
+      <div class="card card-sm">
+        <h3>Production-grade, not demo-grade</h3>
         <p>Every system ships with evals, monitoring, fallback paths, and runbooks. No magic prompts that break next week.</p>
       </div>
-      <div class="diff-item">
-        <h4>Workflow durability</h4>
+      <div class="card card-sm">
+        <h3>Workflow durability</h3>
         <p>Designed for thousands of repeated runs, not impressive single demos.</p>
       </div>
-      <div class="diff-item">
-        <h4>Enterprise governance baked in</h4>
+      <div class="card card-sm">
+        <h3>Enterprise governance baked in</h3>
         <p>Audit trails, security review, escalation, and compliance from day one.</p>
       </div>
-      <div class="diff-item">
-        <h4>Model-agnostic</h4>
+      <div class="card card-sm">
+        <h3>Model-agnostic</h3>
         <p>Claude, OpenAI, open-weight; routed by task criticality, not vendor loyalty.</p>
       </div>
-      <div class="diff-item">
-        <h4>Built by operators</h4>
-        <p>We've shipped AI systems that survive Monday. We know what production really means.</p>
+      <div class="card card-sm">
+        <h3>Built by operators</h3>
+        <p>We've run the systems we ship. We know what production really means.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="band">
   <div class="container">
-    <div class="section-eyebrow">About</div>
+    <p class="section-eyebrow">About</p>
     <h2 class="section-headline">Built by operators who've shipped AI in production.</h2>
-    <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co" style="color:#2563eb;">ProductExec</a> and bring in specialist engineers for each engagement.</p>
+    <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co">ProductExec</a> and bring in specialist engineers for each engagement.</p>
 
-    <div style="margin-top: 48px; padding: 24px; background: white; border: 1px solid #e8eaed; border-radius: 12px;">
-      <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #0a0e1a;">What is Enterprise AI Studio?</h3>
-      <p style="color: #4b5563; font-size: 16px; line-height: 1.6;">Enterprise AI Studio is a specialized AI implementation and engineering consulting firm that helps enterprises build production-grade AI systems. We move organizations beyond pilots and proofs-of-concept to AI solutions that integrate seamlessly with existing workflows, survive security and compliance reviews, and scale reliably. Our services include AI implementation sprints (4-8 week fixed-scope projects), fractional AI engineering (ongoing retainer-based support), and enterprise AI governance consulting. We are model-agnostic, designing systems with Claude, OpenAI, or open-weight models based on task requirements, not vendor preference. Founded and led by Kevin Owens, a CPO-level executive with deep experience in AI-enabled operating models and production AI systems.</p>
+    <div class="card" style="margin-top: 40px;">
+      <h3 style="font-size:20px;">What is Enterprise AI Studio?</h3>
+      <p style="font-size:16px;">Enterprise AI Studio is a specialized AI implementation and engineering consulting firm that helps enterprises build production-grade AI systems. We move organizations beyond pilots and proofs-of-concept to AI solutions that integrate seamlessly with existing workflows, survive security and compliance reviews, and scale reliably. Our services include AI implementation sprints (4–8 week fixed-scope projects), fractional AI engineering (ongoing retainer-based support), and enterprise AI governance consulting. We are model-agnostic, designing systems with Claude, OpenAI, or open-weight models based on task requirements, not vendor preference. Founded and led by Kevin Owens, a CPO-level executive with deep experience in AI-enabled operating models and production AI systems.</p>
     </div>
   </div>
 </section>
 
-<section style="background: white;">
+<section id="faq">
   <div class="container">
-    <div class="section-eyebrow">FAQ</div>
+    <p class="section-eyebrow">FAQ</p>
     <h2 class="section-headline">Common questions.</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <h4>How is this different from working with ProductExec?</h4>
+        <h3>How is this different from working with ProductExec?</h3>
         <p>ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.</p>
       </div>
       <div class="faq-item">
-        <h4>Do you replace our internal engineering team?</h4>
+        <h3>Do you replace our internal engineering team?</h3>
         <p>No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.</p>
       </div>
       <div class="faq-item">
-        <h4>Which models do you use?</h4>
+        <h3>Which models do you use?</h3>
         <p>We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.</p>
       </div>
       <div class="faq-item">
-        <h4>What's a typical engagement size?</h4>
+        <h3>What's a typical engagement size?</h3>
         <p>Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.</p>
       </div>
       <div class="faq-item">
-        <h4>Can you sign an NDA?</h4>
+        <h3>Can you sign an NDA?</h3>
         <p>Yes. We sign mutual NDAs before any scoping conversation.</p>
       </div>
       <div class="faq-item">
-        <h4>What is Enterprise AI Studio?</h4>
+        <h3>What is Enterprise AI Studio?</h3>
         <p>Enterprise AI Studio is a specialized AI implementation and engineering firm. We help enterprises move beyond AI pilots and POCs to production-grade AI systems that solve real business problems. We design, build, and operate AI workflows that integrate with your existing systems, survive audit, and scale reliably.</p>
       </div>
       <div class="faq-item">
-        <h4>How do you ensure AI systems are production-ready?</h4>
+        <h3>How do you ensure AI systems are production-ready?</h3>
         <p>Every system we ship includes: evals that define success criteria, monitoring to track real-world performance, fallback paths for failures, and runbooks for operations. We design for thousands of repeated runs, not single impressive demos.</p>
       </div>
       <div class="faq-item">
-        <h4>What about compliance and governance?</h4>
+        <h3>What about compliance and governance?</h3>
         <p>Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them.</p>
       </div>
       <div class="faq-item">
-        <h4>Do you handle the integration with our systems?</h4>
+        <h3>Do you handle the integration with our systems?</h3>
         <p>Yes. We typically own the entire integration — APIs, webhooks, database connections, CRM/ERP linking, whatever your stack requires. We ensure the AI system fits seamlessly into your workflows without requiring your team to rewire their operations.</p>
       </div>
       <div class="faq-item">
-        <h4>What if we don't know exactly what AI use case we need?</h4>
+        <h3>What if we don't know exactly what AI use case we need?</h3>
         <p>That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on.</p>
       </div>
       <div class="faq-item">
-        <h4>How long does a typical implementation take?</h4>
+        <h3>How long does a typical implementation take?</h3>
         <p>Implementation sprints are 4-8 weeks, depending on use case complexity and system integration scope. We break the timeline into clear milestones and deliver working demos at each one.</p>
       </div>
       <div class="faq-item">
-        <h4>Can you train our team to maintain the system?</h4>
+        <h3>Can you train our team to maintain the system?</h3>
         <p>Yes. Handoff and training are included in every sprint. We provide documentation, runbooks, and hands-on knowledge transfer so your team can monitor and iterate on the system. Alternatively, stay on a fractional engineering retainer for ongoing support.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="band">
   <div class="container">
-    <div class="contact-form-wrap">
-      <div class="section-eyebrow" style="text-align:center;">Get in Touch</div>
-      <h2 class="section-headline" style="text-align:center;max-width:100%;">Ready to ship AI that actually works?</h2>
-      <p class="section-body" style="text-align:center;margin:0 auto 0;">Tell us about your use case. We'll map the constraints and the fastest path to production — no sales deck, just a direct conversation.</p>
+    <div class="contact-form-wrap" style="text-align:center;">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-headline" style="max-width:100%;">Ready to ship AI that actually works?</h2>
+      <p class="section-body" style="margin:0 auto;">Tell us about your use case. We'll map the constraints and the fastest path to production — no sales deck, just a direct conversation.</p>
 
-      <form class="contact-form" id="contactForm" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST" novalidate>
+      <!-- TODO(kevin-formspree): this action is the no-JS fallback; the live endpoint is FORMSPREE_ENDPOINT in /assets/site.js — update both together. -->
+      <form class="contact-form" data-contact-form="contact_home" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label for="name">Full name *</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Smith" required>
           </div>
           <div class="form-field">
             <label for="email">Work email *</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
             <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Acme Corp">
+            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Acme Corp">
           </div>
           <div class="form-field">
             <label for="service">Service interested in</label>
             <select id="service" name="service">
-              <option value="">Select one...</option>
-              <option value="implementation-sprint">AI Implementation Sprint (4-8 weeks)</option>
-              <option value="fractional-engineering">Fractional AI Engineering (Retainer)</option>
-              <option value="governance">Enterprise AI Governance</option>
+              <option value="">Select one…</option>
+              <option value="implementation-sprint">AI implementation sprint (4–8 weeks)</option>
+              <option value="fractional-engineering">Fractional AI engineering (retainer)</option>
+              <option value="governance">Enterprise AI governance</option>
               <option value="not-sure">Not sure yet</option>
             </select>
           </div>
@@ -713,130 +498,49 @@
           <textarea id="message" name="message" placeholder="What workflow or problem are you trying to solve with AI? What's the constraint — team capacity, expertise, timeline, governance?" required></textarea>
         </div>
         <input type="hidden" name="_subject" value="New Enterprise AI Studio Inquiry">
-        <input type="text" name="_gotcha" style="display:none">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
         <div class="form-submit">
-          <button type="submit" class="btn-form-submit" id="submitBtn">Send message</button>
-          <div class="form-status success" id="formSuccess">✓ Message sent. We'll be in touch within one business day.</div>
-          <div class="form-status error" id="formError">Something went wrong. Please email directly: <a href="mailto:kevin.a.owens@gmail.com" style="color:inherit;text-decoration:underline;">kevin.a.owens@gmail.com</a></div>
+          <button type="submit" class="btn btn-primary btn-form-submit">Send message</button>
+          <p class="form-status success" role="status">✓ Message sent. We'll be in touch within one business day.</p>
+          <p class="form-status error" role="alert">Something went wrong. Please <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>email the studio</a> directly.</p>
         </div>
       </form>
     </div>
   </div>
 </section>
 
-<footer>
+</main>
+
+<footer class="site-footer">
   <div class="container">
     <div class="footer-content">
       <div>
-        <div class="logo">Enterprise<span>AI</span>Studio</div>
-        <p style="margin-top: 8px; font-size: 14px;">Production AI for the workflows that matter.</p>
+        <a class="logo" href="/">Enterprise<span>AI</span>Studio</a>
+        <p class="footer-tagline-line">Production AI for enterprise workflows.</p>
       </div>
-      <div class="footer-links">
-        <a href="/">Home</a>
+      <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Case Studies</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
-        <a href="https://productexec.co" target="_blank" rel="noopener">ProductExec</a>
-      </div>
+      </nav>
     </div>
-    <p class="footer-tagline">© 2026 Enterprise AI Studio · kevin.a.owens@gmail.com</p>
+    <!-- TODO(kevin-dns): when hello@enterpriseaistudio.com exists, update CONTACT_EMAIL in /assets/site.js. Link text stays "Email the studio"; the address is never displayed. -->
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
+    <div class="family-strip">
+      <span class="family-eyebrow">A KEVIN OWENS PRACTICE</span>
+      <ul>
+        <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
+        <li><a href="https://productexec.co">ProductExec</a><span>Executive advisory</span></li>
+        <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
-
-<script>
-  /* Enterprise AI Studio — custom GA4 event tracking */
-  (function() {
-    function track(eventName, params) {
-      if (typeof gtag === 'function') gtag('event', eventName, params);
-    }
-
-    document.addEventListener('click', function(e) {
-      var el = e.target.closest('a[href]');
-      if (!el) return;
-
-      var href = el.getAttribute('href') || '';
-      var text = (el.textContent || '').trim();
-      var classes = el.className || '';
-
-      /* Contact form submit */
-      var form = document.getElementById('contactForm');
-      if (form) {
-        form.addEventListener('submit', function(evt) {
-          evt.preventDefault();
-          var btn = document.getElementById('submitBtn');
-          var successEl = document.getElementById('formSuccess');
-          var errorEl = document.getElementById('formError');
-          btn.disabled = true;
-          btn.textContent = 'Sending…';
-          successEl.style.display = 'none';
-          errorEl.style.display = 'none';
-          fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          }).then(function(res) {
-            if (res.ok) {
-              successEl.style.display = 'block';
-              form.reset();
-              track('form_submit', { form_id: 'contact', status: 'success' });
-            } else {
-              errorEl.style.display = 'block';
-              track('form_submit', { form_id: 'contact', status: 'error' });
-            }
-          }).catch(function() {
-            errorEl.style.display = 'block';
-            track('form_submit', { form_id: 'contact', status: 'network_error' });
-          }).finally(function() {
-            btn.disabled = false;
-            btn.textContent = 'Send message';
-          });
-        });
-      }
-
-      /* Contact email click */
-      if (href.startsWith('mailto:')) {
-        track('contact_email_click', { link_text: text, link_url: href });
-        return;
-      }
-
-      /* CTA clicks — primary and secondary buttons */
-      if (classes.indexOf('btn-primary') !== -1 || classes.indexOf('btn-secondary') !== -1 || classes.indexOf('btn-nav') !== -1) {
-        track('cta_click', { cta_text: text, cta_destination: href, cta_class: classes });
-        return;
-      }
-
-      /* Service section anchor links (Scope a sprint, Discuss retainer, etc.) */
-      if (href === '/contact') {
-        var section = el.closest('section');
-        var sectionId = section ? (section.id || 'unknown') : 'unknown';
-        track('service_section_click', { link_text: text, source_section: sectionId });
-        return;
-      }
-    });
-
-    /* Section visibility — track which sections enterprise buyers engage with */
-    if ('IntersectionObserver' in window) {
-      var sections = ['proof', 'case-studies', 'services', 'process', 'about', 'contact'];
-      var seen = {};
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting && !seen[entry.target.id]) {
-            seen[entry.target.id] = true;
-            track('section_view', { section_id: entry.target.id });
-          }
-        });
-      }, { threshold: 0.4 });
-
-      sections.forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
-    }
-  })();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
