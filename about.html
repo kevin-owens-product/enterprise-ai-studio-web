@@ -23,7 +23,7 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
-  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'https://unpkg.com/web-vitals@4?module';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
+  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
@@ -211,8 +211,6 @@
         <a href="/contact">Contact</a>
       </nav>
     </div>
-    <!-- TODO(kevin-dns): when hello@enterpriseaistudio.com exists, update CONTACT_EMAIL in /assets/site.js. Link text stays "Email the studio"; the address is never displayed. -->
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
     <div class="family-strip">
       <span class="family-eyebrow">A KEVIN OWENS PRACTICE</span>
       <ul>
@@ -222,6 +220,8 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
+    <!-- TODO(kevin-dns): when hello@enterpriseaistudio.com exists, update CONTACT_EMAIL in /assets/site.js. Link text stays "Email the studio"; the address is never displayed. -->
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
   </div>
 </footer>
 

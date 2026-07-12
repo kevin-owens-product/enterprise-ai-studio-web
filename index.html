@@ -23,7 +23,7 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
-  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'https://unpkg.com/web-vitals@4?module';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
+  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
@@ -223,6 +223,7 @@
       <div class="hero-stat"><strong>Zero</strong><span>auto-send or auto-approve defaults on sensitive workflows — humans stay in the loop.</span></div>
       <div class="hero-stat"><strong>30 days</strong><span>of post-launch support included with every sprint handoff and runbook.</span></div>
     </div>
+    <p class="hero-stats-note">Delivery standards we build into every engagement — not client claims.</p>
   </div>
 </section>
 
@@ -457,11 +458,6 @@
     <p class="section-eyebrow">About</p>
     <h2 class="section-headline">Built by operators who've shipped AI in production.</h2>
     <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co">ProductExec</a> and bring in specialist engineers for each engagement.</p>
-
-    <div class="card" style="margin-top: 40px;">
-      <h3 style="font-size:20px;">What is Enterprise AI Studio?</h3>
-      <p style="font-size:16px;">Enterprise AI Studio is a specialized AI implementation and engineering consulting firm that helps enterprises build production-grade AI systems. We move organizations beyond pilots and proofs-of-concept to AI solutions that integrate seamlessly with existing workflows, survive security and compliance reviews, and scale reliably. Our services include AI implementation sprints (4–8 week fixed-scope projects), fractional AI engineering (ongoing retainer-based support), and enterprise AI governance consulting. We are model-agnostic, designing systems with Claude, OpenAI, or open-weight models based on task requirements, not vendor preference. Founded and led by Kevin Owens, a CPO-level executive with deep experience in AI-enabled operating models and production AI systems.</p>
-    </div>
   </div>
 </section>
 
@@ -470,54 +466,38 @@
     <p class="section-eyebrow">FAQ</p>
     <h2 class="section-headline">Common questions.</h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <h3>How is this different from working with ProductExec?</h3>
+      <details class="faq-item">
+        <summary>How is this different from working with ProductExec?</summary>
         <p>ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you replace our internal engineering team?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>Do you replace our internal engineering team?</summary>
         <p>No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Which models do you use?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>Which models do you use?</summary>
         <p>We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What's a typical engagement size?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>What's a typical engagement size?</summary>
         <p>Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can you sign an NDA?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>Can you sign an NDA?</summary>
         <p>Yes. We sign mutual NDAs before any scoping conversation.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What is Enterprise AI Studio?</h3>
-        <p>Enterprise AI Studio is a specialized AI implementation and engineering firm. We help enterprises move beyond AI pilots and POCs to production-grade AI systems that solve real business problems. We design, build, and operate AI workflows that integrate with your existing systems, survive audit, and scale reliably.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do you ensure AI systems are production-ready?</h3>
-        <p>Every system we ship includes: evals that define success criteria, monitoring to track real-world performance, fallback paths for failures, and runbooks for operations. We design for thousands of repeated runs, not single impressive demos.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What about compliance and governance?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>What about compliance and governance?</summary>
         <p>Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you handle the integration with our systems?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>Do you handle the integration with our systems?</summary>
         <p>Yes. We typically own the entire integration — APIs, webhooks, database connections, CRM/ERP linking, whatever your stack requires. We ensure the AI system fits seamlessly into your workflows without requiring your team to rewire their operations.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What if we don't know exactly what AI use case we need?</h3>
+      </details>
+      <details class="faq-item">
+        <summary>What if we don't know exactly what AI use case we need?</summary>
         <p>That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How long does a typical implementation take?</h3>
-        <p>Implementation sprints are 4-8 weeks, depending on use case complexity and system integration scope. We break the timeline into clear milestones and deliver working demos at each one.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can you train our team to maintain the system?</h3>
-        <p>Yes. Handoff and training are included in every sprint. We provide documentation, runbooks, and hands-on knowledge transfer so your team can monitor and iterate on the system. Alternatively, stay on a fractional engineering retainer for ongoing support.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
@@ -591,8 +571,6 @@
         <a href="/contact">Contact</a>
       </nav>
     </div>
-    <!-- TODO(kevin-dns): when hello@enterpriseaistudio.com exists, update CONTACT_EMAIL in /assets/site.js. Link text stays "Email the studio"; the address is never displayed. -->
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
     <div class="family-strip">
       <span class="family-eyebrow">A KEVIN OWENS PRACTICE</span>
       <ul>
@@ -602,6 +580,8 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
+    <!-- TODO(kevin-dns): when hello@enterpriseaistudio.com exists, update CONTACT_EMAIL in /assets/site.js. Link text stays "Email the studio"; the address is never displayed. -->
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
   </div>
 </footer>
 
