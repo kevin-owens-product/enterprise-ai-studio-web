@@ -148,12 +148,15 @@
       });
       if (scoreEl) scoreEl.innerHTML = total + '<span> / 25</span>';
       if (verdictEl) verdictEl.textContent = verdictFor(total);
+      /* semantic state: green when ready to scope, amber when early days */
+      var results = checklist.querySelector('.checklist-results');
+      if (results) results.setAttribute('data-level', total >= 20 ? 'high' : (total >= 12 ? 'mid' : 'low'));
       Object.keys(pillarEls).forEach(function (p) {
         var n = perPillar[p] || 0;
         var strong = pillarEls[p].querySelector('strong');
         var bar = pillarEls[p].querySelector('.checklist-meter b');
-        if (strong) strong.textContent = n + '/5';
-        if (bar) bar.style.width = (n * 20) + '%';
+        if (strong) { strong.textContent = n + '/5'; strong.classList.toggle('full', n === 5); }
+        if (bar) { bar.style.width = (n * 20) + '%'; bar.classList.toggle('full', n === 5); }
       });
     }
 
