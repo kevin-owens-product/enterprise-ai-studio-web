@@ -20,9 +20,14 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default denied until the visitor chooses -->
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+    try{if(localStorage.getItem('eas_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script>gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,7 +116,7 @@
   <div class="container">
     <p class="section-eyebrow">Which engagement fits</p>
     <h2 class="section-headline">Sprint, retainer, or governance — side by side.</h2>
-    <p class="section-body">The same facts from the three service pages, in one view. If you're still unsure, the free discovery call exists to answer exactly this question.</p>
+    <p class="section-body">The same facts from the three service pages, in one view. If you're still unsure, the free discovery call exists to answer exactly this question. Full price bands live on <a href="/pricing">pricing</a>, and the questions buyers ask most are answered in the <a href="/faq">FAQ</a>.</p>
 
     <div class="compare-wrap">
       <table class="compare">
@@ -139,9 +144,9 @@
           </tr>
           <tr>
             <th scope="row">Price band</th>
-            <td><strong class="price-band">$40K–$120K</strong> by complexity</td>
-            <td><strong class="price-band">$8K–$30K/month</strong> by hours</td>
-            <td><strong class="price-band">$25K–$60K</strong> by scope</td>
+            <td><strong class="price-band"><a href="/pricing">$40K–$120K</a></strong> by complexity</td>
+            <td><strong class="price-band"><a href="/pricing">$8K–$30K/month</a></strong> by hours</td>
+            <td><strong class="price-band"><a href="/pricing">$25K–$60K</a></strong> by scope</td>
           </tr>
           <tr>
             <th scope="row">Best for</th>
@@ -172,7 +177,7 @@
         <dl>
           <div><dt>Shape</dt><dd><span class="fixed-note">Fixed scope</span>, one system, one launch</dd></div>
           <div><dt>Timeline</dt><dd>4–8 weeks</dd></div>
-          <div><dt>Price band</dt><dd><strong class="price-band">$40K–$120K</strong> by complexity</dd></div>
+          <div><dt>Price band</dt><dd><strong class="price-band"><a href="/pricing">$40K–$120K</a></strong> by complexity</dd></div>
           <div><dt>Best for</dt><dd>One high-value workflow that needs to be scoped, built, and launched properly</dd></div>
           <div><dt>Key deliverables</dt><dd>Scope document, architecture, build and integration, eval suite, production launch, runbook, 30 days post-launch support</dd></div>
           <div><dt>Starts with</dt><dd>Free 30-min discovery call, then a free 1-week scoping phase</dd></div>
@@ -184,7 +189,7 @@
         <dl>
           <div><dt>Shape</dt><dd>Ongoing retainer, flexes month to month</dd></div>
           <div><dt>Timeline</dt><dd>Monthly, 20–80 hrs/month</dd></div>
-          <div><dt>Price band</dt><dd><strong class="price-band">$8K–$30K/month</strong> by hours</dd></div>
+          <div><dt>Price band</dt><dd><strong class="price-band"><a href="/pricing">$8K–$30K/month</a></strong> by hours</dd></div>
           <div><dt>Best for</dt><dd>Teams that need senior AI capacity and production velocity without hiring a full internal group first</dd></div>
           <div><dt>Key deliverables</dt><dd>Dedicated engineer hours, monthly evals, quarterly reviews, on-call coverage for production incidents</dd></div>
           <div><dt>Starts with</dt><dd>Alignment call, then your engineer joins the team</dd></div>
@@ -196,7 +201,7 @@
         <dl>
           <div><dt>Shape</dt><dd><span class="fixed-note">Fixed-fee</span> governance program</dd></div>
           <div><dt>Timeline</dt><dd>4–6 weeks</dd></div>
-          <div><dt>Price band</dt><dd><strong class="price-band">$25K–$60K</strong> by scope</dd></div>
+          <div><dt>Price band</dt><dd><strong class="price-band"><a href="/pricing">$25K–$60K</a></strong> by scope</dd></div>
           <div><dt>Best for</dt><dd>Making AI safe to operate — security review, compliance, and audit readiness before or while you scale</dd></div>
           <div><dt>Key deliverables</dt><dd>AI policy framework, risk register, eval infrastructure, operations manual, vendor evaluation matrix, executive briefing</dd></div>
           <div><dt>Starts with</dt><dd>Week-1 assessment of systems, data flows, and compliance requirements</dd></div>
@@ -228,6 +233,7 @@
     <div class="cta-row" style="margin-top: 40px;">
       <a href="/contact" class="btn btn-primary">Contact the studio</a>
       <a href="/case-studies" class="btn btn-ghost">See case studies</a>
+      <a href="/faq" class="btn btn-ghost">Read the FAQ</a>
     </div>
   </div>
 </section>
@@ -248,6 +254,7 @@
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
       </nav>
     </div>
     <div class="family-strip">
@@ -259,9 +266,17 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
+
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <script src="/assets/site.js" defer></script>
 </body>

@@ -1,24 +1,38 @@
 # Enterprise AI Studio — AI Crawler Context File
 
+> Production AI implementation for enterprise teams: one workflow, scoped, built, and shipped to production with evals, approval gates, and runbooks. Published price bands.
+
+Last updated: 2026-09-16
+
 ## About Us
 Enterprise AI Studio is a specialized consulting and implementation firm focused on production-grade AI systems for enterprise workflows. We design, build, and operate AI systems that actually scale in production — not prototypes or demos.
 
 ## Core Services
 
-### AI Implementation Sprints (4-8 weeks, Fixed Scope)
+### AI Implementation Sprints (4-8 weeks, Fixed Scope) — $40K–$120K
 A single AI system fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.
 
 Examples: support agents, document review, internal Q&A, sales call analysis, workflow automation.
 
-### Fractional AI Engineering (Ongoing Retainer, 20-80 hrs/mo)
+### Fractional AI Engineering (Ongoing Retainer, 20-80 hrs/mo) — $8K–$30K per month
 Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.
 
 Includes: engineering hours, monthly evals, quarterly reviews, on-call coverage.
 
-### Enterprise AI Governance (4-6 weeks, Fixed Fee)
+### Enterprise AI Governance (4-6 weeks, Fixed Fee) — $25K–$60K
 AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.
 
 Includes: governance design, security review, vendor policy, eval infrastructure, executive briefing.
+
+## Pricing Bands
+- AI Implementation Sprint: $40,000–$120,000 USD, 4-8 weeks, fixed scope.
+- Enterprise AI Governance: $25,000–$60,000 USD, 4-6 weeks, fixed fee.
+- Fractional AI Engineering: $8,000–$30,000 USD per month, 20-80 hours per month.
+- What moves a sprint from $40K to $120K: number of systems integrated, data readiness, regulated or customer-facing surface, eval depth required, number of approval gates and reviewers, change-management load.
+- Always included in a sprint price: architecture design, system build, integration, eval suite, approval gates, audit logging and monitoring, runbook and rollback criteria, production launch, handover training, 30 days of post-launch support.
+- Not included: model and infrastructure spend (paid directly to your providers), new third-party licences, ongoing operation past 30 days (that is the retainer), warehouse-scale data cleanup, work outside the one scoped workflow.
+- Discovery is free: a 30-minute call plus a one-week scoping phase ending in a written scope document.
+- Full detail: https://enterpriseaistudio.com/pricing
 
 ## What We Build
 - Internal knowledge assistants (policies, SOPs, customer history, contracts)
@@ -37,22 +51,62 @@ Includes: governance design, security review, vendor policy, eval infrastructure
 - Built by operators who've shipped AI systems in production
 
 ## Leadership
-Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work.
+Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer with experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work.
+
+sameAs:
+- https://www.linkedin.com/in/kevinaowens
+- https://kevinowens.com
+- https://productexec.co
+- https://smartbizaihub.com
+
+## FAQ (short answers)
+- How is this different from ProductExec? ProductExec decides what AI to build; Enterprise AI Studio builds it. Many clients use both.
+- Do you replace our internal engineering team? No — we augment it, build the AI core, integrate it, then hand off or stay on retainer.
+- What if we don't know the use case? The free discovery call maps constraints and surfaces high-leverage use cases, then we scope what you pick.
+- How does discovery work? A free 30-minute call, then a free one-week scoping phase producing architecture, milestones, pricing, and team.
+- Do you work across our whole AI stack? Both new builds and existing systems: optimization, evals, migrations, integrations, production incidents.
+- What's a typical engagement size? Sprints $40K–$120K; retainers $8K–$30K/month; governance $25K–$60K.
+- What's included in sprint pricing? Architecture, build, integration, evals and testing, production launch, runbooks, 30 days post-launch support.
+- What if requirements change mid-sprint? Small changes are absorbed; significant ones go through change orders adjusting timeline, budget, or both.
+- How many retainer hours? 20, 40, 60, or 80 per month, flexible month-to-month, unused hours roll over up to 2 months.
+- Can I pause or scale a retainer? Yes, with 2 weeks notice.
+- Can you sign an NDA? Yes — mutual NDAs before any scoping conversation.
+- How long do sprints take? Typically 4-8 weeks with milestone demos.
+- Which models do you use? Model-agnostic: frontier models for judgment-heavy work, long-context options for synthesis, open-weight where appropriate.
+- Do you handle integration? Yes — APIs, webhooks, databases, CRM, ERP. Integration is in scope.
+- How do you prove production readiness? Representative eval examples, source-grounded responses, human escalation paths, audit logs, monitoring, rollback criteria.
+- What if we hit a production issue? Retainer hours include on-call coverage; critical production issues are prioritized.
+- Do we need governance now or later? Now — governance designed after five shipped systems is governance retrofitted under a security stop-work.
+- How long is a governance engagement? Typically 4-6 weeks.
+- What's in governance design? Risk assessment, AI policy framework, security review, compliance readiness (SOC 2, HIPAA), eval infrastructure design, executive briefing.
+- SOC 2 or HIPAA? Yes — systems are designed to meet compliance requirements and survive audit.
+- Vendor evaluation? Yes — vendors assessed against compliance, cost, and performance requirements.
+- Does AI auto-approve sensitive work? No. Sensitive customer, legal, financial, and compliance workflows keep human approval gates.
+- Who maintains it after launch? Your team, with full documentation, runbooks, and hands-on training — or us, on a retainer.
+- Who is the engineer? A dedicated senior engineer who becomes part of your team and owns your roadmap.
+- Full FAQ: https://enterpriseaistudio.com/faq
 
 ## Key Pages
 - Home: https://enterpriseaistudio.com/
-- About / Founder bio: https://enterpriseaistudio.com/about
-- Use cases (illustrative engagement patterns): https://enterpriseaistudio.com/case-studies
-- Resources (AI Implementation Readiness Checklist): https://enterpriseaistudio.com/resources
+- Services overview: https://enterpriseaistudio.com/services
 - Service: AI Implementation Sprints — https://enterpriseaistudio.com/services/ai-implementation-sprints
 - Service: Fractional AI Engineering — https://enterpriseaistudio.com/services/fractional-ai-engineering
 - Service: Enterprise AI Governance — https://enterpriseaistudio.com/services/enterprise-ai-governance
+- Pricing (published bands): https://enterpriseaistudio.com/pricing
+- Proof (how production readiness is demonstrated): https://enterpriseaistudio.com/proof
+- FAQ (consolidated): https://enterpriseaistudio.com/faq
+- Use cases (illustrative engagement patterns): https://enterpriseaistudio.com/case-studies
+- Resources (AI Implementation Readiness Checklist): https://enterpriseaistudio.com/resources
+- About / Founder bio: https://enterpriseaistudio.com/about
+- Contact: https://enterpriseaistudio.com/contact
+- Privacy notice: https://enterpriseaistudio.com/privacy
 
 ## Free Resources
 - AI Implementation Readiness Checklist — 25 questions across workflow & ROI, data, evals, governance, and change management. Available at https://enterpriseaistudio.com/resources.
 
 ## Contact & Engagement
-For discovery calls and scoping conversations, visit https://enterpriseaistudio.com
+For discovery calls and scoping conversations, use the contact form at https://enterpriseaistudio.com/contact or email kevin@kevinowens.com. We reply within one business day.
 
 Website: https://enterpriseaistudio.com
 Contact: https://enterpriseaistudio.com/contact
+Full site text for AI crawlers: https://enterpriseaistudio.com/llms-full.txt

@@ -20,9 +20,14 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default denied until the visitor chooses -->
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+    try{if(localStorage.getItem('eas_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script>gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +105,7 @@
   <div class="container">
     <p class="section-eyebrow">Free Resource</p>
     <h2 class="section-headline">AI Implementation Readiness Checklist.</h2>
-    <p class="section-body">Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted or stored — it runs entirely in your browser.</p>
+    <p class="section-body">Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask us to email your read-out.</p>
 
     <form id="readiness-checklist-form" class="checklist-card">
       <h3>The 25-question readiness checklist</h3>
@@ -108,7 +113,7 @@
 
       <fieldset class="checklist-pillar" style="border:0;">
         <legend class="visually-hidden">Pillar 1: Workflow and ROI</legend>
-        <h4 aria-hidden="true">1. Workflow &amp; ROI</h4>
+        <h4>1. Workflow &amp; ROI</h4>
         <ul>
           <li><label><input type="checkbox" data-pillar="1">Have you named the single workflow this AI system will change — not a category, a workflow?</label></li>
           <li><label><input type="checkbox" data-pillar="1">Is there one metric that will tell you the system is working (e.g. time-to-resolve, deflection rate, hours saved)?</label></li>
@@ -120,7 +125,7 @@
 
       <fieldset class="checklist-pillar" style="border:0;">
         <legend class="visually-hidden">Pillar 2: Data and Inputs</legend>
-        <h4 aria-hidden="true">2. Data &amp; Inputs</h4>
+        <h4>2. Data &amp; Inputs</h4>
         <ul>
           <li><label><input type="checkbox" data-pillar="2">Does the data the model needs exist today, in a system you can access programmatically?</label></li>
           <li><label><input type="checkbox" data-pillar="2">Is the data permissioned correctly — for users, for the AI service, and for any sub-processors?</label></li>
@@ -132,7 +137,7 @@
 
       <fieldset class="checklist-pillar" style="border:0;">
         <legend class="visually-hidden">Pillar 3: Evals and Quality</legend>
-        <h4 aria-hidden="true">3. Evals &amp; Quality</h4>
+        <h4>3. Evals &amp; Quality</h4>
         <ul>
           <li><label><input type="checkbox" data-pillar="3">Have you defined what "good enough" looks like, in a way an engineer could write a test for?</label></li>
           <li><label><input type="checkbox" data-pillar="3">Do you know who will judge outputs during the build phase — a domain expert, ops lead, or end users?</label></li>
@@ -144,7 +149,7 @@
 
       <fieldset class="checklist-pillar" style="border:0;">
         <legend class="visually-hidden">Pillar 4: Governance and Risk</legend>
-        <h4 aria-hidden="true">4. Governance &amp; Risk</h4>
+        <h4>4. Governance &amp; Risk</h4>
         <ul>
           <li><label><input type="checkbox" data-pillar="4">Do you know which compliance frameworks (SOC 2, HIPAA, GDPR, sector-specific) the system must satisfy?</label></li>
           <li><label><input type="checkbox" data-pillar="4">Have you decided whether customer or regulated data can be sent to a third-party model provider?</label></li>
@@ -156,7 +161,7 @@
 
       <fieldset class="checklist-pillar" style="border:0;">
         <legend class="visually-hidden">Pillar 5: Change Management and Ops</legend>
-        <h4 aria-hidden="true">5. Change Management &amp; Ops</h4>
+        <h4>5. Change Management &amp; Ops</h4>
         <ul>
           <li><label><input type="checkbox" data-pillar="5">Do you know whether end users will be trained, paid, or measured differently because of this system?</label></li>
           <li><label><input type="checkbox" data-pillar="5">Is there an internal champion close to the workflow who will adopt and defend the system early?</label></li>
@@ -165,8 +170,10 @@
           <li><label><input type="checkbox" data-pillar="5">Have you budgeted for ongoing tuning and evals, not just the build?</label></li>
         </ul>
       </fieldset>
+      <noscript><p class="checklist-hint" style="margin-top:16px;">Scoring needs JavaScript; the questions above work fine on paper too — print this page and walk it with your team.</p></noscript>
+    </form>
 
-      <div class="checklist-results" aria-live="polite">
+    <div class="checklist-card checklist-results" aria-live="polite">
         <h3>Your readiness read-out</h3>
         <p class="checklist-score" id="checklist-score">0<span> / 25</span></p>
         <p class="checklist-verdict" id="checklist-verdict"></p>
@@ -177,14 +184,54 @@
           <li data-pillar-score="4"><strong>0/5</strong>Governance &amp; Risk<span class="checklist-meter"><b></b></span></li>
           <li data-pillar-score="5"><strong>0/5</strong>Change &amp; Ops<span class="checklist-meter"><b></b></span></li>
         </ul>
+        <form class="readout-form" data-contact-form="checklist_readout" data-no-redirect action="/api/inquiry" method="post">
+        <input type="hidden" name="form_name" value="checklist_readout">
+        <input type="hidden" name="inquiry_type" value="readiness_checklist">
+          <input type="hidden" name="page_source" value="/resources">
+          <input type="hidden" name="score_total" value="0" data-score-total>
+          <input type="hidden" name="score_pillars" value="{}" data-score-pillars>
+          <p class="readout-lede">We’ll email your score, the five pillar breakdowns, and the two questions we’d ask first.</p>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="readout-name">Full name *</label>
+              <input type="text" id="readout-name" name="name" autocomplete="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-field">
+              <label for="readout-email">Work email *</label>
+              <input type="email" id="readout-email" name="email" autocomplete="email" placeholder="jane@company.com" required>
+            </div>
+            <div class="form-field">
+              <label for="readout-company">Company</label>
+              <input type="text" id="readout-company" name="company" autocomplete="organization" placeholder="Acme Corp">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="readout-role">Your role</label>
+            <select id="readout-role" name="role">
+              <option value="">Select one…</option>
+              <option value="cto-cio">CTO / CIO</option>
+              <option value="vp-engineering">VP Engineering</option>
+              <option value="vp-operations">VP Operations</option>
+              <option value="head-of-data">Head of Data</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <label class="check-line"><input type="checkbox" name="newsletter" value="yes"> Also send occasional notes on production AI (unsubscribe any time).</label>
+          <input class="visually-hidden" type="text" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+          <div class="form-submit" style="text-align:left;">
+            <button type="submit" class="btn btn-on-navy btn-form-submit">Email my read-out</button>
+            <p class="form-consent">By sending, you agree to our <a href="/privacy">privacy notice</a>.</p>
+            <p class="form-status success" role="status">✓ On its way. Check your inbox.</p>
+            <p class="form-status error" role="alert">Something went wrong. Please <a href="/contact#form">email the studio</a> directly.</p>
+          </div>
+        </form>
         <div class="checklist-actions">
-          <a class="btn btn-on-navy" href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a>
+          <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+          <a class="btn btn-on-navy" href="/contact#form">Contact the studio</a>
           <a class="btn btn-ghost" href="/contact">Contact the studio</a>
           <button type="button" class="btn checklist-reset" id="checklist-reset">Reset answers</button>
         </div>
-      </div>
-      <noscript><p class="checklist-hint" style="margin-top:16px;">Scoring needs JavaScript; the questions above work fine on paper too — print this page and walk it with your team.</p></noscript>
-    </form>
+    </div>
 
     <p class="section-body" style="margin-top: 32px;">Most teams pass on three pillars and have real gaps in two. That's normal. The work in scoping is to either close those gaps fast or design the engagement around them.</p>
   </div>
@@ -193,8 +240,37 @@
 <section id="more-resources">
   <div class="container">
     <p class="section-eyebrow">More resources</p>
-    <h2 class="section-headline">More on the way.</h2>
-    <p class="section-body">A scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates — they'll appear here as they ship.</p>
+    <h2 class="section-headline">More on the way — tell us which.</h2>
+    <p class="section-body">A scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.</p>
+
+    <form class="waitlist-form card" data-contact-form="waitlist" data-no-redirect action="/api/inquiry" method="post">
+        <input type="hidden" name="form_name" value="waitlist">
+        <input type="hidden" name="inquiry_type" value="waitlist">
+      <input type="hidden" name="page_source" value="/resources">
+      <div class="form-field">
+        <label for="waitlist-name">Full name *</label>
+        <input type="text" id="waitlist-name" name="name" autocomplete="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-field">
+        <label for="waitlist-email">Work email *</label>
+        <input type="email" id="waitlist-email" name="email" autocomplete="email" placeholder="jane@company.com" required>
+      </div>
+      <fieldset class="waitlist-picks">
+        <legend>Which should we send?</legend>
+        <label class="check-line"><input type="checkbox" name="interests" value="scoping-guide"> Scoping guide</label>
+        <label class="check-line"><input type="checkbox" name="interests" value="governance-starter-pack"> Governance starter pack</label>
+        <label class="check-line"><input type="checkbox" name="interests" value="eval-patterns"> Eval patterns</label>
+        <label class="check-line"><input type="checkbox" name="interests" value="architecture-reference"> Architecture reference</label>
+      </fieldset>
+      <label class="check-line"><input type="checkbox" name="consent" value="yes"> Email me when these ship. No more than once a month; unsubscribe any time.</label>
+      <input class="visually-hidden" type="text" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+      <div class="form-submit" style="text-align:left;">
+        <button type="submit" class="btn btn-primary btn-form-submit">Notify me</button>
+        <p class="form-consent">By sending, you agree to our <a href="/privacy">privacy notice</a>.</p>
+        <p class="form-status success" role="status">✓ You’re on the list. We’ll email when the first one ships.</p>
+        <p class="form-status error" role="alert">Something went wrong. Please <a href="/contact#form">email the studio</a> directly.</p>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -225,6 +301,7 @@
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
       </nav>
     </div>
     <div class="family-strip">
@@ -236,9 +313,17 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
+
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <script src="/assets/site.js" defer></script>
 </body>

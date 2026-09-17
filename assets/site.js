@@ -7,30 +7,55 @@
 
   /* ------------------------------------------------------------------
      STUDIO CONSTANTS — the single place to update contact wiring.
-
-     TODO(kevin-formspree): create a Formspree form (formspree.io) and
-       replace FORMSPREE_ENDPOINT with the form-ID endpoint, e.g.
-       'https://formspree.io/f/abcdwxyz'. The legacy email-style endpoint
-       below still works but is deprecated and can silently drop mail.
-       (The same legacy URL is also present as the no-JS fallback
-       `action` attribute on each <form data-contact-form> — update those
-       when you update this constant.)
-
-     TODO(kevin-dns): once hello@enterpriseaistudio.com exists (Workspace
-       or forwarding), change CONTACT_EMAIL. Link text everywhere stays
-       "Email the studio" — the address itself is never displayed.
+     Forms post to the self-hosted same-origin endpoint below.
   ------------------------------------------------------------------ */
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/kevin.a.owens@gmail.com';
-  var CONTACT_EMAIL = 'kevin.a.owens@gmail.com';
+  var CONTACT_ENDPOINT = '/api/inquiry';
+  /* Booking link — set BOOKING_URL to the Cal.com URL when the calendar
+     exists; an empty string keeps the /contact#form fallback. */
+  var BOOKING_URL = '';
 
   function track(eventName, params) {
     if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
   }
 
-  /* ---------- Contact email links (text says "Email the studio") ---------- */
-  Array.prototype.forEach.call(document.querySelectorAll('a[data-contact-email]'), function (a) {
-    a.setAttribute('href', 'mailto:' + CONTACT_EMAIL);
-  });
+  /* ---------- Analytics consent (Consent Mode v2) ---------- */
+  var CONSENT_KEY = 'eas_consent';
+  function readConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function writeConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+  var consentBar = document.getElementById('consent-bar');
+  if (consentBar) {
+    var storedConsent = readConsent();
+    if (storedConsent !== 'granted' && storedConsent !== 'denied') consentBar.hidden = false;
+    consentBar.addEventListener('click', function (e) {
+      var cbtn = e.target.closest('[data-consent]');
+      if (!cbtn) return;
+      var choice = cbtn.getAttribute('data-consent');
+      writeConsent(choice);
+      if (choice === 'granted' && typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+      consentBar.hidden = true;
+    });
+  }
+
+  /* ---------- Booking links ---------- */
+  if (BOOKING_URL) {
+    Array.prototype.forEach.call(document.querySelectorAll('a[data-booking-link]'), function (a) {
+      a.setAttribute('href', BOOKING_URL);
+      a.setAttribute('rel', 'noopener');
+    });
+  }
+
+  /* ---------- UTM capture (hidden fields on contact forms) ---------- */
+  (function () {
+    var params = null;
+    try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
+    Array.prototype.forEach.call(document.querySelectorAll('input[data-utm]'), function (input) {
+      var key = input.getAttribute('data-utm');
+      var val = params ? (params.get(key) || '') : '';
+      input.value = val;
+    });
+  })();
 
   /* ---------- Mobile nav (hamburger) ---------- */
   var toggle = document.querySelector('.nav-toggle');
@@ -76,7 +101,6 @@
 
   /* ---------- Contact forms: client validation + async submit ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('form[data-contact-form]'), function (form) {
-    form.setAttribute('action', FORMSPREE_ENDPOINT);
     var btn = form.querySelector('button[type="submit"]');
     var successEl = form.querySelector('.form-status.success');
     var errorEl = form.querySelector('.form-status.error');
@@ -98,15 +122,26 @@
       }
 
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-      fetch(form.getAttribute('action'), {
+      var payload = {};
+      var fd = new FormData(form);
+      fd.forEach(function (value, key) {
+        if (Object.prototype.hasOwnProperty.call(payload, key)) {
+          if (!Array.isArray(payload[key])) payload[key] = [payload[key]];
+          payload[key].push(value);
+        } else {
+          payload[key] = value;
+        }
+      });
+      fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
       }).then(function (res) {
         if (res.ok) {
           show(successEl);
           form.reset();
           track('form_submit', { form_id: formId, status: 'success' });
+          if (!form.hasAttribute('data-no-redirect')) window.location.href = '/thank-you';
         } else {
           show(errorEl);
           track('form_submit', { form_id: formId, status: 'error' });
@@ -149,7 +184,7 @@
       if (scoreEl) scoreEl.innerHTML = total + '<span> / 25</span>';
       if (verdictEl) verdictEl.textContent = verdictFor(total);
       /* semantic state: green when ready to scope, amber when early days */
-      var results = checklist.querySelector('.checklist-results');
+      var results = document.querySelector('.checklist-results');
       if (results) results.setAttribute('data-level', total >= 20 ? 'high' : (total >= 12 ? 'mid' : 'low'));
       Object.keys(pillarEls).forEach(function (p) {
         var n = perPillar[p] || 0;
@@ -158,6 +193,10 @@
         if (strong) { strong.textContent = n + '/5'; strong.classList.toggle('full', n === 5); }
         if (bar) { bar.style.width = (n * 20) + '%'; bar.classList.toggle('full', n === 5); }
       });
+      var totalEl = document.querySelector('[data-score-total]');
+      var pillarsEl = document.querySelector('[data-score-pillars]');
+      if (totalEl) totalEl.value = String(total);
+      if (pillarsEl) pillarsEl.value = JSON.stringify(perPillar);
     }
 
     checklist.addEventListener('change', function (e) {
