@@ -20,9 +20,14 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default denied until the visitor chooses -->
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+    try{if(localStorage.getItem('eas_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script>gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +46,19 @@
     "serviceType": "AI Implementation",
     "areaServed": "US",
     "priceRange": "$40,000 - $120,000",
-    "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "40000 - 120000" }
+    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 40000, "highPrice": 120000 }
+  }
+  </script>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://enterpriseaistudio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://enterpriseaistudio.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "AI Implementation Sprints", "item": "https://enterpriseaistudio.com/services/ai-implementation-sprints" }
+    ]
   }
   </script>
   <!-- Structured Data: FAQPage -->
@@ -219,6 +236,27 @@
   </div>
 </section>
 
+<section id="also-consider">
+  <div class="container">
+    <p class="section-eyebrow">Also consider</p>
+    <h2 class="section-headline">Not sure this is the right shape?</h2>
+    <div class="grid-2">
+      <article class="card card-hover">
+        <p class="card-sub">Ongoing · $8K–$30K / month</p>
+        <h3>Fractional AI Engineering</h3>
+        <p>Senior AI engineering bandwidth on retainer when the work is continuous rather than a single fixed-scope build.</p>
+        <a class="card-link" href="/services/fractional-ai-engineering">See the retainer</a>
+      </article>
+      <article class="card card-hover">
+        <p class="card-sub">4–6 weeks · $25K–$60K</p>
+        <h3>Enterprise AI Governance</h3>
+        <p>Policy, risk register, eval infrastructure, and the audit trail that gets AI work through security review.</p>
+        <a class="card-link" href="/services/enterprise-ai-governance">See governance</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="band">
   <div class="container">
     <div class="contact-form-wrap" style="text-align:center;">
@@ -226,7 +264,17 @@
       <h2 class="section-headline" style="max-width:100%;">Let's scope your sprint.</h2>
       <p class="section-body" style="margin:0 auto;">A quick discovery call to map constraints and timeline. No sales pitch, just a direct conversation.</p>
 
-      <form class="contact-form" data-contact-form="sprint_contact" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST">
+      <div class="cta-row" style="margin-top:20px;">
+        <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+      </div>
+
+      <form class="contact-form" data-contact-form="sprint_contact" action="/api/inquiry" method="post">
+        <input type="hidden" name="form_name" value="sprint_contact">
+        <input type="hidden" name="inquiry_type" value="implementation_sprint">
+        <input type="hidden" name="page_source" value="/services/ai-implementation-sprints">
+        <input type="hidden" name="utm_source" value="" data-utm="utm_source">
+        <input type="hidden" name="utm_medium" value="" data-utm="utm_medium">
+        <input type="hidden" name="utm_campaign" value="" data-utm="utm_campaign">
         <div class="form-row">
           <div class="form-field">
             <label for="name">Full name *</label>
@@ -243,24 +291,71 @@
             <input type="text" id="company" name="company" autocomplete="organization" placeholder="Acme Corp">
           </div>
           <div class="form-field">
-            <label for="service">Service interested in</label>
+            <label for="role">Your role</label>
+            <select id="role" name="role">
+              <option value="">Select one…</option>
+              <option value="cto-cio">CTO / CIO</option>
+              <option value="vp-engineering">VP Engineering</option>
+              <option value="vp-operations">VP Operations</option>
+              <option value="head-of-data">Head of Data</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company_size">Company size</label>
+            <select id="company_size" name="company_size">
+              <option value="">Select one…</option>
+              <option value="lt-200">Under 200</option>
+              <option value="200-1000">200–1,000</option>
+              <option value="1000-5000">1,000–5,000</option>
+              <option value="5000-plus">5,000+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="service">Engagement type</label>
             <select id="service" name="service">
+              <option value="">Select one…</option>
               <option value="implementation-sprint" selected>AI implementation sprint (4–8 weeks)</option>
               <option value="fractional-engineering">Fractional AI engineering (retainer)</option>
               <option value="governance">Enterprise AI governance</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select one…</option>
+              <option value="now">Now</option>
+              <option value="this-quarter">This quarter</option>
+              <option value="next-quarter">Next quarter</option>
+              <option value="exploring">Exploring</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="budget">Budget band</label>
+            <select id="budget" name="budget">
+              <option value="">Select one…</option>
+              <option value="25k-60k">$25K–$60K (governance)</option>
+              <option value="40k-120k">$40K–$120K (sprint)</option>
+              <option value="8k-30k-month">$8K–$30K / month (retainer)</option>
+              <option value="not-sure">Not sure yet</option>
             </select>
           </div>
         </div>
         <div class="form-field">
           <label for="message">Tell us about your use case *</label>
-          <textarea id="message" name="message" placeholder="What workflow or problem are you trying to solve with AI? What's the constraint — team capacity, expertise, timeline, governance?" required></textarea>
+          <textarea id="message" name="message" placeholder="Describe the workflow, systems, constraints, and what success would look like." required></textarea>
         </div>
-        <input type="hidden" name="_subject" value="New AI Implementation Sprint Inquiry">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+        <input class="visually-hidden" type="text" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
         <div class="form-submit">
-          <button type="submit" class="btn btn-primary btn-form-submit">Send message</button>
-          <p class="form-status success" role="status">✓ Message sent. We'll be in touch within one business day.</p>
-          <p class="form-status error" role="alert">Something went wrong. Please <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>email the studio</a> directly.</p>
+          <button type="submit" class="btn btn-primary btn-form-submit">Send the brief</button>
+          <p class="form-consent">By sending, you agree to our <a href="/privacy">privacy notice</a>.</p>
+          <p class="form-status success" role="status">✓ Brief sent. We'll be in touch within one business day.</p>
+          <p class="form-status error" role="alert">Something went wrong. Please <a href="/contact#form">email the studio</a> directly.</p>
         </div>
       </form>
     </div>
@@ -283,6 +378,7 @@
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
       </nav>
     </div>
     <div class="family-strip">
@@ -294,9 +390,17 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
+
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <script src="/assets/site.js" defer></script>
 </body>

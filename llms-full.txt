@@ -1,0 +1,2223 @@
+# Enterprise AI Studio — Full Site Text
+
+Last updated: 2026-09-16
+
+Every public page of https://enterpriseaistudio.com as plain text, for AI crawlers and answer engines. Canonical short version: https://enterpriseaistudio.com/llms.txt
+
+---
+
+# Enterprise AI Studio — Production AI implementation
+
+URL: https://enterpriseaistudio.com/
+Description: We design, build, and operate production AI systems for enterprise teams. Implementation sprints, fractional AI engineering, and governance frameworks.
+
+Production AI implementation
+
+## One AI workflow. In production. In eight weeks.
+
+Fixed scope, published price, and the evals, approval gates, and runbooks that get it through security review. Not a pilot — a system your team runs on Monday.
+
+Contact the studio
+See our services
+
+The delivery loop — how every engagement ships.
+
+### Credibility signals
+
+4–8 wks implementation sprint window with scoped milestones and launch criteria.
+
+250+ representative eval examples before a regulated or customer-facing launch.
+
+Zero auto-send or auto-approve defaults on sensitive workflows — humans stay in the loop.
+
+30 days of post-launch support included with every sprint handoff and runbook.
+
+Delivery standards we build into every engagement — not client claims.
+
+Four-time CPO operating background
+ProductExec — our sister practice
+Model-agnostic architecture
+Audit trails and evals by default
+Human approval gates
+
+The Problem
+
+### AI is no longer the bottleneck. Implementation is.
+
+Most enterprise AI projects stall in the same place: the strategy is clear, the use case is real, but no one in the building can ship a production-grade system. Your engineering team is fully booked. Generic agencies hand you a demo. In-house "AI initiatives" don't survive their first compliance review. Enterprise AI Studio is the implementation team you bring in when the strategy is decided and you need it built — properly, securely, and in production.
+
+Case Studies
+
+### Proof patterns from production AI workflows.
+
+These are anonymized and representative case-study patterns. Named customer stories are published only after customers approve disclosure.
+
+Customer Support · Implementation Sprint
+
+#### Tier-1 support agent with human escalation
+
+A B2B support workflow that answers repeat questions from approved knowledge, customer account state, and policy constraints while escalating low-confidence cases to humans.
+
+- Shadow-mode rollout before customer exposure
+
+- Retrieval citations on every answer
+
+- Confidence thresholds and rollback runbook
+
+- Helpdesk integration instead of a separate chatbot island
+
+Target result: faster first response with fewer tier-1 tickets reaching senior agents.
+
+Document Intelligence · Legal/Procurement
+
+#### Contract review and policy deviation detection
+
+A document pipeline that extracts key clauses, compares them against a company playbook, and routes exceptions to legal with source-page provenance.
+
+- Clause-level precision and recall evals
+
+- Reviewer-in-the-loop interface
+
+- No auto-approval on risky language
+
+- Source trace from risk flag to original document
+
+Target result: reduce manual review hours while preserving legal control over final decisions.
+
+Sales Workflow · Fractional AI Engineering
+
+#### Call analysis, CRM hygiene, and follow-up drafts
+
+A post-call workflow that turns transcripts into buyer signals, CRM updates, and sales follow-up drafts while keeping reps in charge of what gets sent.
+
+- Draft-only outbound messaging
+
+- CRM writes logged and reversible
+
+- Rep grading loop for ongoing evals
+
+- Quarterly quality review against baseline
+
+Target result: cleaner CRM data and faster follow-up without risky automated sending.
+
+"The useful proof is not a flashy demo. It is a working workflow with evals, escalation, and a runbook."
+
+Kevin Owens · Production launch principle
+
+"Governance belongs in the build, not in a cleanup meeting after the prototype already spread."
+
+Kevin Owens · Governance principle
+
+"The model is one component. The operating system around it decides whether the AI work holds up in production."
+
+Kevin Owens · Operating principle
+
+Contact the studio
+Read the full case-study library
+
+Services
+
+### Three ways to work with us.
+
+#### AI Implementation Sprints
+
+4–8 weeks · Fixed scope
+
+A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. We bring engineering, evals, and production discipline; you bring workflow knowledge.
+
+Examples: support agents, document review, internal Q&A, sales call analysis, workflow automation.
+
+Scope a sprint
+
+#### Fractional AI Engineering
+
+Ongoing retainer · 20–80 hrs/mo
+
+Dedicated senior AI engineering bandwidth on retainer. We become your AI team — building new systems, optimizing existing ones, running evals, and handling production incidents.
+
+Includes: engineering hours, monthly evals, quarterly reviews, on-call coverage.
+
+Discuss a retainer
+
+#### Enterprise AI Governance
+
+4–6 weeks · Fixed fee
+
+AI governance, security, and operating-model readiness. We design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.
+
+Includes: governance design, security review, vendor policy, eval infrastructure, executive briefing.
+
+Review your readiness
+
+#### What we build
+
+- Internal knowledge assistants · policies, SOPs, contracts
+
+- Document intelligence · review, classify, route
+
+- Customer support agents · tier-1 with escalation
+
+- Sales workflow assistants · call analysis, CRM hygiene
+
+- Internal Q&A bots · IT, HR, finance, onboarding
+
+- Workflow automation · email, CRM, ticketing, billing
+
+Our Process
+
+### Our process is the product.
+
+01
+
+#### Discovery (free, 30 min)
+
+One call to map the use case, technical constraints, and success metrics.
+
+02
+
+#### Scoping (free, 1 week)
+
+A detailed scope document: architecture, milestones, pricing, team.
+
+03
+
+#### Sprint kickoff
+
+Architecture, eval plan, and production criteria locked in.
+
+04
+
+#### Build & integrate
+
+Weekly stakeholder checkpoints; live demo at every milestone.
+
+05
+
+#### Production launch
+
+System live with monitoring, runbook, and 30 days of post-launch support.
+
+06
+
+#### Handoff or retainer
+
+Knowledge transfer to your team, or transition to a fractional engagement.
+
+Why Us
+
+### Why teams choose us.
+
+-
+01
+
+#### Strategy + execution under one roof
+
+Through ProductExec , our sister practice, you can move from "what should we build" to "build it" without re-briefing.
+
+-
+02
+
+#### Production-grade, not demo-grade
+
+Every system ships with evals, monitoring, fallback paths, and runbooks. No magic prompts that break next week.
+
+-
+03
+
+#### Workflow durability
+
+Designed for thousands of repeated runs, not impressive single demos.
+
+-
+04
+
+#### Enterprise governance baked in
+
+Audit trails, security review, escalation, and compliance from day one.
+
+-
+05
+
+#### Model-agnostic
+
+Claude, OpenAI, open-weight; routed by task criticality, not vendor loyalty.
+
+-
+06
+
+#### Built by operators
+
+We've run the systems we ship. We know what production really means.
+
+About
+
+### Built by operators who've shipped AI in production.
+
+Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer whose operating background spans B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside ProductExec , our sister practice, and bring in specialist engineers for each engagement. Connect with Kevin on LinkedIn .
+
+Scope honesty
+
+### What we won't do.
+
+#### Vague pilots
+
+If the workflow and the metric aren't named, there's nothing to ship against.
+
+#### Demo-grade systems on real users
+
+Anything touching customers or regulated work ships with evals, gates, and a runbook — or it doesn't ship.
+
+#### Governance bolted on after launch
+
+Approvals, audit trail, and rollback criteria are designed in week one, not retrofitted under security review.
+
+#### Innovation theatre
+
+Work that doesn't move a real workflow metric isn't worth your budget or our quarter.
+
+If you need forty people and two years, hire a systems integrator. We'll tell you so on the first call.
+
+FAQ
+
+### Common questions.
+
+#### How is this different from working with ProductExec?
+
+ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.
+
+#### Do you replace our internal engineering team?
+
+No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.
+
+#### Which models do you use?
+
+We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.
+
+#### What's a typical engagement size?
+
+Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.
+
+#### Can you sign an NDA?
+
+Yes. We sign mutual NDAs before any scoping conversation.
+
+#### What about compliance and governance?
+
+Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them.
+
+#### Do you handle the integration with our systems?
+
+Yes. We typically own the entire integration — APIs, webhooks, database connections, CRM/ERP linking, whatever your stack requires. We ensure the AI system fits seamlessly into your workflows without requiring your team to rewire their operations.
+
+#### What if we don't know exactly what AI use case we need?
+
+That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on.
+
+Get in Touch
+
+### Ready to ship AI that actually works?
+
+Tell us about your use case. We'll map the constraints and the fastest path to production — no sales deck, just a direct conversation.
+
+Full name *
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Company size
+
+Select one…
+
+Under 200
+
+200–1,000
+
+1,000–5,000
+
+5,000+
+
+Engagement type
+
+Select one…
+
+AI implementation sprint (4–8 weeks)
+
+Fractional AI engineering (retainer)
+
+Enterprise AI governance
+
+Not sure yet
+
+Timeline
+
+Select one…
+
+Now
+
+This quarter
+
+Next quarter
+
+Exploring
+
+Budget band
+
+Select one…
+
+$25K–$60K (governance)
+
+$40K–$120K (sprint)
+
+$8K–$30K / month (retainer)
+
+Not sure yet
+
+Tell us about your use case *
+
+Send the brief
+By sending, you agree to our privacy notice .
+
+✓ Brief sent. We'll be in touch within one business day.
+
+Something went wrong. Please email the studio directly.
+
+---
+
+# AI Implementation Services — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/services
+Description: Enterprise AI Studio services: AI implementation sprints, fractional AI engineering, and governance for production AI workflows — with a side-by-side comparison.
+
+Services
+
+## Production AI services built around shipped workflows.
+
+Choose the engagement shape that fits the business problem: a fixed implementation sprint, ongoing fractional AI engineering, or governance work that makes AI safe to operate.
+
+Contact the studio
+See proof standards
+
+### Three ways we help enterprise teams move from AI idea to production system.
+
+#### AI implementation sprints
+
+Four to eight week fixed-scope builds for one high-value workflow with evaluation, integration, launch criteria, and handoff.
+
+- Workflow mapping and architecture
+
+- Model, retrieval, and tool integration
+
+- Eval suite and launch runbook
+
+Read sprint details
+
+#### Fractional AI engineering
+
+Embedded senior AI engineering capacity for teams that need production velocity without hiring a full internal group first.
+
+- Backlog shaping and implementation
+
+- Production reliability work
+
+- Vendor and model decisions
+
+Read retainer details
+
+#### Enterprise AI governance
+
+Practical governance systems for model risk, escalation, auditability, access control, and compliance-sensitive deployment.
+
+- Readiness assessment
+
+- Eval and monitoring design
+
+- Human approval workflows
+
+Read governance details
+
+Which engagement fits
+
+### Sprint, retainer, or governance — side by side.
+
+The same facts from the three service pages, in one view. If you're still unsure, the free discovery call exists to answer exactly this question. Full price bands live on pricing , and the questions buyers ask most are answered in the FAQ .
+
+Comparison of Enterprise AI Studio engagement types
+
+Dimension
+
+AI implementation sprint
+
+Fractional AI engineering
+
+Enterprise AI governance
+
+Shape
+
+Fixed scope , one system, one launch
+
+Ongoing retainer, flexes month to month
+
+Fixed-fee governance program
+
+Timeline
+
+4–8 weeks
+
+Monthly, 20–80 hrs/month
+
+4–6 weeks
+
+Price band
+
+$40K–$120K by complexity
+
+$8K–$30K/month by hours
+
+$25K–$60K by scope
+
+Best for
+
+One high-value workflow that needs to be scoped, built, and launched properly
+
+Teams that need senior AI capacity and production velocity without hiring a full internal group first
+
+Making AI safe to operate — security review, compliance, and audit readiness before or while you scale
+
+Key deliverables
+
+Scope document, architecture, build and integration, eval suite, production launch, runbook, 30 days post-launch support
+
+Dedicated engineer hours, monthly evals, quarterly reviews, on-call coverage for production incidents
+
+AI policy framework, risk register, eval infrastructure, operations manual, vendor evaluation matrix, executive briefing
+
+Starts with
+
+Free 30-min discovery call, then a free 1-week scoping phase
+
+Alignment call, then your engineer joins the team
+
+Week-1 assessment of systems, data flows, and compliance requirements
+
+#### AI implementation sprint
+
+Shape Fixed scope , one system, one launch
+
+Timeline 4–8 weeks
+
+Price band $40K–$120K by complexity
+
+Best for One high-value workflow that needs to be scoped, built, and launched properly
+
+Key deliverables Scope document, architecture, build and integration, eval suite, production launch, runbook, 30 days post-launch support
+
+Starts with Free 30-min discovery call, then a free 1-week scoping phase
+
+Read sprint details
+
+#### Fractional AI engineering
+
+Shape Ongoing retainer, flexes month to month
+
+Timeline Monthly, 20–80 hrs/month
+
+Price band $8K–$30K/month by hours
+
+Best for Teams that need senior AI capacity and production velocity without hiring a full internal group first
+
+Key deliverables Dedicated engineer hours, monthly evals, quarterly reviews, on-call coverage for production incidents
+
+Starts with Alignment call, then your engineer joins the team
+
+Read retainer details
+
+#### Enterprise AI governance
+
+Shape Fixed-fee governance program
+
+Timeline 4–6 weeks
+
+Price band $25K–$60K by scope
+
+Best for Making AI safe to operate — security review, compliance, and audit readiness before or while you scale
+
+Key deliverables AI policy framework, risk register, eval infrastructure, operations manual, vendor evaluation matrix, executive briefing
+
+Starts with Week-1 assessment of systems, data flows, and compliance requirements
+
+Read governance details
+
+Process
+
+### The operating model is part of the deliverable.
+
+#### 1. Pick the workflow
+
+We start with business impact, data access, operational risk, and the human workflow around the AI system.
+
+#### 2. Build with evals
+
+Representative examples, failure modes, and acceptance criteria shape implementation before launch.
+
+#### 3. Launch with controls
+
+Escalation paths, logs, monitoring, and rollback criteria are included before production traffic ramps.
+
+Contact the studio
+See case studies
+Read the FAQ
+
+---
+
+# AI Implementation Sprints — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/services/ai-implementation-sprints
+Description: Fixed-scope AI projects delivered in 4-8 weeks. We handle the full cycle: scoping, architecture, build, integration, and production launch.
+
+Service · Implementation sprints
+
+## AI Implementation Sprints.
+
+A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4–8 weeks. Fixed scope. Production-grade.
+
+Contact the studio
+Compare all services
+
+The Model
+
+### Fixed scope, fixed timeline, fixed price.
+
+We work differently from typical consulting engagements. You bring the problem. We handle the full cycle: architecture, build, integration, evals, and production launch. The scope is locked in the scoping phase — no surprises, no moving targets.
+
+#### What's Included
+
+Discovery call (free, 30 min): Map your use case, technical constraints, and success metrics.
+
+Scoping phase (free, 1 week): Detailed scope document with architecture, milestones, pricing, and team composition.
+
+Sprint execution (4–8 weeks): Full-cycle delivery: system design, build, integration, evals, production launch.
+
+Production launch: System live with monitoring, runbook documentation, and dashboards.
+
+Post-launch support (30 days): On-call for issues, handoff documentation, and team training.
+
+#### Pricing
+
+$40,000 – $120,000 depending on complexity. Typical breakdown:
+
+$40K–$60K: Narrow, well-defined use cases (e.g., single workflow, document classification, basic Q&A).
+
+$60K–$80K: Multi-step workflows, moderate integration, evals on 2-3 models.
+
+$80K–$120K: Complex integrations, multiple systems, custom eval frameworks, governance design.
+
+What We Build
+
+### Common sprint examples.
+
+#### Customer support agents
+
+AI handles tier-1 tickets, escalates intelligently, learns from feedback. Integrated with ticketing system.
+
+#### Document intelligence systems
+
+Review, classify, route inbound documents. Full audit trail, compliance-ready.
+
+#### Internal knowledge assistants
+
+Answer employee questions from policies, SOPs, customer history, contracts.
+
+#### Sales workflow assistants
+
+Call analysis, follow-up drafting, CRM hygiene, deal guidance.
+
+#### Content generation systems
+
+Batch or real-time content creation: proposals, reports, email drafts, with human review loops.
+
+#### Workflow automation
+
+Multi-step processes across email, CRM, ticketing, billing, or custom APIs.
+
+Our Approach
+
+### How we ship.
+
+#### Week 1–2: Architecture & planning
+
+System design, eval plan, data pipeline, integration points, risk assessment.
+
+#### Week 2–4: Build & integration
+
+Core system development, integration with your infrastructure, evals running in parallel.
+
+#### Week 4–6: Evals & hardening
+
+Run production simulation, stress test, error handling, fallback paths, monitoring.
+
+#### Week 6–8: Production launch
+
+Live deployment, monitoring dashboards, runbooks, team training, 30 days post-launch support.
+
+FAQ
+
+### Common questions.
+
+#### How long do sprints take?
+
+Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one.
+
+#### What's included in the pricing?
+
+Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support.
+
+#### Do you handle integration with our existing systems?
+
+Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope.
+
+#### What if our team wants to maintain the system after launch?
+
+We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support.
+
+#### How does discovery work?
+
+We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team.
+
+#### What if requirements change mid-sprint?
+
+We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both.
+
+#### Do you cover compliance and governance?
+
+Yes. Every system we build includes audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has specific compliance needs (SOC 2, HIPAA, etc.), we design the system to support them.
+
+Also consider
+
+### Not sure this is the right shape?
+
+Ongoing · $8K–$30K / month
+
+#### Fractional AI Engineering
+
+Senior AI engineering bandwidth on retainer when the work is continuous rather than a single fixed-scope build.
+
+See the retainer
+
+4–6 weeks · $25K–$60K
+
+#### Enterprise AI Governance
+
+Policy, risk register, eval infrastructure, and the audit trail that gets AI work through security review.
+
+See governance
+
+Ready to Build?
+
+### Let's scope your sprint.
+
+A quick discovery call to map constraints and timeline. No sales pitch, just a direct conversation.
+
+Pick a time
+
+Full name *
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Company size
+
+Select one…
+
+Under 200
+
+200–1,000
+
+1,000–5,000
+
+5,000+
+
+Engagement type
+
+Select one…
+
+AI implementation sprint (4–8 weeks)
+
+Fractional AI engineering (retainer)
+
+Enterprise AI governance
+
+Not sure yet
+
+Timeline
+
+Select one…
+
+Now
+
+This quarter
+
+Next quarter
+
+Exploring
+
+Budget band
+
+Select one…
+
+$25K–$60K (governance)
+
+$40K–$120K (sprint)
+
+$8K–$30K / month (retainer)
+
+Not sure yet
+
+Tell us about your use case *
+
+Send the brief
+By sending, you agree to our privacy notice .
+
+✓ Brief sent. We'll be in touch within one business day.
+
+Something went wrong. Please email the studio directly.
+
+---
+
+# Fractional AI Engineering — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/services/fractional-ai-engineering
+Description: Dedicated senior AI engineering on retainer. 20-80 hours per month. Build new systems, optimize existing ones, handle production incidents, run evals.
+
+Service · Fractional engineering
+
+## Fractional AI Engineering.
+
+Dedicated senior AI engineer on your team. Build new systems, optimize existing ones, run evals, handle production. 20–80 hours per month.
+
+Contact the studio
+Compare all services
+
+The Model
+
+### Your AI team, on retainer.
+
+You get a dedicated senior engineer who becomes part of your team. They work on your backlog, respond to production issues, run experiments, and help you scale AI across your organization. It's not a sprint; it's a partnership.
+
+#### What's Included
+
+Dedicated engineer hours: 20, 40, 60, or 80 hours per month. Flex up or down with 2 weeks notice.
+
+Monthly evals: Measure system performance, identify optimization opportunities, test new models or approaches.
+
+Quarterly reviews: Strategic review of your AI roadmap, upcoming projects, and architecture decisions.
+
+On-call coverage: Production incidents get immediate attention. Critical issues resolved within hours.
+
+Continuity: Same engineer across months/years so they understand your systems, constraints, and priorities.
+
+#### Pricing
+
+$8,000/mo (20 hrs): Light maintenance, evals, 1-2 small features per month.
+
+$16,000/mo (40 hrs): Standard engagement. New feature development, evals, production support.
+
+$24,000/mo (60 hrs): Accelerated roadmap. Multiple projects in parallel, deeper optimization work.
+
+$30,000/mo (80 hrs): Full-time equivalent. Your dedicated AI engineering team.
+
+Common Work
+
+### What retainer engineers do.
+
+#### New system development
+
+Build the next AI feature or workflow. From architecture through production launch.
+
+#### System optimization
+
+Reduce latency, improve quality, lower costs. Run evals and A/B tests.
+
+#### Model migration
+
+Evaluate new models, run side-by-side benchmarks, manage switchovers safely.
+
+#### Production incidents
+
+On-call for system failures, degradation, unexpected behavior. Root cause analysis and fixes.
+
+#### Infrastructure & ops
+
+Logging, monitoring, cost optimization, security hardening, compliance reviews.
+
+#### Team enablement
+
+Help your engineers learn. Code reviews, architecture discussions, best practices.
+
+Typical Engagement
+
+### How retainers work.
+
+You choose your hours (20/40/60/80/month) and kick off with a brief alignment call. Your engineer then joins your team — attends standup, syncs on priorities, picks up work from your backlog.
+
+Hours are tracked and flexible: slower months roll unused hours forward (up to 2 months), faster months you can burn them or add capacity. You get a monthly report of work completed, current systems status, and recommended priorities.
+
+Critical production issues are handled immediately, outside the hour budget. Everything else comes from your monthly allocation.
+
+FAQ
+
+### Common questions.
+
+#### How many hours per month do I get?
+
+Our retainers are offered as 20, 40, 60, or 80 hours per month. You can flex usage month-to-month, and unused hours roll over (up to 2 months) so you're not penalized for lighter months.
+
+#### What's included in a retainer?
+
+Dedicated engineering hours, monthly evals, quarterly reviews, on-call coverage for production issues, and ongoing optimization. You get a senior engineer as part of your team.
+
+#### Can I pause or scale up a retainer?
+
+Yes. You can pause for a month or scale hours up/down with 2 weeks notice. The engagement is designed to flex with your actual needs.
+
+#### What happens if we hit a production issue?
+
+Retainer hours include on-call coverage. Critical issues get immediate attention; we prioritize your production systems over other work.
+
+#### Do you work across our whole AI stack, or just new builds?
+
+Both. We build new systems, optimize existing ones, run evals, handle migrations, integrate with your infrastructure, and manage production incidents. You get your own AI team.
+
+#### Who's the engineer on our team?
+
+A dedicated senior engineer who becomes part of your team. They own your roadmap, understand your systems, and provide continuity across projects.
+
+Also consider
+
+### Not sure this is the right shape?
+
+4–8 weeks · $40K–$120K
+
+#### AI Implementation Sprints
+
+One workflow, fully scoped, built, and shipped to production on a fixed timeline and a published price.
+
+See the sprint
+
+4–6 weeks · $25K–$60K
+
+#### Enterprise AI Governance
+
+Policy, risk register, eval infrastructure, and the audit trail that gets AI work through security review.
+
+See governance
+
+Let's Talk
+
+### Find your AI team.
+
+Tell us about your roadmap and current AI systems. We'll match you with an engineer and scope the engagement.
+
+Pick a time
+
+Full name *
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Company size
+
+Select one…
+
+Under 200
+
+200–1,000
+
+1,000–5,000
+
+5,000+
+
+Engagement type
+
+Select one…
+
+AI implementation sprint (4–8 weeks)
+
+Fractional AI engineering (retainer)
+
+Enterprise AI governance
+
+Not sure yet
+
+Timeline
+
+Select one…
+
+Now
+
+This quarter
+
+Next quarter
+
+Exploring
+
+Budget band
+
+Select one…
+
+$25K–$60K (governance)
+
+$40K–$120K (sprint)
+
+$8K–$30K / month (retainer)
+
+Not sure yet
+
+Tell us about your AI roadmap and current systems *
+
+Send the brief
+By sending, you agree to our privacy notice .
+
+✓ Brief sent. We'll be in touch within one business day.
+
+Something went wrong. Please email the studio directly.
+
+---
+
+# Enterprise AI Governance — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/services/enterprise-ai-governance
+Description: AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.
+
+Service · Governance
+
+## Enterprise AI Governance.
+
+Design governance, security, and operating-model readiness so your AI work survives audit and scales without surprises. 4–6 weeks, fixed fee.
+
+Contact the studio
+Compare all services
+
+The Problem
+
+### Your AI work won't survive security review without governance.
+
+Most enterprises ship their first AI system, then security and compliance flag it. No audit trail. No eval framework. Data handling unclear. Vendor risks unmitigated. Now you're rewriting production code to satisfy compliance.
+
+We help you design governance first, so your AI infrastructure is security-ready, audit-ready, and compliant from day one. No rewrites. No surprises.
+
+#### What's Included
+
+Risk assessment (Week 1): Map your current AI systems, data flows, vendor dependencies, and compliance requirements.
+
+Policy framework (Week 2-3): Design AI governance: vendor selection criteria, data handling policies, audit trails, escalation protocols, role-based access control.
+
+Security review (Week 3): Review your systems against NIST AI RMF, CIS controls, and your compliance requirements (SOC 2, HIPAA, etc.).
+
+Eval infrastructure (Week 4): Design and build eval frameworks so you measure quality, cost, and safety continuously.
+
+Operations manual (Week 5): How to deploy, monitor, and scale AI systems safely. For your ops team and leadership.
+
+Executive briefing (Week 6): AI risks, governance model, and compliance readiness. For your board and CISO.
+
+#### Pricing
+
+$25,000 – $60,000 depending on scope and system complexity.
+
+$25K–$35K: Single system, basic governance, no specific compliance requirements.
+
+$35K–$50K: Multiple systems, SOC 2 or similar compliance needs, custom eval frameworks.
+
+$50K–$60K: Complex integrations, HIPAA or financial regulation, vendor audit deep-dive, policy evolution consulting.
+
+What You Get
+
+### Governance deliverables.
+
+#### AI Policy Framework
+
+Vendor selection criteria, data handling, audit trails, escalation, RBAC, retention policies.
+
+#### Risk Register
+
+Current risks, mitigation strategies, compliance gaps, vendor risks.
+
+#### Eval Infrastructure
+
+Code-ready evals for quality, cost, safety, bias, and compliance.
+
+#### Operations Manual
+
+Deploy, monitor, scale, respond to incidents. For your ops and leadership team.
+
+#### Vendor Evaluation Matrix
+
+How to evaluate and compare vendors (Claude, OpenAI, open-weight, etc.) against your requirements.
+
+#### Executive Briefing
+
+Risks, governance model, compliance readiness. For your board and CISO.
+
+The Engagement
+
+### How governance work unfolds.
+
+Week 1: Assessment — We understand your current systems, data flows, vendor choices, and compliance requirements. Interviews with engineering, security, compliance, and leadership.
+
+Weeks 2-3: Design — AI policy framework, vendor criteria, data handling policies, audit infrastructure, escalation protocols.
+
+Week 4: Evals — Build and integrate eval frameworks to measure quality, cost, bias, and compliance continuously.
+
+Week 5: Documentation — Operations manual, security review findings, risk register with mitigations.
+
+Week 6: Leadership — Executive briefing and Q&A. Your team now has a clear governance model to scale AI safely.
+
+FAQ
+
+### Common questions.
+
+#### Do we need AI governance now, or later?
+
+Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls.
+
+#### How long does an engagement take?
+
+Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual.
+
+#### What's included in governance design?
+
+Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing.
+
+#### Do you handle SOC 2 or HIPAA compliance?
+
+Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit.
+
+#### Can you help with vendor evaluation?
+
+Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements.
+
+#### What's the output of a governance engagement?
+
+You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence.
+
+Also consider
+
+### Not sure this is the right shape?
+
+4–8 weeks · $40K–$120K
+
+#### AI Implementation Sprints
+
+One workflow, fully scoped, built, and shipped to production on a fixed timeline and a published price.
+
+See the sprint
+
+Ongoing · $8K–$30K / month
+
+#### Fractional AI Engineering
+
+Senior AI engineering bandwidth on retainer when the work is continuous rather than a single fixed-scope build.
+
+See the retainer
+
+Let's Build Governance
+
+### Design for scale.
+
+Tell us about your current AI systems and compliance requirements. We'll assess and scope the engagement.
+
+Pick a time
+
+Full name *
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Company size
+
+Select one…
+
+Under 200
+
+200–1,000
+
+1,000–5,000
+
+5,000+
+
+Engagement type
+
+Select one…
+
+AI implementation sprint (4–8 weeks)
+
+Fractional AI engineering (retainer)
+
+Enterprise AI governance
+
+Not sure yet
+
+Timeline
+
+Select one…
+
+Now
+
+This quarter
+
+Next quarter
+
+Exploring
+
+Budget band
+
+Select one…
+
+$25K–$60K (governance)
+
+$40K–$120K (sprint)
+
+$8K–$30K / month (retainer)
+
+Not sure yet
+
+Tell us about your systems and compliance requirements *
+
+Send the brief
+By sending, you agree to our privacy notice .
+
+✓ Brief sent. We'll be in touch within one business day.
+
+Something went wrong. Please email the studio directly.
+
+---
+
+# AI Implementation Pricing — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/pricing
+Description: Published price bands for AI implementation sprints, fractional AI engineering retainers, and enterprise AI governance — and exactly what moves a sprint from $40K to $120K.
+
+Pricing
+
+## What this costs.
+
+We publish price bands because the alternative wastes a week of your time and ours. If the number is wrong for your budget, you should know that before the first call — not after three meetings and a deck.
+
+Send the brief
+Pick a time
+
+The three bands
+
+### Three ways to work with us.
+
+4–8 weeks · fixed scope
+
+#### AI Implementation Sprint
+
+$40K–$120K
+
+One workflow, fully scoped, built, and shipped to production on a fixed timeline and a published price. Architecture, build, integration, evals, launch, runbooks, and 30 days of post-launch support.
+
+See the sprint
+
+4–6 weeks · fixed fee
+
+#### Enterprise AI Governance
+
+$25K–$60K
+
+Policy framework, risk register, eval infrastructure, vendor evaluation matrix, operations manual, and the executive briefing that gets AI work through security review.
+
+See governance
+
+Ongoing · 20–80 hrs / month
+
+#### Fractional AI Engineering
+
+$8K–$30K / month
+
+Senior AI engineering bandwidth on retainer: new builds, optimisation, monthly evals, quarterly reviews, and on-call coverage for production issues.
+
+See the retainer
+
+Discovery is free: a 30-minute call, then a one-week scoping phase that ends in a written scope document — architecture, milestones, price, and team — whether or not you go ahead.
+
+Range, explained
+
+### What moves a sprint from $40K to $120K.
+
+A sprint is one workflow either way. The spread is complexity, not padding. These six factors account for nearly all of it.
+
+#### Number of systems integrated
+
+One well-documented API sits at the bottom of the band. A CRM, a ticketing system, a data warehouse, and a legacy ERP with no sandbox sit at the top.
+
+#### Data readiness
+
+Clean, permissioned, retrievable content is cheap. Scattered documents with no access model, no ground truth, and no owner means we build that first.
+
+#### Regulated or customer-facing surface
+
+Internal drafting tools carry less burden than anything touching customers, money, health, or legal — those need tighter controls and heavier review.
+
+#### Eval depth required
+
+A representative eval set with a handful of dimensions is one cost. Adversarial cases, per-release regression gates, and human-rated judgment sets are another.
+
+#### Approval gates and reviewers
+
+Each human gate is a workflow of its own: queues, routing, escalation, SLAs, and an audit trail that survives inspection. More reviewers, more surface.
+
+#### Change-management load
+
+Five power users who want the tool costs little. Two hundred people across three time zones who did not ask for it means training, rollout, and support design.
+
+We price the band at the end of scoping, not before it — and the number in the scope document is the number on the invoice. Significant scope changes are handled through change orders that adjust timeline, budget, or both.
+
+Inclusions
+
+### What's always included.
+
+#### In every sprint price
+
+Architecture design. System build. Integration with your infrastructure. An eval suite with a representative test set. Approval gates and escalation paths. Audit logging and monitoring. A written runbook and rollback criteria. Production launch. Hands-on handover training. 30 days of post-launch support.
+
+#### What's not included
+
+Model and infrastructure spend, which you pay your providers directly. New licences for systems you don't already own. Ongoing operation after the 30-day window — that's what the retainer is for. Net-new data cleanup at warehouse scale. Work outside the one scoped workflow, which becomes its own sprint rather than quiet scope creep.
+
+You own the code and the evals. We sign a mutual NDA before any scoping conversation. More detail on the FAQ and across the three services .
+
+Next step
+
+### Find out which band you're in.
+
+Send the workflow, the systems, and what success would look like. We'll reply within one business day with a view on scope and price — or with the reason this isn't a fit.
+
+Send the brief
+Pick a time
+
+---
+
+# Proof & Production Readiness — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/proof
+Description: How Enterprise AI Studio proves AI workflows are production ready with evals, auditability, escalation, monitoring, and launch criteria.
+
+Proof
+
+## How we prove an AI workflow is ready for production.
+
+Enterprise AI should not be judged by a polished demo. It should be judged by representative evals, source-grounded behavior, human escalation, audit trails, and launch criteria.
+
+Contact the studio
+See case studies
+
+The delivery loop — how every engagement ships.
+
+### Production readiness signals.
+
+250+
+
+#### Representative eval examples
+
+We build workflow-specific eval sets around real business cases, edge cases, and escalation conditions.
+
+Zero
+
+#### Unsafe auto-approval defaults
+
+Sensitive customer, legal, financial, and compliance flows stay reviewable until explicit approval gates are designed.
+
+30 days
+
+#### Post-launch support window
+
+Sprint handoffs include support, runbooks, and launch monitoring instead of leaving teams with a fragile prototype.
+
+#### A sprint's eval plan, in miniature
+
+Sample artifact · excerpt
+
+Excerpt of the eval-plan structure every sprint ships with
+
+Eval dimension
+What we test
+Gate
+
+"Good enough" definition
+
+Written so an engineer can build a test for it — acceptance criteria per workflow step.
+
+Pre-build
+
+Failure behavior
+
+The system escalates, asks, or refuses when it isn't confident.
+
+Launch gate
+
+Unacceptable errors
+
+Defined up front (e.g. wrong dollar amounts, wrong customer) and blocked, not tolerated.
+
+Hard block
+
+Output judgment
+
+A named domain expert, ops lead, or end users grade outputs during the build phase.
+
+Build phase
+
+Post-launch quality
+
+Quality tracked continuously after launch, not only at sprint review.
+
+Post-launch
+
+Structure shown, not results — the examples, thresholds, and error classes are defined per engagement during scoping. The readiness checklist asks the same questions this plan answers.
+
+AEO answers
+
+### What makes an enterprise AI implementation credible?
+
+#### It is grounded in approved data.
+
+Answers cite source systems, documents, or workflow state. Retrieval and permissions are tested before launch.
+
+#### It can say no.
+
+Low confidence, missing context, and policy-sensitive requests route to humans rather than creating false certainty.
+
+#### It is observable.
+
+Inputs, outputs, tools, approvals, and failure modes are logged in a way operators can inspect.
+
+#### It has a rollback path.
+
+Launch plans include ramp criteria, monitoring, and a clear path to disable or narrow behavior.
+
+Contact the studio
+Take the readiness checklist
+
+FAQ
+
+### Two questions we get every time.
+
+#### How do you prove an AI workflow is production ready?
+
+Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria.
+
+#### Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?
+
+No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved.
+
+More answers on scope, pricing, delivery, and governance are on the full FAQ .
+
+Take it with you
+
+### Want the eval plan as a template?
+
+The eval-plan structure above is being written up as a reusable template. Tell us on the resources page and we’ll send it when it ships — no gated download, no form wall.
+
+Get the eval-plan template
+
+---
+
+# Engagement Patterns — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/case-studies
+Description: Illustrative engagement patterns for production AI in enterprise workflows: customer support agents, document intelligence, sales workflow analysis, internal knowledge assistants, and audit-grade governance.
+
+Engagement patterns
+
+## Engagement patterns
+
+Five engagement patterns that show what a production AI system looks like inside an enterprise workflow — from scope to architecture to the commitments we hold ourselves to.
+
+Note: These are illustrative engagement patterns drawn from common enterprise AI workflows — not named client results. Named client case studies will be added as customers approve disclosure.
+
+Contact the studio
+See our services
+
+Engagement patterns
+
+### What production AI looks like in real workflows.
+
+Customer Support · Implementation Sprint
+
+#### Tier-1 support agent for a B2B SaaS platform
+
+Problem: Support team handling thousands of repetitive how-to and account-state tickets per week. Agent fatigue and slow time-to-first-response on simple cases.
+
+What we built: A retrieval-augmented support agent that handles tier-1 issues end-to-end inside the existing helpdesk. Confidence-thresholded escalation to humans, full audit trail, and customer-state grounding (account, plan, recent activity) so answers reflect the actual user.
+
+How it ships safely: Eval suite of 250+ representative tickets. Shadow-mode launch reviewing every response against a human reply for two weeks. Gated rollout per ticket category with rollback runbook.
+
+Retrieval
+Eval-driven rollout
+Helpdesk integration
+Audit trail
+
+100% responses logged with retrieval citations
+
+Scope a build like this →
+
+Document Intelligence · Implementation Sprint
+
+#### Contract review and clause extraction for a procurement team
+
+Problem: Procurement reviewing hundreds of vendor contracts per quarter. Manual clause extraction, redline drafting, and risk flagging consuming senior legal hours.
+
+What we built: A document intelligence pipeline that ingests PDFs and DOCX, extracts a fixed set of clauses (term, renewal, indemnity, liability cap, data handling, AI use), flags policy deviations against the company's standard playbook, and routes flagged items to a human reviewer with a redline draft.
+
+How it ships safely: Per-clause precision/recall evals on a 200-document gold set. Reviewer-in-the-loop UI with confidence badges. Full provenance from extracted clause back to source page.
+
+Doc parsing
+Clause extraction
+Policy diffing
+Reviewer UI
+
+0 auto-approvals — human always confirms risk
+
+Scope a build like this →
+
+Sales Workflow · Fractional Engagement
+
+#### Sales call analysis and follow-up drafting
+
+Problem: Sales reps losing context across multi-call deal cycles. Inconsistent CRM hygiene and slow follow-up drafting after discovery calls.
+
+What we built: Post-call analysis that pulls transcripts from the call platform, extracts buyer signals, generates a structured summary into the CRM, and drafts a tailored follow-up email per call. Reps review and send; the model never auto-sends.
+
+How it ships safely: Reps grade outputs in-app for ongoing eval. Quarterly comparison of follow-up quality vs. baseline. CRM writes are reversible and logged.
+
+Transcripts
+CRM sync
+Draft-only output
+In-app grading
+
+0 auto-sent emails to customers
+
+Scope a build like this →
+
+Internal Knowledge · Implementation Sprint
+
+#### Internal knowledge assistant over policies and SOPs
+
+Problem: New hires and existing staff repeatedly asking IT, HR, and operations the same set of policy and process questions. Tribal knowledge stuck in PDFs and wikis.
+
+What we built: Internal Q&A assistant grounded in approved policies, SOPs, and FAQs. Answers always cite the source document and section. RBAC-aware so HR-confidential content is only available to authorized employees. Slack and intranet entry points.
+
+How it ships safely: Pre-launch eval against a 300-question gold set across IT, HR, finance, and ops. Confidence threshold with "I don't know — talk to [team]" fallback. Monthly content freshness audit.
+
+RAG
+RBAC
+Slack
+Source citations
+
+100% answers carry source citations
+
+Scope a build like this →
+
+Governance · Enterprise AI Governance Engagement
+
+#### AI governance and security review for a regulated enterprise
+
+Problem: Enterprise launching its first wave of AI features and unsure how to clear security review, compliance, and board-level oversight. Engineering shipping faster than governance can keep up.
+
+What we built: A governance program covering AI policy, vendor and model approval, eval and monitoring requirements per use case, an internal "AI launch checklist," and a quarterly executive briefing format. We staged it as a 4–6 week engagement so engineering didn't lose momentum.
+
+How it ships safely: Policy aligned with existing security and compliance frameworks (SOC 2, HIPAA where applicable). Launch checklist piloted on two real systems before company-wide rollout.
+
+AI policy
+Vendor review
+Eval gating
+Exec briefing
+
+4–6 weeks to a documented governance program
+
+2 systems piloted through the new launch checklist
+
+1 quarterly exec briefing format adopted
+
+Scope a build like this →
+
+What's next
+
+### Have a workflow that looks like one of these?
+
+Tell us what you're trying to change. We'll be honest about whether AI is the right answer, what would have to be true to ship it safely, and which engagement shape fits.
+
+Contact the studio
+Take the readiness checklist
+
+---
+
+# Enterprise AI FAQ — Scope, Pricing, Governance, Delivery
+
+URL: https://enterpriseaistudio.com/faq
+Description: Answers to the questions enterprise buyers actually ask: what a sprint costs, how evals work, who owns the code, how governance and security review are handled.
+
+FAQ
+
+## Questions we get asked.
+
+Everything buyers ask us before a first call, in one place — scope, price, delivery, evals, governance, and how we actually work with your team. Price bands are the published ones on pricing .
+
+Scope & fit
+
+### Scope and fit.
+
+#### How is this different from working with ProductExec?
+
+ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.
+
+#### Do you replace our internal engineering team?
+
+No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.
+
+#### What if we don't know exactly what AI use case we need?
+
+That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on.
+
+#### How does discovery work?
+
+We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team.
+
+#### Do you work across our whole AI stack, or just new builds?
+
+Both. We build new systems, optimize existing ones, run evals, handle migrations, integrate with your infrastructure, and manage production incidents. You get your own AI team.
+
+The three engagement shapes are described in full on services .
+
+Pricing & contracts
+
+### Pricing and contracts.
+
+#### What's a typical engagement size?
+
+Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.
+
+#### What's included in the pricing?
+
+Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support.
+
+#### What if requirements change mid-sprint?
+
+We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both.
+
+#### How many hours per month do I get?
+
+Our retainers are offered as 20, 40, 60, or 80 hours per month. You can flex usage month-to-month, and unused hours roll over (up to 2 months) so you're not penalized for lighter months.
+
+#### What's included in a retainer?
+
+Dedicated engineering hours, monthly evals, quarterly reviews, on-call coverage for production issues, and ongoing optimization. You get a senior engineer as part of your team.
+
+#### Can I pause or scale up a retainer?
+
+Yes. You can pause for a month or scale hours up/down with 2 weeks notice. The engagement is designed to flex with your actual needs.
+
+#### Can you sign an NDA?
+
+Yes. We sign mutual NDAs before any scoping conversation.
+
+Full bands, and what moves a sprint from $40K to $120K, are on pricing .
+
+Delivery & evals
+
+### Delivery and evals.
+
+#### How long do sprints take?
+
+Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one.
+
+#### Which models do you use?
+
+We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.
+
+#### Do you handle integration with our existing systems?
+
+Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope.
+
+#### How do you prove an AI workflow is production ready?
+
+Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria.
+
+#### What happens if we hit a production issue?
+
+Retainer hours include on-call coverage. Critical issues get immediate attention; we prioritize your production systems over other work.
+
+Governance & security
+
+### Governance and security.
+
+#### Do we need AI governance now, or later?
+
+Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls.
+
+#### How long does an engagement take?
+
+Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual.
+
+#### What's included in governance design?
+
+Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing.
+
+#### Do you handle SOC 2 or HIPAA compliance?
+
+Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit.
+
+#### Can you help with vendor evaluation?
+
+Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements.
+
+#### What's the output of a governance engagement?
+
+You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence.
+
+#### What about compliance and governance?
+
+Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them.
+
+#### Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?
+
+No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved.
+
+Working together
+
+### Working together.
+
+#### What if our team wants to maintain the system after launch?
+
+We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support.
+
+#### Who's the engineer on our team?
+
+A dedicated senior engineer who becomes part of your team. They own your roadmap, understand your systems, and provide continuity across projects.
+
+Still unanswered
+
+### Ask us the one that isn't here.
+
+Send the workflow and the constraint you're worried about. We reply within one business day — with the honest answer, including when the answer is that we're not the right fit.
+
+Contact the studio
+Pick a time
+
+---
+
+# Resources & Readiness Checklist — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/resources
+Description: Free resources for enterprise AI buyers: the interactive AI Implementation Readiness Checklist — 25 scored questions across data, evals, governance, change management, and ops.
+
+Resources
+
+## Resources for enterprise AI buyers.
+
+Practical tools, checklists, and guidance for teams scoping production AI work — written by operators who've shipped these systems and lived with them.
+
+Take the readiness checklist
+Contact the studio
+
+Free Resource
+
+### AI Implementation Readiness Checklist.
+
+Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask us to email your read-out.
+
+#### The 25-question readiness checklist
+
+Tick a question only if you could answer it in a scoping call without checking with anyone.
+
+Pillar 1: Workflow and ROI
+
+1. Workflow & ROI
+
+- Have you named the single workflow this AI system will change — not a category, a workflow?
+
+- Is there one metric that will tell you the system is working (e.g. time-to-resolve, deflection rate, hours saved)?
+
+- Do you know the current baseline of that metric, measured today, not estimated?
+
+- Have you sized the value (annual hours, dollars, or revenue) of moving that metric by a realistic amount?
+
+- Is there a named executive sponsor who owns the metric, not just the AI initiative?
+
+Pillar 2: Data and Inputs
+
+2. Data & Inputs
+
+- Does the data the model needs exist today, in a system you can access programmatically?
+
+- Is the data permissioned correctly — for users, for the AI service, and for any sub-processors?
+
+- Do you have a representative sample (50–500 examples) you could hand a vendor on day one?
+
+- Is there a "ground truth" anywhere (resolved tickets, signed contracts, reviewed documents) that can power evals?
+
+- Do you know how fresh data needs to be in production — minutes, hours, or daily-batch?
+
+Pillar 3: Evals and Quality
+
+3. Evals & Quality
+
+- Have you defined what "good enough" looks like, in a way an engineer could write a test for?
+
+- Do you know who will judge outputs during the build phase — a domain expert, ops lead, or end users?
+
+- Will the system fail gracefully (escalate, ask, or refuse) when it isn't confident?
+
+- Have you decided what kinds of errors are unacceptable (e.g. wrong dollar amounts, wrong customer)?
+
+- Will you track quality continuously after launch, not only at sprint review?
+
+Pillar 4: Governance and Risk
+
+4. Governance & Risk
+
+- Do you know which compliance frameworks (SOC 2, HIPAA, GDPR, sector-specific) the system must satisfy?
+
+- Have you decided whether customer or regulated data can be sent to a third-party model provider?
+
+- Do you know whether there is an audit-trail requirement — every prompt, response, retrieval, and decision logged?
+
+- Has security review been pre-briefed, with a path to approval, rather than left as a post-build surprise?
+
+- Do you have a documented escalation and incident protocol for AI-driven errors?
+
+Pillar 5: Change Management and Ops
+
+5. Change Management & Ops
+
+- Do you know whether end users will be trained, paid, or measured differently because of this system?
+
+- Is there an internal champion close to the workflow who will adopt and defend the system early?
+
+- Is there a rollback plan if quality drops or behaviour drifts?
+
+- Do you know who owns the system in production — engineering, ops, or a shared on-call?
+
+- Have you budgeted for ongoing tuning and evals, not just the build?
+
+Scoring needs JavaScript; the questions above work fine on paper too — print this page and walk it with your team.
+
+#### Your readiness read-out
+
+0 / 25
+
+- 0/5 Workflow & ROI
+
+- 0/5 Data & Inputs
+
+- 0/5 Evals & Quality
+
+- 0/5 Governance & Risk
+
+- 0/5 Change & Ops
+
+We’ll email your score, the five pillar breakdowns, and the two questions we’d ask first.
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Also send occasional notes on production AI (unsubscribe any time).
+
+Email my read-out
+By sending, you agree to our privacy notice .
+
+✓ On its way. Check your inbox.
+
+Something went wrong. Please email the studio directly.
+
+Pick a time
+Email the studio
+Contact the studio
+Reset answers
+
+Most teams pass on three pillars and have real gaps in two. That's normal. The work in scoping is to either close those gaps fast or design the engagement around them.
+
+More resources
+
+### More on the way — tell us which.
+
+A scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.
+
+Work email *
+
+Which should we send?
+
+Scoping guide
+
+Governance starter pack
+
+Eval patterns
+
+Architecture reference
+
+Email me when these ship. No more than once a month; unsubscribe any time.
+
+Notify me
+By sending, you agree to our privacy notice .
+
+✓ You’re on the list. We’ll email when the first one ships.
+
+Something went wrong. Please email the studio directly.
+
+Want it live, not on a slide?
+
+### We can run the checklist with you in 30 minutes.
+
+Bring a workflow you'd like to AI-enable. We'll walk the 25 questions live and tell you whether it's a sprint, a retainer, a governance engagement, or not yet ready.
+
+Contact the studio
+
+---
+
+# About — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/about
+Description: Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer with deep experience shipping production AI for enterprise workflows. Operator-first model, model-agnostic builds, governance built in.
+
+About the studio
+
+## Operators who ship production AI.
+
+Enterprise AI Studio is a specialized implementation firm led by Kevin Owens, a four-time Chief Product Officer with a track record of taking AI from prototype to production inside enterprise B2B SaaS, healthcare workflow, and operating-model transformations.
+
+Contact the studio
+See our services
+
+Founder
+
+### Kevin Owens — Founder & Principal.
+
+Kevin Owens on LinkedIn
+
+KO
+
+Kevin is a product, engineering, and transformation executive who has been building software for two decades and AI-enabled systems for the last several years. He has held CPO roles across four B2B SaaS companies and is a graduate of USC's Marshall School of Business.
+
+#### Background
+
+Kevin's career spans hands-on engineering, product leadership, and operating-model design. He has personally led product organizations through cloud, mobile, data platform, and now AI transitions — and has shipped AI systems that survive production load and audit.
+
+- Four-time CPO across enterprise B2B SaaS, productivity, healthcare workflow, and AI tooling.
+
+- Operator-first : he scopes work the way an executive does, then implements like an engineer who has been on call.
+
+- Model-agnostic : production experience with frontier models (Claude, OpenAI), open-weight stacks, and retrieval/eval infrastructure.
+
+- USC Marshall graduate; based in Los Angeles, working with teams across the US, UK, and EU.
+
+#### How Kevin works
+
+Kevin is hands-on. He scopes engagements directly with the customer, owns the architecture and eval design, and stays accountable through production launch. For longer engagements he assembles a dedicated team of senior AI engineers around a single point of accountability — him.
+
+What he refuses: vague pilots, demo-grade systems shipped to real users, governance bolted on after launch, and "innovation theatre" that doesn't move a real workflow metric.
+
+How we work
+
+### Three principles that shape every engagement.
+
+#### Production from day one
+
+Every system we build is designed for thousands of repeated runs — with evals, monitoring, fallback paths, and runbooks. No demo-grade code in production paths.
+
+#### Governance baked in
+
+Audit trails, RBAC, escalation protocols, and security review are designed into the architecture, not bolted on. SOC 2 / HIPAA contexts welcomed.
+
+#### Operator accountability
+
+One senior owner per engagement. We answer to your operating-model goals, not just feature velocity. Engagements close with a real handoff or roll into retainer.
+
+Team Model
+
+### A senior owner, plus the right specialists for each engagement.
+
+Enterprise AI Studio operates a partner-and-specialist model. Kevin is the senior owner across every engagement; the specialist team flexes around the work.
+
+#### Senior AI engineers (specialist bench)
+
+Production AI builders with deep experience in evals, retrieval, agent orchestration, and platform-level reliability. We bring in the right specialist for each engagement rather than billing one shape of engineer for every problem.
+
+#### ProductExec — our sister practice
+
+For clients who need to decide what AI to build before they build it, we partner with ProductExec, our sister practice, on AI operating-model design and roadmap work. Many clients run strategy with ProductExec, then implementation with Enterprise AI Studio.
+
+productexec.co
+
+What's next
+
+### If you're moving AI into production, we should talk.
+
+Most engagements start with a single 30-minute conversation. We'll listen to the workflow you're trying to change, name the constraints, and tell you whether a sprint, retainer, or governance engagement is the fastest path to production.
+
+Contact the studio
+See case studies
+
+---
+
+# Contact the Studio — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/contact
+Description: Contact Enterprise AI Studio about production AI implementation, fractional AI engineering, or enterprise AI governance. We respond within one business day.
+
+Contact
+
+## Contact the studio.
+
+Tell us the workflow, the systems involved, and what would make the project valuable. We'll reply within one business day with a practical next step — usually a free 30-minute discovery conversation, not a generic sales deck.
+
+### Send us the shape of the problem.
+
+Prefer email? Email the studio and we'll take it from there.
+
+Pick a time
+
+Full name *
+
+Work email *
+
+Company
+
+Your role
+
+Select one…
+
+CTO / CIO
+
+VP Engineering
+
+VP Operations
+
+Head of Data
+
+Other
+
+Company size
+
+Select one…
+
+Under 200
+
+200–1,000
+
+1,000–5,000
+
+5,000+
+
+Engagement type
+
+Select one…
+
+AI implementation sprint (4–8 weeks)
+
+Fractional AI engineering (retainer)
+
+Enterprise AI governance
+
+Not sure yet
+
+Timeline
+
+Select one…
+
+Now
+
+This quarter
+
+Next quarter
+
+Exploring
+
+Budget band
+
+Select one…
+
+$25K–$60K (governance)
+
+$40K–$120K (sprint)
+
+$8K–$30K / month (retainer)
+
+Not sure yet
+
+What workflow should AI improve? *
+
+Send the brief
+By sending, you agree to our privacy notice .
+
+✓ Brief sent. We’ll be in touch within one business day.
+
+Something went wrong. Please email the studio directly.
+
+Fit
+
+### Good fit signals.
+
+#### There is a real workflow
+
+The best projects attach AI to a repeatable business process, not a vague desire to experiment.
+
+#### Data access is possible
+
+Documents, systems, or operational state can be permissioned and tested safely.
+
+#### Safety matters
+
+The workflow benefits from evals, approvals, auditability, and clear operating controls.
+
+---
+
+# Privacy Notice — Enterprise AI Studio
+
+URL: https://enterpriseaistudio.com/privacy
+Description: How Enterprise AI Studio handles the information you send us: contact form submissions, analytics with consent, and how to ask us to delete your data.
+
+Privacy
+
+## Privacy notice.
+
+We collect as little as possible, we never sell it, and there is no third-party form processor sitting between you and us. This page says exactly what happens to anything you send.
+
+The detail
+
+### What we collect and why.
+
+#### Who we are
+
+Enterprise AI Studio is a production AI implementation practice run by Kevin Owens, a four-time Chief Product Officer. We are the data controller for this site. For anything in this notice, contact Email the studio .
+
+#### What we collect
+
+Things you type into a form. When you send a brief, request a checklist read-out, or join a waitlist, we receive the fields on that form — name, work email, company, role, company size, engagement type, timeline, budget band, and your message — plus which page you sent it from and any UTM parameters in the URL. Our server also records the submitting IP address and browser user agent with the submission, as basic abuse protection.
+
+Things we do not collect unless you ask us to. The AI Implementation Readiness Checklist scores entirely in your browser. Your answers are not sent anywhere unless you fill in the read-out form and press the button — at which point your score and the pillar breakdown are sent with your email address so we can reply.
+
+Server logs. Our host keeps standard request logs (IP, timestamp, path, user agent) for operations and security.
+
+#### Why we collect it
+
+To reply to you, to scope work you have asked us to scope, to send a read-out or resource you asked for, and to keep the site working and free of spam. That is the whole list. We do not build advertising profiles.
+
+#### Who processes it for us
+
+Render — application and static hosting; processes every request to this site.
+
+PostgreSQL database (hosted by Render) — stores form submissions.
+
+SMTP email provider — delivers the notification email that tells us a brief arrived, and our reply to you.
+
+Google Analytics 4 (property G-DPS2MFLM6Q ) — page analytics, and only after you accept. See below.
+
+Google Fonts — serves the Inter and JetBrains Mono webfonts; your browser requests them directly from Google.
+
+Cal.com — if and when scheduling is enabled, a booking link will hand you off to Cal.com, whose own privacy notice applies to what you enter there. Today the booking button points back at our own contact form.
+
+We do not use a third-party form processor. Forms post to our own server.
+
+#### Analytics and consent
+
+Analytics are denied by default. We load Google Analytics 4 under Consent Mode v2 with analytics_storage , ad_storage , ad_user_data , and ad_personalization all set to denied before any tag runs. Nothing is stored on your device for analytics until you press “Accept analytics” in the banner.
+
+Your choice is remembered in your browser's local storage under the key eas_consent , with the value granted or denied . That value never leaves your browser.
+
+Changing your mind. Clear this site's local storage (or your site data for enterpriseaistudio.com) in your browser settings and reload — the banner reappears and you can choose again. Declining is permanent until you do that; we do not re-ask.
+
+#### What we never do
+
+We do not sell or rent your information. We do not run ad retargeting or share data with ad networks. We do not send your submissions to a third-party form processor. We do not add you to a mailing list because you sent a brief — only the explicit checkbox does that.
+
+#### How long we keep it
+
+Form submissions: up to 24 months from the last contact, then deleted. Submissions that are plainly spam are deleted as we find them. Server logs: up to 90 days. Analytics data: retained on Google's default GA4 schedule of 14 months, and only for visitors who accepted. Email correspondence is kept as long as the business relationship needs it.
+
+#### Your rights and how to exercise them
+
+You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can also ask us to stop emailing you at any time. Send the request to Email the studio from the address you used, and we will confirm within one business day and complete it within 30 days. There is no charge, and we will not ask you to justify the request.
+
+If you are in the UK or EU, you also have the right to complain to your local supervisory authority.
+
+#### Changes to this notice
+
+If we add or remove a processor, or change what we collect, we update this page and the date below.
+
+Last updated: 16 September 2026.

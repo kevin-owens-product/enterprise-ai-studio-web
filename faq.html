@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI FAQ — Scope, Pricing, Governance, Delivery</title>
+  <meta name="description" content="Answers to the questions enterprise buyers actually ask: what a sprint costs, how evals work, who owns the code, how governance and security review are handled.">
+  <meta property="og:title" content="Enterprise AI FAQ — Scope, Pricing, Governance, Delivery">
+  <meta property="og:description" content="Answers to the questions enterprise buyers actually ask: what a sprint costs, how evals work, who owns the code, how governance and security review are handled.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterpriseaistudio.com/faq">
+  <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enterprise AI FAQ — Scope, Pricing, Governance, Delivery">
+  <meta name="twitter:description" content="Answers to the questions enterprise buyers actually ask about production AI implementation.">
+  <meta name="twitter:image" content="https://enterpriseaistudio.com/og-image.png">
+  <link rel="canonical" href="https://enterpriseaistudio.com/faq">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default denied until the visitor chooses -->
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+    try{if(localStorage.getItem('eas_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
+  <script>gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is this different from working with ProductExec?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you replace our internal engineering team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if we don't know exactly what AI use case we need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does discovery work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work across our whole AI stack, or just new builds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We build new systems, optimize existing ones, run evals, handle migrations, integrate with your infrastructure, and manage production incidents. You get your own AI team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a typical engagement size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in the pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if requirements change mid-sprint?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many hours per month do I get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our retainers are offered as 20, 40, 60, or 80 hours per month. You can flex usage month-to-month, and unused hours roll over (up to 2 months) so you're not penalized for lighter months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dedicated engineering hours, monthly evals, quarterly reviews, on-call coverage for production issues, and ongoing optimization. You get a senior engineer as part of your team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I pause or scale up a retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can pause for a month or scale hours up/down with 2 weeks notice. The engagement is designed to flex with your actual needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you sign an NDA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We sign mutual NDAs before any scoping conversation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do sprints take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which models do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle integration with our existing systems?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you prove an AI workflow is production ready?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if we hit a production issue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Retainer hours include on-call coverage. Critical issues get immediate attention; we prioritize your production systems over other work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need AI governance now, or later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an engagement take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in governance design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle SOC 2 or HIPAA compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with vendor evaluation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the output of a governance engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about compliance and governance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our team wants to maintain the system after launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who's the engineer on our team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A dedicated senior engineer who becomes part of your team. They own your roadmap, understand your systems, and provide continuity across projects."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://enterpriseaistudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://enterpriseaistudio.com/faq"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Main">
+    <a class="logo" href="/">Enterprise<span>AI</span>Studio</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="visually-hidden">Menu</span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-links" id="site-menu">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/proof">Proof</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="btn-nav">Contact the studio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-bottom: 72px;">
+  <div class="container">
+    <p class="eyebrow">FAQ</p>
+    <h1>Questions we get asked.</h1>
+    <p class="lede">Everything buyers ask us before a first call, in one place — scope, price, delivery, evals, governance, and how we actually work with your team. Price bands are the published ones on <a href="/pricing">pricing</a>.</p>
+  </div>
+</section>
+
+<section id="scope-fit" class="band">
+  <div class="container">
+    <p class="section-eyebrow">Scope &amp; fit</p>
+    <h2 class="section-headline">Scope and fit.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>How is this different from working with ProductExec?</h3>
+        <p>ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you replace our internal engineering team?</h3>
+        <p>No. We augment your team. We typically build the AI core, integrate it with your systems, and hand off to your team or stay on retainer for continued AI work.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if we don't know exactly what AI use case we need?</h3>
+        <p>That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does discovery work?</h3>
+        <p>We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you work across our whole AI stack, or just new builds?</h3>
+        <p>Both. We build new systems, optimize existing ones, run evals, handle migrations, integrate with your infrastructure, and manage production incidents. You get your own AI team.</p>
+      </div>
+    </div>
+    <p class="section-body" style="margin-top:32px;">The three engagement shapes are described in full on <a href="/services">services</a>.</p>
+  </div>
+</section>
+
+<section id="pricing-contracts">
+  <div class="container">
+    <p class="section-eyebrow">Pricing &amp; contracts</p>
+    <h2 class="section-headline">Pricing and contracts.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What's a typical engagement size?</h3>
+        <p>Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's included in the pricing?</h3>
+        <p>Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if requirements change mid-sprint?</h3>
+        <p>We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many hours per month do I get?</h3>
+        <p>Our retainers are offered as 20, 40, 60, or 80 hours per month. You can flex usage month-to-month, and unused hours roll over (up to 2 months) so you're not penalized for lighter months.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's included in a retainer?</h3>
+        <p>Dedicated engineering hours, monthly evals, quarterly reviews, on-call coverage for production issues, and ongoing optimization. You get a senior engineer as part of your team.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I pause or scale up a retainer?</h3>
+        <p>Yes. You can pause for a month or scale hours up/down with 2 weeks notice. The engagement is designed to flex with your actual needs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you sign an NDA?</h3>
+        <p>Yes. We sign mutual NDAs before any scoping conversation.</p>
+      </div>
+    </div>
+    <p class="section-body" style="margin-top:32px;">Full bands, and what moves a sprint from $40K to $120K, are on <a href="/pricing">pricing</a>.</p>
+  </div>
+</section>
+
+<section id="delivery-evals" class="band">
+  <div class="container">
+    <p class="section-eyebrow">Delivery &amp; evals</p>
+    <h2 class="section-headline">Delivery and evals.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>How long do sprints take?</h3>
+        <p>Typically 4-8 weeks, depending on use case complexity and integration scope. We break the timeline into clear milestones and deliver working demos at each one.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which models do you use?</h3>
+        <p>We're model-agnostic. We pick the right model for each task — frontier models for judgment-heavy work, cheaper long-context options for synthesis, open-weight where appropriate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you handle integration with our existing systems?</h3>
+        <p>Yes, completely. We integrate with your APIs, webhooks, databases, CRM, ERP, or any system your AI needs to connect to. Integration is part of the scope.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do you prove an AI workflow is production ready?</h3>
+        <p>Production readiness is proven with representative evaluation examples, source-grounded responses, human escalation paths, audit logs, monitoring, and rollback criteria.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if we hit a production issue?</h3>
+        <p>Retainer hours include on-call coverage. Critical issues get immediate attention; we prioritize your production systems over other work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="governance-security">
+  <div class="container">
+    <p class="section-eyebrow">Governance &amp; security</p>
+    <h2 class="section-headline">Governance and security.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Do we need AI governance now, or later?</h3>
+        <p>Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does an engagement take?</h3>
+        <p>Typically 4-6 weeks. We assess your current state, design governance frameworks, build eval infrastructure, conduct security reviews, and deliver an operations manual.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's included in governance design?</h3>
+        <p>Risk assessment, AI policy framework (vendor selection, data handling, audit trails), security review, compliance readiness (SOC 2, HIPAA, etc.), eval infrastructure design, and executive briefing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you handle SOC 2 or HIPAA compliance?</h3>
+        <p>Yes. We design AI systems to meet compliance requirements. We work with your compliance team and design infrastructure that survives audit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you help with vendor evaluation?</h3>
+        <p>Yes. We help you evaluate AI vendors (Claude, OpenAI, open-weight, etc.) against your compliance, cost, and performance requirements.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the output of a governance engagement?</h3>
+        <p>You get: AI policy framework, risk register, eval infrastructure (code-ready), operations manual, vendor evaluation matrix, and executive briefing. Everything to scale AI with confidence.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What about compliance and governance?</h3>
+        <p>Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does Enterprise AI Studio allow AI systems to auto-approve sensitive work?</h3>
+        <p>No. Sensitive customer, legal, financial, and compliance workflows use human approval gates until explicit controls and risk thresholds are approved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="working-together" class="band">
+  <div class="container">
+    <p class="section-eyebrow">Working together</p>
+    <h2 class="section-headline">Working together.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What if our team wants to maintain the system after launch?</h3>
+        <p>We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who's the engineer on our team?</h3>
+        <p>A dedicated senior engineer who becomes part of your team. They own your roadmap, understand your systems, and provide continuity across projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq-cta" class="navy-band">
+  <div class="container">
+    <p class="section-eyebrow">Still unanswered</p>
+    <h2 class="section-headline">Ask us the one that isn't here.</h2>
+    <p class="section-body">Send the workflow and the constraint you're worried about. We reply within one business day — with the honest answer, including when the answer is that we're not the right fit.</p>
+    <div class="cta-row" style="margin-top:32px;">
+      <a class="btn btn-on-navy" href="/contact#form">Contact the studio</a>
+      <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <a class="logo" href="/">Enterprise<span>AI</span>Studio</a>
+        <p class="footer-tagline-line">Production AI for enterprise workflows.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/services">Services</a>
+        <a href="/proof">Proof</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </div>
+    <div class="family-strip">
+      <span class="family-eyebrow">A KEVIN OWENS PRACTICE</span>
+      <ul>
+        <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
+        <li><a href="https://productexec.co">ProductExec</a><span>Executive advisory</span></li>
+        <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+      </ul>
+    </div>
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
+  </div>
+</footer>
+
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

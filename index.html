@@ -20,9 +20,14 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default denied until the visitor chooses -->
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+    try{if(localStorage.getItem('eas_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPS2MFLM6Q"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
+  <script>gtag('js',new Date());gtag('config','G-DPS2MFLM6Q');</script>
   <script type="module">import{onLCP,onCLS,onINP,onFCP,onTTFB}from'/assets/web-vitals.js';function send(m){if(typeof gtag!=='function')return;gtag('event',m.name,{value:Math.round(m.name==='CLS'?m.value*1000:m.value),metric_id:m.id,metric_value:m.value,metric_delta:m.delta,metric_rating:m.rating,non_interaction:true});}onLCP(send);onCLS(send);onINP(send);onFCP(send);onTTFB(send);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,11 +43,7 @@
     "url": "https://enterpriseaistudio.com",
     "logo": "https://enterpriseaistudio.com/og-image.png",
     "description": "Production AI implementation for enterprise workflows. We design, build, and operate AI systems that scale in production.",
-    "founder": {
-      "@type": "Person",
-      "name": "Kevin Owens",
-      "url": "https://kevinowens.com"
-    },
+    "founder": { "@id": "https://kevinowens.com/#person" },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
@@ -57,16 +58,35 @@
     "foundingDate": "2025"
   }
   </script>
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://kevinowens.com/#person",
+    "name": "Kevin Owens",
+    "url": "https://kevinowens.com",
+    "jobTitle": "Founder, Enterprise AI Studio",
+    "description": "Four-time Chief Product Officer who builds and operates production AI systems for enterprise teams.",
+    "sameAs": [
+      "https://www.linkedin.com/in/kevinaowens",
+      "https://kevinowens.com",
+      "https://productexec.co",
+      "https://smartbizaihub.com"
+    ]
+  }
+  </script>
   <!-- Structured Data: Services -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
+    "@id": "https://enterpriseaistudio.com/#business",
     "name": "Enterprise AI Studio",
     "url": "https://enterpriseaistudio.com",
     "image": "https://enterpriseaistudio.com/og-image.png",
     "description": "Production AI implementation consulting for enterprise teams",
-    "address": { "@type": "PostalAddress", "streetAddress": "Remote", "addressCountry": "US" },
+    "areaServed": "US",
     "offers": [
       {
         "@type": "Service",
@@ -74,8 +94,8 @@
         "name": "AI Implementation Sprints",
         "description": "A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4-8 weeks, fixed scope.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "priceRange": "$40,000 - $120,000",
-        "areaServed": "US"
+        "areaServed": "US",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 40000, "highPrice": 120000 }
       },
       {
         "@type": "Service",
@@ -83,8 +103,8 @@
         "name": "Fractional AI Engineering",
         "description": "Dedicated senior AI engineering bandwidth on retainer. Ongoing engagement, 20-80 hours per month.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "priceRange": "$8,000 - $30,000 per month",
-        "areaServed": "US"
+        "areaServed": "US",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 8000, "highPrice": 30000 }
       },
       {
         "@type": "Service",
@@ -92,8 +112,8 @@
         "name": "Enterprise AI Governance",
         "description": "AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure. 4-6 weeks, fixed fee.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "priceRange": "$25,000 - $60,000",
-        "areaServed": "US"
+        "areaServed": "US",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 25000, "highPrice": 60000 }
       }
     ]
   }
@@ -106,7 +126,7 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How is Enterprise AI Studio different from ProductExec?",
+        "name": "How is this different from working with ProductExec?",
         "acceptedAnswer": { "@type": "Answer", "text": "ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation." }
       },
       {
@@ -128,6 +148,21 @@
         "@type": "Question",
         "name": "Can you sign an NDA?",
         "acceptedAnswer": { "@type": "Answer", "text": "Yes. We sign mutual NDAs before any scoping conversation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What about compliance and governance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Governance is baked into everything we build. We include audit trails, security reviews, role-based access control, and escalation protocols from day one. If your organization has compliance requirements (SOC 2, HIPAA, etc.), we design the AI system to support them, not work around them." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle the integration with our systems?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We typically own the entire integration — APIs, webhooks, database connections, CRM/ERP linking, whatever your stack requires. We ensure the AI system fits seamlessly into your workflows without requiring your team to rewire their operations." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if we don't know exactly what AI use case we need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "That's common. Our discovery call is free and specifically designed to map your constraints and uncover high-leverage use cases. We help you prioritize what to build first, then scope the work you want to move forward on." }
       }
     ]
   }
@@ -164,8 +199,8 @@
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Production AI implementation</p>
-        <h1>Production AI for enterprise workflows.</h1>
-        <p class="lede">We design, build, and operate the AI systems that move your business — not demos that don't survive a Monday.</p>
+        <h1>One AI workflow. In production. In eight weeks.</h1>
+        <p class="lede">Fixed scope, published price, and the evals, approval gates, and runbooks that get it through security review. Not a pilot — a system your team runs on Monday.</p>
         <div class="cta-row">
           <a href="/contact" class="btn btn-on-navy">Contact the studio</a>
           <a href="/services" class="btn btn-ghost">See our services</a>
@@ -217,6 +252,12 @@
         <figcaption>The delivery loop — how every engagement ships.</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section id="proof" class="band" style="padding: 40px 0;">
+  <div class="container">
+    <h2 class="visually-hidden">Credibility signals</h2>
     <div class="hero-stats" aria-label="Production readiness signals">
       <div class="hero-stat"><strong>4–8 wks</strong><span>implementation sprint window with scoped milestones and launch criteria.</span></div>
       <div class="hero-stat"><strong>250+</strong><span>representative eval examples before a regulated or customer-facing launch.</span></div>
@@ -224,15 +265,9 @@
       <div class="hero-stat"><strong>30 days</strong><span>of post-launch support included with every sprint handoff and runbook.</span></div>
     </div>
     <p class="hero-stats-note">Delivery standards we build into every engagement — not client claims.</p>
-  </div>
-</section>
-
-<section id="proof" class="band" style="padding: 40px 0;">
-  <div class="container">
-    <h2 class="visually-hidden">Credibility signals</h2>
     <div class="badge-row" style="margin-top:0;" aria-label="Credibility signals">
-      <span class="badge">CPO-level operating background</span>
-      <span class="badge">ProductExec strategy partner</span>
+      <span class="badge">Four-time CPO operating background</span>
+      <span class="badge">ProductExec — our sister practice</span>
       <span class="badge">Model-agnostic architecture</span>
       <span class="badge">Audit trails and evals by default</span>
       <span class="badge">Human approval gates</span>
@@ -298,15 +333,15 @@
     <div class="grid-3" style="margin-top: 24px;">
       <div class="quote-card">
         <p>"The useful proof is not a flashy demo. It is a working workflow with evals, escalation, and a runbook."</p>
-        <strong>Production launch principle</strong>
+        <strong>Kevin Owens · Production launch principle</strong>
       </div>
       <div class="quote-card">
         <p>"Governance belongs in the build, not in a cleanup meeting after the prototype already spread."</p>
-        <strong>Governance principle</strong>
+        <strong>Kevin Owens · Governance principle</strong>
       </div>
       <div class="quote-card">
         <p>"The model is one component. The operating system around it decides whether the AI work holds up in production."</p>
-        <strong>Operating principle</strong>
+        <strong>Kevin Owens · Operating principle</strong>
       </div>
     </div>
 
@@ -411,7 +446,7 @@
         <span class="why-num" aria-hidden="true">01</span>
         <div>
           <h3>Strategy + execution under one roof</h3>
-          <p>Through our partnership with <a href="https://productexec.co" style="color:var(--accent-text);">ProductExec</a>, you can move from "what should we build" to "build it" without re-briefing.</p>
+          <p>Through <a href="https://productexec.co" style="color:var(--accent-text);">ProductExec</a>, our sister practice, you can move from "what should we build" to "build it" without re-briefing.</p>
         </div>
       </li>
       <li>
@@ -457,7 +492,33 @@
   <div class="container">
     <p class="section-eyebrow">About</p>
     <h2 class="section-headline">Built by operators who've shipped AI in production.</h2>
-    <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a product and transformation executive with CPO-level experience across B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co">ProductExec</a> and bring in specialist engineers for each engagement.</p>
+    <p class="section-body">Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer whose operating background spans B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside <a href="https://productexec.co">ProductExec</a>, our sister practice, and bring in specialist engineers for each engagement. Connect with Kevin on <a href="https://www.linkedin.com/in/kevinaowens">LinkedIn</a>.</p>
+  </div>
+</section>
+
+<section id="wont-do" class="band">
+  <div class="container">
+    <p class="section-eyebrow">Scope honesty</p>
+    <h2 class="section-headline">What we won't do.</h2>
+    <div class="grid-4" style="margin-top:44px;">
+      <article class="card card-sm">
+        <h3>Vague pilots</h3>
+        <p>If the workflow and the metric aren't named, there's nothing to ship against.</p>
+      </article>
+      <article class="card card-sm">
+        <h3>Demo-grade systems on real users</h3>
+        <p>Anything touching customers or regulated work ships with evals, gates, and a runbook — or it doesn't ship.</p>
+      </article>
+      <article class="card card-sm">
+        <h3>Governance bolted on after launch</h3>
+        <p>Approvals, audit trail, and rollback criteria are designed in week one, not retrofitted under security review.</p>
+      </article>
+      <article class="card card-sm">
+        <h3>Innovation theatre</h3>
+        <p>Work that doesn't move a real workflow metric isn't worth your budget or our quarter.</p>
+      </article>
+    </div>
+    <p class="section-body" style="margin-top:28px;">If you need forty people and two years, hire a systems integrator. We'll tell you so on the first call.</p>
   </div>
 </section>
 
@@ -509,7 +570,13 @@
       <h2 class="section-headline" style="max-width:100%;">Ready to ship AI that actually works?</h2>
       <p class="section-body" style="margin:0 auto;">Tell us about your use case. We'll map the constraints and the fastest path to production — no sales deck, just a direct conversation.</p>
 
-      <form class="contact-form" data-contact-form="contact_home" action="https://formspree.io/kevin.a.owens@gmail.com" method="POST">
+      <form class="contact-form" data-contact-form="contact_home" action="/api/inquiry" method="post">
+        <input type="hidden" name="form_name" value="contact_home">
+        <input type="hidden" name="inquiry_type" value="general">
+        <input type="hidden" name="page_source" value="/">
+        <input type="hidden" name="utm_source" value="" data-utm="utm_source">
+        <input type="hidden" name="utm_medium" value="" data-utm="utm_medium">
+        <input type="hidden" name="utm_campaign" value="" data-utm="utm_campaign">
         <div class="form-row">
           <div class="form-field">
             <label for="name">Full name *</label>
@@ -526,7 +593,30 @@
             <input type="text" id="company" name="company" autocomplete="organization" placeholder="Acme Corp">
           </div>
           <div class="form-field">
-            <label for="service">Service interested in</label>
+            <label for="role">Your role</label>
+            <select id="role" name="role">
+              <option value="">Select one…</option>
+              <option value="cto-cio">CTO / CIO</option>
+              <option value="vp-engineering">VP Engineering</option>
+              <option value="vp-operations">VP Operations</option>
+              <option value="head-of-data">Head of Data</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company_size">Company size</label>
+            <select id="company_size" name="company_size">
+              <option value="">Select one…</option>
+              <option value="lt-200">Under 200</option>
+              <option value="200-1000">200–1,000</option>
+              <option value="1000-5000">1,000–5,000</option>
+              <option value="5000-plus">5,000+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="service">Engagement type</label>
             <select id="service" name="service">
               <option value="">Select one…</option>
               <option value="implementation-sprint">AI implementation sprint (4–8 weeks)</option>
@@ -536,16 +626,38 @@
             </select>
           </div>
         </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select one…</option>
+              <option value="now">Now</option>
+              <option value="this-quarter">This quarter</option>
+              <option value="next-quarter">Next quarter</option>
+              <option value="exploring">Exploring</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="budget">Budget band</label>
+            <select id="budget" name="budget">
+              <option value="">Select one…</option>
+              <option value="25k-60k">$25K–$60K (governance)</option>
+              <option value="40k-120k">$40K–$120K (sprint)</option>
+              <option value="8k-30k-month">$8K–$30K / month (retainer)</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
         <div class="form-field">
           <label for="message">Tell us about your use case *</label>
-          <textarea id="message" name="message" placeholder="What workflow or problem are you trying to solve with AI? What's the constraint — team capacity, expertise, timeline, governance?" required></textarea>
+          <textarea id="message" name="message" placeholder="Describe the workflow, systems, constraints, and what success would look like." required></textarea>
         </div>
-        <input type="hidden" name="_subject" value="New Enterprise AI Studio Inquiry">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+        <input class="visually-hidden" type="text" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
         <div class="form-submit">
-          <button type="submit" class="btn btn-primary btn-form-submit">Send message</button>
-          <p class="form-status success" role="status">✓ Message sent. We'll be in touch within one business day.</p>
-          <p class="form-status error" role="alert">Something went wrong. Please <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>email the studio</a> directly.</p>
+          <button type="submit" class="btn btn-primary btn-form-submit">Send the brief</button>
+          <p class="form-consent">By sending, you agree to our <a href="/privacy">privacy notice</a>.</p>
+          <p class="form-status success" role="status">✓ Brief sent. We'll be in touch within one business day.</p>
+          <p class="form-status error" role="alert">Something went wrong. Please <a href="/contact#form">email the studio</a> directly.</p>
         </div>
       </form>
     </div>
@@ -568,6 +680,7 @@
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
       </nav>
     </div>
     <div class="family-strip">
@@ -579,9 +692,17 @@
         <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
       </ul>
     </div>
-    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="mailto:kevin.a.owens@gmail.com" data-contact-email>Email the studio</a></p>
+    <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
+
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <script src="/assets/site.js" defer></script>
 </body>
