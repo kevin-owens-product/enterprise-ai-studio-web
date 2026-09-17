@@ -105,7 +105,7 @@ sameAs:
 - AI Implementation Readiness Checklist — 25 questions across workflow & ROI, data, evals, governance, and change management. Available at https://enterpriseaistudio.com/resources.
 
 ## Contact & Engagement
-For discovery calls and scoping conversations, use the contact form at https://enterpriseaistudio.com/contact or email kevin@kevinowens.com. We reply within one business day.
+For discovery calls and scoping conversations, use the contact form at https://enterpriseaistudio.com/contact or message Kevin on LinkedIn at https://www.linkedin.com/in/kevinaowens. We reply within one business day.
 
 Website: https://enterpriseaistudio.com
 Contact: https://enterpriseaistudio.com/contact
