@@ -424,6 +424,10 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2355606E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px;
 }
+/* iOS zooms the viewport when a focused control is under 16px — bump it on small screens only. */
+@media (max-width: 640px) {
+  .form-field input, .form-field select, .form-field textarea { font-size: 16px; }
+}
 .form-submit { text-align: center; margin-top: 4px; }
 .btn-form-submit { padding: 12px 36px; font-size: 15px; }
 .btn-form-submit:disabled { background: var(--ink-muted); transform: none; cursor: not-allowed; box-shadow: none; }

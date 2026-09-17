@@ -46,11 +46,11 @@ The Problem
 
 Most enterprise AI projects stall in the same place: the strategy is clear, the use case is real, but no one in the building can ship a production-grade system. Your engineering team is fully booked. Generic agencies hand you a demo. In-house "AI initiatives" don't survive their first compliance review. Enterprise AI Studio is the implementation team you bring in when the strategy is decided and you need it built — properly, securely, and in production.
 
-Case Studies
+Engagement patterns
 
 ### Proof patterns from production AI workflows.
 
-These are anonymized and representative case-study patterns. Named customer stories are published only after customers approve disclosure.
+These are anonymized and representative engagement patterns. Named customer stories are published only after customers approve disclosure.
 
 Customer Support · Implementation Sprint
 
@@ -113,7 +113,7 @@ Kevin Owens · Governance principle
 Kevin Owens · Operating principle
 
 Contact the studio
-Read the full case-study library
+Read all engagement patterns
 
 Services
 
@@ -579,7 +579,7 @@ Representative examples, failure modes, and acceptance criteria shape implementa
 Escalation paths, logs, monitoring, and rollback criteria are included before production traffic ramps.
 
 Contact the studio
-See case studies
+See engagement patterns
 Read the FAQ
 
 ---
@@ -1370,7 +1370,7 @@ Proof
 Enterprise AI should not be judged by a polished demo. It should be judged by representative evals, source-grounded behavior, human escalation, audit trails, and launch criteria.
 
 Contact the studio
-See case studies
+See engagement patterns
 
 The delivery loop — how every engagement ships.
 
@@ -1483,7 +1483,7 @@ Get the eval-plan template
 
 ---
 
-# Engagement Patterns — Enterprise AI Studio
+# Engagement patterns — Enterprise AI Studio
 
 URL: https://enterpriseaistudio.com/case-studies
 Description: Illustrative engagement patterns for production AI in enterprise workflows: customer support agents, document intelligence, sales workflow analysis, internal knowledge assistants, and audit-grade governance.
@@ -1492,7 +1492,7 @@ Engagement patterns
 
 ## Engagement patterns
 
-Five engagement patterns that show what a production AI system looks like inside an enterprise workflow — from scope to architecture to the commitments we hold ourselves to.
+Five engagement patterns that show what a production AI system would look like inside an enterprise workflow — from scope to architecture to the commitments we would hold ourselves to.
 
 Note: These are illustrative engagement patterns drawn from common enterprise AI workflows — not named client results. Named client case studies will be added as customers approve disclosure.
 
@@ -1501,7 +1501,7 @@ See our services
 
 Engagement patterns
 
-### What production AI looks like in real workflows.
+### What production AI would look like in these workflows.
 
 Customer Support · Implementation Sprint
 
@@ -1509,16 +1509,16 @@ Customer Support · Implementation Sprint
 
 Problem: Support team handling thousands of repetitive how-to and account-state tickets per week. Agent fatigue and slow time-to-first-response on simple cases.
 
-What we built: A retrieval-augmented support agent that handles tier-1 issues end-to-end inside the existing helpdesk. Confidence-thresholded escalation to humans, full audit trail, and customer-state grounding (account, plan, recent activity) so answers reflect the actual user.
+What we'd build: A retrieval-augmented support agent that handles tier-1 issues end-to-end inside the existing helpdesk. Confidence-thresholded escalation to humans, full audit trail, and customer-state grounding (account, plan, recent activity) so answers reflect the actual user.
 
-How it ships safely: Eval suite of 250+ representative tickets. Shadow-mode launch reviewing every response against a human reply for two weeks. Gated rollout per ticket category with rollback runbook.
+How it would ship safely: Eval suite of 250+ representative tickets. Shadow-mode launch reviewing every response against a human reply for two weeks. Gated rollout per ticket category with rollback runbook.
 
 Retrieval
 Eval-driven rollout
 Helpdesk integration
 Audit trail
 
-100% responses logged with retrieval citations
+Design commitment: 100% of responses logged with retrieval citations
 
 Scope a build like this →
 
@@ -1528,16 +1528,16 @@ Document Intelligence · Implementation Sprint
 
 Problem: Procurement reviewing hundreds of vendor contracts per quarter. Manual clause extraction, redline drafting, and risk flagging consuming senior legal hours.
 
-What we built: A document intelligence pipeline that ingests PDFs and DOCX, extracts a fixed set of clauses (term, renewal, indemnity, liability cap, data handling, AI use), flags policy deviations against the company's standard playbook, and routes flagged items to a human reviewer with a redline draft.
+What we'd build: A document intelligence pipeline that ingests PDFs and DOCX, extracts a fixed set of clauses (term, renewal, indemnity, liability cap, data handling, AI use), flags policy deviations against the company's standard playbook, and routes flagged items to a human reviewer with a redline draft.
 
-How it ships safely: Per-clause precision/recall evals on a 200-document gold set. Reviewer-in-the-loop UI with confidence badges. Full provenance from extracted clause back to source page.
+How it would ship safely: Per-clause precision/recall evals on a 200-document gold set. Reviewer-in-the-loop UI with confidence badges. Full provenance from extracted clause back to source page.
 
 Doc parsing
 Clause extraction
 Policy diffing
 Reviewer UI
 
-0 auto-approvals — human always confirms risk
+Design commitment: 0 auto-approvals — a human always confirms risk
 
 Scope a build like this →
 
@@ -1547,16 +1547,16 @@ Sales Workflow · Fractional Engagement
 
 Problem: Sales reps losing context across multi-call deal cycles. Inconsistent CRM hygiene and slow follow-up drafting after discovery calls.
 
-What we built: Post-call analysis that pulls transcripts from the call platform, extracts buyer signals, generates a structured summary into the CRM, and drafts a tailored follow-up email per call. Reps review and send; the model never auto-sends.
+What we'd build: Post-call analysis that pulls transcripts from the call platform, extracts buyer signals, generates a structured summary into the CRM, and drafts a tailored follow-up email per call. Reps review and send; the model never auto-sends.
 
-How it ships safely: Reps grade outputs in-app for ongoing eval. Quarterly comparison of follow-up quality vs. baseline. CRM writes are reversible and logged.
+How it would ship safely: Reps grade outputs in-app for ongoing eval. Quarterly comparison of follow-up quality vs. baseline. CRM writes are reversible and logged.
 
 Transcripts
 CRM sync
 Draft-only output
 In-app grading
 
-0 auto-sent emails to customers
+Design commitment: 0 auto-sent emails to customers
 
 Scope a build like this →
 
@@ -1566,16 +1566,16 @@ Internal Knowledge · Implementation Sprint
 
 Problem: New hires and existing staff repeatedly asking IT, HR, and operations the same set of policy and process questions. Tribal knowledge stuck in PDFs and wikis.
 
-What we built: Internal Q&A assistant grounded in approved policies, SOPs, and FAQs. Answers always cite the source document and section. RBAC-aware so HR-confidential content is only available to authorized employees. Slack and intranet entry points.
+What we'd build: Internal Q&A assistant grounded in approved policies, SOPs, and FAQs. Answers always cite the source document and section. RBAC-aware so HR-confidential content is only available to authorized employees. Slack and intranet entry points.
 
-How it ships safely: Pre-launch eval against a 300-question gold set across IT, HR, finance, and ops. Confidence threshold with "I don't know — talk to [team]" fallback. Monthly content freshness audit.
+How it would ship safely: Pre-launch eval against a 300-question gold set across IT, HR, finance, and ops. Confidence threshold with "I don't know — talk to [team]" fallback. Monthly content freshness audit.
 
 RAG
 RBAC
 Slack
 Source citations
 
-100% answers carry source citations
+Design commitment: 100% of answers carry source citations
 
 Scope a build like this →
 
@@ -1585,20 +1585,20 @@ Governance · Enterprise AI Governance Engagement
 
 Problem: Enterprise launching its first wave of AI features and unsure how to clear security review, compliance, and board-level oversight. Engineering shipping faster than governance can keep up.
 
-What we built: A governance program covering AI policy, vendor and model approval, eval and monitoring requirements per use case, an internal "AI launch checklist," and a quarterly executive briefing format. We staged it as a 4–6 week engagement so engineering didn't lose momentum.
+What we'd build: A governance program covering AI policy, vendor and model approval, eval and monitoring requirements per use case, an internal "AI launch checklist," and a quarterly executive briefing format. We would stage it as a 4–6 week engagement so engineering doesn't lose momentum.
 
-How it ships safely: Policy aligned with existing security and compliance frameworks (SOC 2, HIPAA where applicable). Launch checklist piloted on two real systems before company-wide rollout.
+How it would ship safely: Policy aligned with existing security and compliance frameworks (SOC 2, HIPAA where applicable). Launch checklist would be piloted on two real systems before company-wide rollout.
 
 AI policy
 Vendor review
 Eval gating
 Exec briefing
 
-4–6 weeks to a documented governance program
+Target shape: 4–6 weeks to a documented governance program
 
-2 systems piloted through the new launch checklist
+Target shape: 2 systems piloted through the new launch checklist before wider rollout
 
-1 quarterly exec briefing format adopted
+Design commitment: 1 quarterly exec briefing format
 
 Scope a build like this →
 
@@ -2031,7 +2031,7 @@ What's next
 Most engagements start with a single 30-minute conversation. We'll listen to the workflow you're trying to change, name the constraints, and tell you whether a sprint, retainer, or governance engagement is the fastest path to production.
 
 Contact the studio
-See case studies
+See engagement patterns
 
 ---
 

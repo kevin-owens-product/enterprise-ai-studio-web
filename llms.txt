@@ -95,7 +95,7 @@ sameAs:
 - Pricing (published bands): https://enterpriseaistudio.com/pricing
 - Proof (how production readiness is demonstrated): https://enterpriseaistudio.com/proof
 - FAQ (consolidated): https://enterpriseaistudio.com/faq
-- Use cases (illustrative engagement patterns): https://enterpriseaistudio.com/case-studies
+- Engagement patterns (illustrative patterns, not delivered client results): https://enterpriseaistudio.com/case-studies
 - Resources (AI Implementation Readiness Checklist): https://enterpriseaistudio.com/resources
 - About / Founder bio: https://enterpriseaistudio.com/about
 - Contact: https://enterpriseaistudio.com/contact
