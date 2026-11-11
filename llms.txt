@@ -43,7 +43,7 @@ Includes: governance design, security review, vendor policy, eval infrastructure
 - Workflow automation (multi-step processes across email, CRM, ticketing, billing)
 
 ## Our Approach
-- Strategy + execution under one roof (partnership with ProductExec)
+- From investment thesis to production under one roof (partnership with ProductExec, AI value creation for PE portfolios)
 - Production-grade systems with evals, monitoring, fallback paths, runbooks
 - Workflow durability designed for thousands of repeated runs
 - Enterprise governance baked in (audit trails, security review, compliance)
@@ -60,7 +60,7 @@ sameAs:
 - https://smartbizaihub.com
 
 ## FAQ (short answers)
-- How is this different from ProductExec? ProductExec decides what AI to build; Enterprise AI Studio builds it. Many clients use both.
+- How is this different from ProductExec? ProductExec finds and proves the AI plays across a private equity portfolio; Enterprise AI Studio builds them. Many engagements use both.
 - Do you replace our internal engineering team? No — we augment it, build the AI core, integrate it, then hand off or stay on retainer.
 - What if we don't know the use case? The free discovery call maps constraints and surfaces high-leverage use cases, then we scope what you pick.
 - How does discovery work? A free 30-minute call, then a free one-week scoping phase producing architecture, milestones, pricing, and team.
