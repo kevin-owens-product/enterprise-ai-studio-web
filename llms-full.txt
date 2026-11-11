@@ -210,9 +210,9 @@ Why Us
 -
 01
 
-#### Strategy + execution under one roof
+#### From business case to production under one roof
 
-Through ProductExec , our sister practice, you can move from "what should we build" to "build it" without re-briefing.
+Through ProductExec , our sister practice for AI value creation in PE portfolios, a business case proven in one company moves straight into the build without re-briefing.
 
 -
 02
@@ -253,7 +253,7 @@ About
 
 ### Built by operators who've shipped AI in production.
 
-Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer whose operating background spans B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work. We work alongside ProductExec , our sister practice, and bring in specialist engineers for each engagement. Connect with Kevin on LinkedIn .
+Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer whose operating background spans B2B SaaS, productivity, healthcare workflow, and AI-enabled operating-model work, most recently as AI transformation lead inside a PE-owned software company. We work alongside ProductExec , our sister practice, and bring in specialist engineers for each engagement. Connect with Kevin on LinkedIn .
 
 Scope honesty
 
@@ -283,7 +283,7 @@ FAQ
 
 #### How is this different from working with ProductExec?
 
-ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.
+ProductExec works with private equity firms to find the AI plays that pay back across a portfolio and prove the business case in one company. Enterprise AI Studio is the team that builds it, in PE-backed companies and in enterprises that already know what they need. Many engagements use both: ProductExec proves the case, the Studio ships it.
 
 #### Do you replace our internal engineering team?
 
@@ -1630,7 +1630,7 @@ Scope & fit
 
 #### How is this different from working with ProductExec?
 
-ProductExec helps you decide what AI to build and how it fits your operating model. Enterprise AI Studio is the team that builds it. Many clients work with both — strategy first, then implementation.
+ProductExec works with private equity firms to find the AI plays that pay back across a portfolio and prove the business case in one company. Enterprise AI Studio is the team that builds it, in PE-backed companies and in enterprises that already know what they need. Many engagements use both: ProductExec proves the case, the Studio ships it.
 
 #### Do you replace our internal engineering team?
 
@@ -2020,7 +2020,7 @@ Production AI builders with deep experience in evals, retrieval, agent orchestra
 
 #### ProductExec — our sister practice
 
-For clients who need to decide what AI to build before they build it, we partner with ProductExec, our sister practice, on AI operating-model design and roadmap work. Many clients run strategy with ProductExec, then implementation with Enterprise AI Studio.
+For private equity firms and portfolio companies that need to decide which AI plays pay back before anything gets built, we partner with ProductExec, our sister practice for AI value creation in PE portfolios. ProductExec assesses the portfolio and proves the case; Enterprise AI Studio ships it.
 
 productexec.co
 

@@ -1,25 +1,27 @@
 /* ============================================================
    Enterprise AI Studio — shared stylesheet
    Family design system: Direction B "Navy Anchor, Paper Body"
+   2026-11: cool neutrals, gridded navy bands and a mint highlight, matching
+   the refreshed productexec.co. The Studio keeps its own blue accent.
    Shared across every page; do not fork per-page styles.
    ============================================================ */
 
 :root {
-  --family-navy: #0A0E1A;   /* hero + footer ground, family signature */
-  --family-navy-2: #101B33; /* gradient partner on navy bands */
-  --paper: #FAF8F2;         /* body ground */
+  --family-navy: #0B0D12;   /* hero + footer ground, family signature */
+  --family-navy-2: #141A2B; /* gradient partner on navy bands */
+  --paper: #F5F6F8;         /* body ground */
   --surface: #FFFFFF;       /* cards on paper */
-  --ink: #0A0E1A;           /* text on paper */
-  --ink-muted: #55606E;     /* secondary text on paper (AA vs paper) */
-  --line: #E6E1D6;          /* hairlines on paper */
+  --ink: #0B0D12;           /* text on paper */
+  --ink-muted: #5A6272;     /* secondary text on paper (AA vs paper) */
+  --line: #E2E5EB;          /* hairlines on paper */
   --on-navy: #EDEFF4;       /* text on navy */
   --on-navy-muted: #A9B2C6; /* muted text on navy (AA on navy) */
   --accent: #2563EB;        /* site accent (buttons, fills) */
   --accent-hover: #1D4ED8;
   --accent-text: #1D4ED8;   /* accent for small text/links on paper (AA-safe) */
   --accent-on-navy: #60A5FA;/* accent for text on navy (AA-safe) */
-  --success: #2E7D5B;
-  --success-on-navy: #5BC49A; /* success tint that passes AA on navy */
+  --success: #047857;
+  --success-on-navy: #34D399; /* success tint that passes AA on navy */
   --warning: #A87717;
   --warning-on-navy: #E4C889;
   --danger: #B3402A;
@@ -411,7 +413,7 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
 .form-field { display: flex; flex-direction: column; gap: 6px; }
 .form-field label { font-size: 14px; font-weight: 600; color: var(--ink); }
 .form-field input, .form-field select, .form-field textarea {
-  padding: 12px 14px; border: 1px solid #D5CFC0; border-radius: 10px;
+  padding: 12px 14px; border: 1px solid #CDD3DE; border-radius: 10px;
   font-family: inherit; font-size: 15px; color: var(--ink); background: var(--surface);
   transition: border-color .15s, box-shadow .15s; outline: none; width: 100%;
 }
@@ -576,3 +578,36 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
   color: var(--ink-muted); text-decoration: none; background: var(--surface);
 }
 .faq-jump a:hover { border-color: var(--accent); color: var(--accent-text); }
+
+/* ============================================================
+   2026-11 family refresh — gridded navy bands with a blue/mint
+   glow, tighter display type, rounder cards that lift on hover.
+   ============================================================ */
+.hero {
+  background:
+    radial-gradient(55% 45% at 80% 6%, rgba(37, 99, 235, 0.34), transparent 70%),
+    radial-gradient(40% 40% at 8% 95%, rgba(52, 211, 153, 0.12), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(180deg, #07080C 0%, #0B0D12 60%, #10131B 100%);
+}
+.navy-band {
+  background:
+    radial-gradient(50% 60% at 85% 0%, rgba(37, 99, 235, 0.22), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 56px 56px,
+    #0B0D12;
+}
+.hero h1 { letter-spacing: -0.03em; line-height: 1.04; }
+.hero-grid h1 { font-size: clamp(36px, 4.4vw, 58px); }
+.hero .eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04); color: #BFD3FF; font-size: 11px;
+}
+.hero .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #34D399; box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18); }
+.section-headline { letter-spacing: -0.03em; line-height: 1.08; font-size: clamp(28px, 3.4vw, 40px); }
+.card { border-radius: 20px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+a.card:hover, .card:hover { box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06), 0 12px 28px -10px rgba(15, 23, 42, 0.18); }
+a.card:hover { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { a.card:hover { transform: none; } }
