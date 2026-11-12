@@ -35,14 +35,53 @@
         window.gtag('consent', 'update', { analytics_storage: 'granted' });
       }
       consentBar.hidden = true;
+      if (consentOpen) consentOpen.forEach(function (b) { b.hidden = false; });
+    });
+    /* Footer "Cookie settings" reopens the card so a choice can be changed. */
+    var consentOpen = Array.prototype.slice.call(document.querySelectorAll('[data-consent-open]'));
+    consentOpen.forEach(function (b) {
+      b.hidden = !consentBar.hidden;
+      b.addEventListener('click', function () {
+        consentBar.hidden = false;
+        b.hidden = true;
+        var first = consentBar.querySelector('button');
+        if (first) first.focus();
+      });
     });
   }
 
-  /* ---------- Booking links ---------- */
-  if (BOOKING_URL) {
-    Array.prototype.forEach.call(document.querySelectorAll('a[data-booking-link]'), function (a) {
+  /* ---------- Booking links ----------
+     With BOOKING_URL set, every [data-booking-link] becomes "Pick a time" and
+     opens the calendar; [data-booking-only] links (e.g. on /thank-you) appear.
+     Without it, links stay labelled "Request a time" and take the visitor to
+     the nearest contact form on the page (or /contact#form) and focus it. */
+  function focusContactForm(form) {
+    var field = form.querySelector('input:not([type="hidden"]):not([tabindex="-1"]), select, textarea');
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (field) setTimeout(function () { field.focus({ preventScroll: true }); }, 350);
+  }
+  var pageContactForm = document.querySelector('form.contact-form[data-contact-form]');
+  Array.prototype.forEach.call(document.querySelectorAll('a[data-booking-link]'), function (a) {
+    if (BOOKING_URL) {
       a.setAttribute('href', BOOKING_URL);
       a.setAttribute('rel', 'noopener');
+      a.textContent = 'Pick a time';
+      a.hidden = false;
+      return;
+    }
+    if (a.hasAttribute('data-booking-only')) { a.hidden = true; return; }
+    if (pageContactForm) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        focusContactForm(pageContactForm);
+      });
+    }
+  });
+  /* Arriving at /contact#form: focus the first field, not just scroll. */
+  if (pageContactForm && window.location.hash === '#form' && pageContactForm.id === 'form') {
+    window.addEventListener('load', function () {
+      var field = pageContactForm.querySelector('input:not([type="hidden"]):not([tabindex="-1"])');
+      if (field) field.focus({ preventScroll: true });
     });
   }
 
@@ -95,11 +134,22 @@
       if (e.target.closest('a')) closeMenu(false); /* navigating away */
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 768 && menu.classList.contains('open')) closeMenu(false);
+      if (window.innerWidth >= 1024 && menu.classList.contains('open')) closeMenu(false);
     });
   }
 
   /* ---------- Contact forms: client validation + async submit ---------- */
+  /* Visitor-facing text for the error codes /api/inquiry returns. Codes not
+     listed (store_error, unknown_form, ...) fall back to the form's own
+     "try again" message. */
+  var ERROR_MESSAGES = {
+    invalid_email: 'That email address didn\u2019t go through. Check it (for example jane@company.com) and send again.',
+    missing_name: 'Please add your name, then send again.',
+    rate_limited: 'Too many messages from this connection in the last few minutes. Wait about ten minutes and send again \u2014 your text is still in the form.',
+    body_too_large: 'That message is too long to send. Shorten it and send again.',
+    cross_origin: 'This form can only be sent from enterpriseaistudio.com. Reload the page and try again.',
+    network: 'We couldn\u2019t reach the server. Check your connection and send again \u2014 your text is still in the form.'
+  };
   Array.prototype.forEach.call(document.querySelectorAll('form[data-contact-form]'), function (form) {
     var btn = form.querySelector('button[type="submit"]');
     var successEl = form.querySelector('.form-status.success');
@@ -107,14 +157,37 @@
     var btnLabel = btn ? btn.textContent : '';
     var formId = form.getAttribute('data-contact-form') || 'contact';
 
+    var errorDefault = errorEl ? errorEl.innerHTML : '';
+    var emailInput = form.querySelector('input[type="email"]');
+    var nameInput = form.querySelector('input[name="name"]');
+
     function show(el) { if (el) el.classList.add('visible'); }
     function hide(el) { if (el) el.classList.remove('visible'); }
+    function showError(code) {
+      if (!errorEl) return;
+      var msg = ERROR_MESSAGES[code];
+      if (msg) errorEl.textContent = msg; else errorEl.innerHTML = errorDefault;
+      show(errorEl);
+      var target = code === 'invalid_email' ? emailInput : (code === 'missing_name' ? nameInput : null);
+      if (target) target.focus();
+    }
+    /* Require a dotted domain (name@company.com) on top of type=email,
+       matching what the server accepts. */
+    if (emailInput) {
+      emailInput.addEventListener('input', function () { emailInput.setCustomValidity(''); });
+    }
+    function checkEmail() {
+      if (!emailInput || !emailInput.value) return;
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@.]{2,}$/.test(emailInput.value.trim());
+      emailInput.setCustomValidity(ok ? '' : 'Enter a full email address, like jane@company.com.');
+    }
 
     form.addEventListener('submit', function (evt) {
       evt.preventDefault();
       hide(successEl); hide(errorEl);
 
       /* Client-side validation: native constraint API with visible messages */
+      checkEmail();
       if (!form.checkValidity()) {
         form.reportValidity();
         track('form_validation_error', { form_id: formId });
@@ -143,11 +216,14 @@
           track('form_submit', { form_id: formId, status: 'success' });
           if (!form.hasAttribute('data-no-redirect')) window.location.href = '/thank-you';
         } else {
-          show(errorEl);
-          track('form_submit', { form_id: formId, status: 'error' });
+          return res.json().catch(function () { return {}; }).then(function (data) {
+            var code = (data && data.error) || (res.status === 429 ? 'rate_limited' : '');
+            showError(code);
+            track('form_submit', { form_id: formId, status: 'error', error_code: code || String(res.status) });
+          });
         }
       }).catch(function () {
-        show(errorEl);
+        showError('network');
         track('form_submit', { form_id: formId, status: 'network_error' });
       }).finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }

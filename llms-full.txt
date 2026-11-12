@@ -1,6 +1,6 @@
 # Enterprise AI Studio — Full Site Text
 
-Last updated: 2026-09-16
+Last updated: 2026-11-12
 
 Every public page of https://enterpriseaistudio.com as plain text, for AI crawlers and answer engines. Canonical short version: https://enterpriseaistudio.com/llms.txt
 
@@ -732,7 +732,7 @@ Ready to Build?
 
 A quick discovery call to map constraints and timeline. No sales pitch, just a direct conversation.
 
-Pick a time
+Request a time
 
 Full name *
 
@@ -841,7 +841,7 @@ Monthly evals: Measure system performance, identify optimization opportunities, 
 
 Quarterly reviews: Strategic review of your AI roadmap, upcoming projects, and architecture decisions.
 
-On-call coverage: Production incidents get immediate attention. Critical issues resolved within hours.
+On-call coverage: Production incidents get immediate attention and take priority over planned work. On-call time comes out of your retainer hours.
 
 Continuity: Same engineer across months/years so they understand your systems, constraints, and priorities.
 
@@ -853,7 +853,7 @@ $16,000/mo (40 hrs): Standard engagement. New feature development, evals, produc
 
 $24,000/mo (60 hrs): Accelerated roadmap. Multiple projects in parallel, deeper optimization work.
 
-$30,000/mo (80 hrs): Full-time equivalent. Your dedicated AI engineering team.
+$30,000/mo (80 hrs): Roughly half-time senior capacity. Several systems or projects in flight at once.
 
 Common Work
 
@@ -891,7 +891,7 @@ You choose your hours (20/40/60/80/month) and kick off with a brief alignment ca
 
 Hours are tracked and flexible: slower months roll unused hours forward (up to 2 months), faster months you can burn them or add capacity. You get a monthly report of work completed, current systems status, and recommended priorities.
 
-Critical production issues are handled immediately, outside the hour budget. Everything else comes from your monthly allocation.
+Critical production issues jump the queue and are worked immediately; like all other work, that time comes from your monthly allocation.
 
 FAQ
 
@@ -947,7 +947,7 @@ Let's Talk
 
 Tell us about your roadmap and current AI systems. We'll match you with an engineer and scope the engagement.
 
-Pick a time
+Request a time
 
 Full name *
 
@@ -1170,7 +1170,7 @@ Let's Build Governance
 
 Tell us about your current AI systems and compliance requirements. We'll assess and scope the engagement.
 
-Pick a time
+Request a time
 
 Full name *
 
@@ -1263,7 +1263,7 @@ Pricing
 We publish price bands because the alternative wastes a week of your time and ours. If the number is wrong for your budget, you should know that before the first call — not after three meetings and a deck.
 
 Send the brief
-Pick a time
+Request a time
 
 The three bands
 
@@ -1354,7 +1354,7 @@ Next step
 Send the workflow, the systems, and what success would look like. We'll reply within one business day with a view on scope and price — or with the reason this isn't a fit.
 
 Send the brief
-Pick a time
+Request a time
 
 ---
 
@@ -1479,7 +1479,7 @@ Take it with you
 
 The eval-plan structure above is being written up as a reusable template. Tell us on the resources page and we’ll send it when it ships — no gated download, no form wall.
 
-Get the eval-plan template
+Ask for the eval-plan template
 
 ---
 
@@ -1748,6 +1748,10 @@ Working together
 
 ### Working together.
 
+#### Who owns the code and the evals?
+
+You do. You own the code and the evals we build, and they hand over with the documentation and runbooks at launch. We sign a mutual NDA before any scoping conversation.
+
 #### What if our team wants to maintain the system after launch?
 
 We provide full documentation, runbooks, and hands-on training. Your team will understand the system architecture, how to run it, and how to iterate on it. We also offer fractional engineering retainers if you'd prefer ongoing support.
@@ -1763,7 +1767,7 @@ Still unanswered
 Send the workflow and the constraint you're worried about. We reply within one business day — with the honest answer, including when the answer is that we're not the right fit.
 
 Contact the studio
-Pick a time
+Request a time
 
 ---
 
@@ -1785,7 +1789,7 @@ Free Resource
 
 ### AI Implementation Readiness Checklist.
 
-Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask us to email your read-out.
+Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask Kevin to email you a read-out.
 
 #### The 25-question readiness checklist
 
@@ -1877,7 +1881,7 @@ Scoring needs JavaScript; the questions above work fine on paper too — print t
 
 - 0/5 Change & Ops
 
-We’ll email your score, the five pillar breakdowns, and the two questions we’d ask first.
+Kevin will email you your score, the five pillar breakdowns, and the two questions we’d ask first, within one business day.
 
 Work email *
 
@@ -1902,12 +1906,10 @@ Also send occasional notes on production AI (unsubscribe any time).
 Email my read-out
 By sending, you agree to our privacy notice .
 
-✓ On its way. Check your inbox.
+✓ Got it. Kevin will email your read-out within one business day.
 
 Try again in a few minutes, or message Kevin on LinkedIn
 
-Pick a time
-Email the studio
 Contact the studio
 Reset answers
 
@@ -1917,12 +1919,13 @@ More resources
 
 ### More on the way — tell us which.
 
-A scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.
+An eval-plan template, a scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.
 
 Work email *
 
 Which should we send?
 
+Eval-plan template
 Scoping guide
 
 Governance starter pack
@@ -2050,7 +2053,7 @@ Tell us the workflow, the systems involved, and what would make the project valu
 
 No inbox to dig for — this form reaches Kevin directly. Prefer a message? Message Kevin on LinkedIn at https://www.linkedin.com/in/kevinaowens
 
-Pick a time
+Request a time
 
 Full name *
 
@@ -2164,7 +2167,7 @@ The detail
 
 #### Who we are
 
-Enterprise AI Studio is a production AI implementation practice run by Kevin Owens, a four-time Chief Product Officer. We are the data controller for this site. For anything in this notice, contact Email the studio .
+Enterprise AI Studio is a production AI implementation practice run by Kevin Owens, a four-time Chief Product Officer. We are the data controller for this site. For anything in this notice, use the contact form.
 
 #### What we collect
 
@@ -2190,7 +2193,7 @@ Google Analytics 4 (property G-DPS2MFLM6Q ) — page analytics, and only after y
 
 Google Fonts — serves the Inter and JetBrains Mono webfonts; your browser requests them directly from Google.
 
-Cal.com — if and when scheduling is enabled, a booking link will hand you off to Cal.com, whose own privacy notice applies to what you enter there. Today the booking button points back at our own contact form.
+Cal.com — if and when scheduling is enabled, a booking link will hand you off to Cal.com, whose own privacy notice applies to what you enter there. Today there is no booking link: “Request a time” takes you to our own contact form.
 
 We do not use a third-party form processor. Forms post to our own server.
 
@@ -2212,7 +2215,7 @@ Form submissions: up to 24 months from the last contact, then deleted. Submissio
 
 #### Your rights and how to exercise them
 
-You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can also ask us to stop emailing you at any time. Send the request to Email the studio from the address you used, and we will confirm within one business day and complete it within 30 days. There is no charge, and we will not ask you to justify the request.
+You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can also ask us to stop emailing you at any time. Send the request through the contact form, giving the same email address you used before, and we will confirm within one business day and complete it within 30 days. There is no charge, and we will not ask you to justify the request.
 
 If you are in the UK or EU, you also have the right to complain to your local supervisory authority.
 

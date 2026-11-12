@@ -7,9 +7,11 @@
   <meta name="description" content="Published price bands for AI implementation sprints, fractional AI engineering retainers, and enterprise AI governance — and exactly what moves a sprint from $40K to $120K.">
   <meta property="og:title" content="AI Implementation Pricing — Enterprise AI Studio">
   <meta property="og:description" content="Published price bands for AI implementation sprints, fractional AI engineering retainers, and enterprise AI governance — and exactly what moves a sprint from $40K to $120K.">
+  <meta property="og:site_name" content="Enterprise AI Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/pricing">
   <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:alt" content="Enterprise AI Studio: production AI implementation for enterprise workflows.">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -45,7 +47,7 @@
         "name": "AI Implementation Sprints",
         "description": "A single AI system, fully scoped, designed, built, and shipped on a fixed timeline and budget. 4-8 weeks, fixed scope.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "areaServed": "US",
+        "areaServed": ["United States", "United Kingdom", "European Union"],
         "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 40000, "highPrice": 120000 }
       },
       {
@@ -54,7 +56,7 @@
         "name": "Enterprise AI Governance",
         "description": "AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure. 4-6 weeks, fixed fee.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "areaServed": "US",
+        "areaServed": ["United States", "United Kingdom", "European Union"],
         "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 25000, "highPrice": 60000 }
       },
       {
@@ -63,7 +65,7 @@
         "name": "Fractional AI Engineering",
         "description": "Dedicated senior AI engineering bandwidth on retainer. Ongoing engagement, 20-80 hours per month.",
         "provider": { "@type": "Organization", "name": "Enterprise AI Studio" },
-        "areaServed": "US",
+        "areaServed": ["United States", "United Kingdom", "European Union"],
         "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 8000, "highPrice": 30000 }
       }
     ]
@@ -84,6 +86,13 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
@@ -96,6 +105,7 @@
     </button>
     <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
+      <li><a href="/pricing" aria-current="page">Pricing</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Engagement patterns</a></li>
       <li><a href="/resources">Resources</a></li>
@@ -114,7 +124,7 @@
     <p class="lede">We publish price bands because the alternative wastes a week of your time and ours. If the number is wrong for your budget, you should know that before the first call — not after three meetings and a deck.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="/contact#form">Send the brief</a>
-      <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+      <a class="btn btn-ghost" data-booking-link href="/contact#form">Request a time</a>
     </div>
   </div>
 </section>
@@ -210,7 +220,7 @@
     <p class="section-body">Send the workflow, the systems, and what success would look like. We'll reply within one business day with a view on scope and price — or with the reason this isn't a fit.</p>
     <div class="cta-row" style="margin-top:32px;">
       <a class="btn btn-on-navy" href="/contact#form">Send the brief</a>
-      <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+      <a class="btn btn-ghost" data-booking-link href="/contact#form">Request a time</a>
     </div>
   </div>
 </section>
@@ -225,12 +235,15 @@
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
+        <a href="/pricing">Pricing</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Engagement patterns</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
         <a href="/privacy">Privacy</a>
+        <button type="button" class="footer-link-button" data-consent-open hidden>Cookie settings</button>
       </nav>
     </div>
     <div class="family-strip">
@@ -239,20 +252,13 @@
         <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
         <li><a href="https://productexec.co">ProductExec</a><span>AI value creation for PE</span></li>
         <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
-        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>AI pilots for small businesses</span></li>
       </ul>
     </div>
     <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
 
-<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
-  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
-  <div class="consent-bar-actions">
-    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
-    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
-  </div>
-</div>
 
 <script src="/assets/site.js" defer></script>
 </body>
