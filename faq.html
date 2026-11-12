@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enterprise AI FAQ — Scope, Pricing, Governance, Delivery</title>
-  <meta name="description" content="Answers to the questions enterprise buyers actually ask: what a sprint costs, how evals work, who owns the code, how governance and security review are handled.">
+  <meta name="description" content="Answers to the questions enterprise buyers actually ask: how a sprint is priced, how our data is handled, how evals work, who owns the code, how governance and security review are handled.">
   <meta property="og:title" content="Enterprise AI FAQ — Scope, Pricing, Governance, Delivery">
-  <meta property="og:description" content="Answers to the questions enterprise buyers actually ask: what a sprint costs, how evals work, who owns the code, how governance and security review are handled.">
+  <meta property="og:description" content="Answers to the questions enterprise buyers actually ask: how a sprint is priced, how our data is handled, how evals work, who owns the code, how governance and security review are handled.">
   <meta property="og:site_name" content="Enterprise AI Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/faq">
@@ -71,7 +71,7 @@
         "name": "How does discovery work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team."
+          "text": "We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, price, and team."
         }
       },
       {
@@ -87,12 +87,12 @@
         "name": "What's a typical engagement size?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K."
+          "text": "Implementation sprints are 4-8 weeks of fixed scope for one workflow. Retainers run 20, 40, 60, or 80 hours a month. Governance programs are 4-6 weeks at a fixed fee. Every engagement is quoted in writing after a free 30-minute discovery call and, for sprints, a free one-week scoping phase."
         }
       },
       {
         "@type": "Question",
-        "name": "What's included in the pricing?",
+        "name": "What's included in a sprint?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support."
@@ -103,7 +103,7 @@
         "name": "What if requirements change mid-sprint?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both."
+          "text": "We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, price, or both."
         }
       },
       {
@@ -135,7 +135,7 @@
         "name": "Can you sign an NDA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We sign mutual NDAs before any scoping conversation."
+          "text": "Yes. We sign your NDA before any scoping conversation, and your DPA before any of your data is in scope."
         }
       },
       {
@@ -176,6 +176,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Retainer hours include on-call coverage. Critical issues get immediate attention; we prioritize your production systems over other work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle security and our data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Builds run in your own cloud accounts, under your access controls, and your data stays in your environment. We use model providers under enterprise or API terms that don't train on your data. The studio gets least-privilege access, removed at handover. The code, prompts, evals, and infrastructure-as-code are handed over and owned by you. We sign your NDA and DPA."
         }
       },
       {
@@ -247,7 +255,7 @@
         "name": "Who owns the code and the evals?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You do. You own the code and the evals we build, and they hand over with the documentation and runbooks at launch. We sign a mutual NDA before any scoping conversation."
+          "text": "You do. The code, prompts, evals, and infrastructure-as-code we build are handed over with the documentation and runbooks at launch, and the studio's access is removed. We sign your NDA before any scoping conversation."
         }
       },
       {
@@ -313,7 +321,7 @@
     </button>
     <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
-      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/pricing">How pricing works</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Engagement patterns</a></li>
       <li><a href="/resources">Resources</a></li>
@@ -329,7 +337,7 @@
   <div class="container">
     <p class="eyebrow">FAQ</p>
     <h1>Questions we get asked.</h1>
-    <p class="lede">Everything buyers ask us before a first call, in one place — scope, price, delivery, evals, governance, and how we actually work with your team. Price bands are the published ones on <a href="/pricing">pricing</a>.</p>
+    <p class="lede">Everything buyers ask us before a first call, in one place — scope, pricing, delivery, evals, security, governance, and how we actually work with your team. How engagements are quoted is on <a href="/pricing">how pricing works</a>.</p>
   </div>
 </section>
 
@@ -352,7 +360,7 @@
       </div>
       <div class="faq-item">
         <h3>How does discovery work?</h3>
-        <p>We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, pricing, and team.</p>
+        <p>We start with a free 30-minute discovery call to map your use case, constraints, and success metrics. Then a free 1-week scoping phase where we deliver a detailed scope document: architecture, milestones, price, and team.</p>
       </div>
       <div class="faq-item">
         <h3>Do you work across our whole AI stack, or just new builds?</h3>
@@ -370,15 +378,15 @@
     <div class="faq-list">
       <div class="faq-item">
         <h3>What's a typical engagement size?</h3>
-        <p>Implementation sprints range from $40K-$120K. Retainers from $8K-$30K/month. Governance projects from $25K-$60K.</p>
+        <p>Implementation sprints are 4–8 weeks of fixed scope for one workflow. Retainers run 20, 40, 60, or 80 hours a month. Governance programs are 4–6 weeks at a fixed fee. Every engagement is quoted in writing after a free 30-minute discovery call and, for sprints, a free one-week scoping phase. See <a href="/pricing">how pricing works</a>.</p>
       </div>
       <div class="faq-item">
-        <h3>What's included in the pricing?</h3>
+        <h3>What's included in a sprint?</h3>
         <p>Complete end-to-end delivery: architecture design, system build, integration with your infrastructure, evals and testing, production launch, runbooks, and 30 days of post-launch support.</p>
       </div>
       <div class="faq-item">
         <h3>What if requirements change mid-sprint?</h3>
-        <p>We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, budget, or both.</p>
+        <p>We plan for some change. Small tweaks and clarifications are absorbed in the scope. Significant scope changes are managed through change orders that adjust timeline, price, or both.</p>
       </div>
       <div class="faq-item">
         <h3>How many hours per month do I get?</h3>
@@ -394,10 +402,10 @@
       </div>
       <div class="faq-item">
         <h3>Can you sign an NDA?</h3>
-        <p>Yes. We sign mutual NDAs before any scoping conversation.</p>
+        <p>Yes. We sign your NDA before any scoping conversation, and your DPA before any of your data is in scope.</p>
       </div>
     </div>
-    <p class="section-body" style="margin-top:32px;">Full bands, and what moves a sprint from $40K to $120K, are on <a href="/pricing">pricing</a>.</p>
+    <p class="section-body" style="margin-top:32px;">How each engagement is quoted, and what shapes the scope of a sprint, is on <a href="/pricing">how pricing works</a>.</p>
   </div>
 </section>
 
@@ -435,6 +443,10 @@
     <p class="section-eyebrow">Governance &amp; security</p>
     <h2 class="section-headline">Governance and security.</h2>
     <div class="faq-list">
+      <div class="faq-item" id="security">
+        <h3>How do you handle security and our data?</h3>
+        <p>Builds run in your own cloud accounts, under your access controls, and your data stays in your environment. We use model providers under enterprise or API terms that don't train on your data. The studio gets least-privilege access, removed at handover. The code, prompts, evals, and infrastructure-as-code are handed over and owned by you. We sign your NDA and DPA.</p>
+      </div>
       <div class="faq-item">
         <h3>Do we need AI governance now, or later?</h3>
         <p>Now. The worst time to design governance is after you've shipped 5 AI systems and your security team says 'stop.' We help you design governance that scales from day one, before you hit compliance walls.</p>
@@ -478,7 +490,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <h3>Who owns the code and the evals?</h3>
-        <p>You do. You own the code and the evals we build, and they hand over with the documentation and runbooks at launch. We sign a mutual NDA before any scoping conversation.</p>
+        <p>You do. The code, prompts, evals, and infrastructure-as-code we build are handed over with the documentation and runbooks at launch, and the studio's access is removed. We sign your NDA before any scoping conversation.</p>
       </div>
       <div class="faq-item">
         <h3>What if our team wants to maintain the system after launch?</h3>
@@ -514,7 +526,7 @@
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
-        <a href="/pricing">Pricing</a>
+        <a href="/pricing">How pricing works</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Engagement patterns</a>
         <a href="/resources">Resources</a>

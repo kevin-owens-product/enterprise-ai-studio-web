@@ -10,9 +10,9 @@
      Forms post to the self-hosted same-origin endpoint below.
   ------------------------------------------------------------------ */
   var CONTACT_ENDPOINT = '/api/inquiry';
-  /* Booking link — set BOOKING_URL to the Cal.com URL when the calendar
-     exists; an empty string keeps the /contact#form fallback. */
-  var BOOKING_URL = '';
+  /* Booking link — the Google Calendar appointment page. An empty string
+     falls back to the nearest contact form (/contact#form). */
+  var BOOKING_URL = 'https://calendar.app.google/U4e4ETunoZaib7im8';
 
   function track(eventName, params) {
     if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
@@ -64,8 +64,11 @@
   Array.prototype.forEach.call(document.querySelectorAll('a[data-booking-link]'), function (a) {
     if (BOOKING_URL) {
       a.setAttribute('href', BOOKING_URL);
+      a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
       a.textContent = 'Pick a time';
+      a.setAttribute('aria-label', 'Pick a time (opens the calendar in a new tab)');
+      a.addEventListener('click', function () { track('booking_click', { link_url: BOOKING_URL }); });
       a.hidden = false;
       return;
     }
