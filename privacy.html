@@ -7,9 +7,11 @@
   <meta name="description" content="How Enterprise AI Studio handles the information you send us: contact form submissions, analytics with consent, and how to ask us to delete your data.">
   <meta property="og:title" content="Privacy Notice — Enterprise AI Studio">
   <meta property="og:description" content="How Enterprise AI Studio handles the information you send us: contact form submissions, analytics with consent, and how to ask us to delete your data.">
+  <meta property="og:site_name" content="Enterprise AI Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/privacy">
   <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:alt" content="Enterprise AI Studio: production AI implementation for enterprise workflows.">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -49,6 +51,13 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
@@ -61,6 +70,7 @@
     </button>
     <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
+      <li><a href="/pricing">How pricing works</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Engagement patterns</a></li>
       <li><a href="/resources">Resources</a></li>
@@ -87,12 +97,12 @@
 
     <div class="detail-section">
       <h3>Who we are</h3>
-      <p>Enterprise AI Studio is a production AI implementation practice run by Kevin Owens, a four-time Chief Product Officer. We are the data controller for this site. For anything in this notice, contact <a href="/contact#form">Contact the studio</a>.</p>
+      <p>Enterprise AI Studio is a production AI implementation practice run by Kevin Owens, a four-time Chief Product Officer. We are the data controller for this site. For anything in this notice, use <a href="/contact#form">the contact form</a>.</p>
     </div>
 
     <div class="detail-section">
       <h3>What we collect</h3>
-      <p><strong>Things you type into a form.</strong> When you send a brief, request a checklist read-out, or join a waitlist, we receive the fields on that form — name, work email, company, role, company size, engagement type, timeline, budget band, and your message — plus which page you sent it from and any UTM parameters in the URL. Our server also records the submitting IP address and browser user agent with the submission, as basic abuse protection.</p>
+      <p><strong>Things you type into a form.</strong> When you send a brief, request a checklist read-out, or join a waitlist, we receive the fields on that form — name, work email, company, role, company size, engagement type, timeline, and your message — plus which page you sent it from and any UTM parameters in the URL. Our server also records the submitting IP address and browser user agent with the submission, as basic abuse protection.</p>
       <p><strong>Things we do not collect unless you ask us to.</strong> The AI Implementation Readiness Checklist scores entirely in your browser. Your answers are not sent anywhere unless you fill in the read-out form and press the button — at which point your score and the pillar breakdown are sent with your email address so we can reply.</p>
       <p><strong>Server logs.</strong> Our host keeps standard request logs (IP, timestamp, path, user agent) for operations and security.</p>
     </div>
@@ -109,7 +119,7 @@
       <p><strong>SMTP email provider</strong> — delivers the notification email that tells us a brief arrived, and our reply to you.</p>
       <p><strong>Google Analytics 4 (property <span class="price-band">G-DPS2MFLM6Q</span>)</strong> — page analytics, and only after you accept. See below.</p>
       <p><strong>Google Fonts</strong> — serves the Inter and JetBrains Mono webfonts; your browser requests them directly from Google.</p>
-      <p><strong>Cal.com</strong> — if and when scheduling is enabled, a booking link will hand you off to Cal.com, whose own privacy notice applies to what you enter there. Today the booking button points back at our own contact form.</p>
+      <p><strong>Google Calendar</strong> — the “Pick a time” buttons open a Google Calendar appointment page in a new tab. Google’s own privacy notice applies to what you enter there; we receive the booking details you give it.</p>
       <p>We do not use a third-party form processor. Forms post to our own server.</p>
     </div>
 
@@ -132,14 +142,14 @@
 
     <div class="detail-section">
       <h3>Your rights and how to exercise them</h3>
-      <p>You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can also ask us to stop emailing you at any time. Send the request to <a href="/contact#form">Contact the studio</a> from the address you used, and we will confirm within one business day and complete it within 30 days. There is no charge, and we will not ask you to justify the request.</p>
+      <p>You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can also ask us to stop emailing you at any time. Send the request through <a href="/contact#form">the contact form</a>, giving the same email address you used before, and we will confirm within one business day and complete it within 30 days. There is no charge, and we will not ask you to justify the request.</p>
       <p>If you are in the UK or EU, you also have the right to complain to your local supervisory authority.</p>
     </div>
 
     <div class="detail-section">
       <h3>Changes to this notice</h3>
       <p>If we add or remove a processor, or change what we collect, we update this page and the date below.</p>
-      <p><strong>Last updated: 16 September 2026.</strong></p>
+      <p><strong>Last updated: 12 November 2026.</strong></p>
     </div>
   </div>
 </section>
@@ -154,12 +164,15 @@
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
+        <a href="/pricing">How pricing works</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Engagement patterns</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
         <a href="/privacy">Privacy</a>
+        <button type="button" class="footer-link-button" data-consent-open hidden>Cookie settings</button>
       </nav>
     </div>
     <div class="family-strip">
@@ -168,20 +181,13 @@
         <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
         <li><a href="https://productexec.co">ProductExec</a><span>AI value creation for PE</span></li>
         <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
-        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>AI pilots for small businesses</span></li>
       </ul>
     </div>
     <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
 
-<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
-  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
-  <div class="consent-bar-actions">
-    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
-    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
-  </div>
-</div>
 
 <script src="/assets/site.js" defer></script>
 </body>

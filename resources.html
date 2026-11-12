@@ -7,9 +7,11 @@
   <meta name="description" content="Free resources for enterprise AI buyers: the interactive AI Implementation Readiness Checklist — 25 scored questions across data, evals, governance, change management, and ops.">
   <meta property="og:title" content="Resources &amp; Readiness Checklist — Enterprise AI Studio">
   <meta property="og:description" content="The AI Implementation Readiness Checklist — 25 scored questions to answer before scoping a production AI project.">
+  <meta property="og:site_name" content="Enterprise AI Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/resources">
   <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:alt" content="Enterprise AI Studio: production AI implementation for enterprise workflows.">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -66,6 +68,13 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
@@ -78,6 +87,7 @@
     </button>
     <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
+      <li><a href="/pricing">How pricing works</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Engagement patterns</a></li>
       <li><a href="/resources" aria-current="page">Resources</a></li>
@@ -105,7 +115,7 @@
   <div class="container">
     <p class="section-eyebrow">Free Resource</p>
     <h2 class="section-headline">AI Implementation Readiness Checklist.</h2>
-    <p class="section-body">Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask us to email your read-out.</p>
+    <p class="section-body">Twenty-five questions across five pillars. Check every question you can confidently answer today; your score and the read-out update as you go. Nothing is submitted unless you ask Kevin to email you a read-out.</p>
 
     <form id="readiness-checklist-form" class="checklist-card">
       <h3>The 25-question readiness checklist</h3>
@@ -190,7 +200,7 @@
           <input type="hidden" name="page_source" value="/resources">
           <input type="hidden" name="score_total" value="0" data-score-total>
           <input type="hidden" name="score_pillars" value="{}" data-score-pillars>
-          <p class="readout-lede">We’ll email your score, the five pillar breakdowns, and the two questions we’d ask first.</p>
+          <p class="readout-lede">Kevin will email you your score, the five pillar breakdowns, and the two questions we’d ask first, within one business day.</p>
           <div class="form-row">
             <div class="form-field">
               <label for="readout-name">Full name *</label>
@@ -221,14 +231,13 @@
           <div class="form-submit" style="text-align:left;">
             <button type="submit" class="btn btn-on-navy btn-form-submit">Email my read-out</button>
             <p class="form-consent">By sending, you agree to our <a href="/privacy">privacy notice</a>.</p>
-            <p class="form-status success" role="status">✓ On its way. Check your inbox.</p>
+            <p class="form-status success" role="status">✓ Got it. Kevin will email your read-out within one business day.</p>
             <p class="form-status error" role="alert">Try again in a few minutes, or <a href="https://www.linkedin.com/in/kevinaowens">message Kevin on LinkedIn</a>.</p>
           </div>
         </form>
         <div class="checklist-actions">
-          <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+          <a class="btn btn-ghost" data-booking-link data-booking-only hidden href="/contact#form">Pick a time</a>
           <a class="btn btn-on-navy" href="/contact#form">Contact the studio</a>
-          <a class="btn btn-ghost" href="/contact">Contact the studio</a>
           <button type="button" class="btn checklist-reset" id="checklist-reset">Reset answers</button>
         </div>
     </div>
@@ -241,7 +250,7 @@
   <div class="container">
     <p class="section-eyebrow">More resources</p>
     <h2 class="section-headline">More on the way — tell us which.</h2>
-    <p class="section-body">A scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.</p>
+    <p class="section-body">An eval-plan template, a scoping guide, governance starter pack, eval patterns, and a production architecture reference are being written up as engagements turn into reusable templates. Tell us which ones matter and we’ll send them when they ship.</p>
 
     <form class="waitlist-form card" data-contact-form="waitlist" data-no-redirect action="/api/inquiry" method="post">
         <input type="hidden" name="form_name" value="waitlist">
@@ -257,6 +266,7 @@
       </div>
       <fieldset class="waitlist-picks">
         <legend>Which should we send?</legend>
+        <label class="check-line"><input type="checkbox" name="interests" value="eval-plan-template"> Eval-plan template</label>
         <label class="check-line"><input type="checkbox" name="interests" value="scoping-guide"> Scoping guide</label>
         <label class="check-line"><input type="checkbox" name="interests" value="governance-starter-pack"> Governance starter pack</label>
         <label class="check-line"><input type="checkbox" name="interests" value="eval-patterns"> Eval patterns</label>
@@ -296,12 +306,15 @@
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
+        <a href="/pricing">How pricing works</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Engagement patterns</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
         <a href="/privacy">Privacy</a>
+        <button type="button" class="footer-link-button" data-consent-open hidden>Cookie settings</button>
       </nav>
     </div>
     <div class="family-strip">
@@ -310,20 +323,13 @@
         <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
         <li><a href="https://productexec.co">ProductExec</a><span>AI value creation for PE</span></li>
         <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
-        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>AI pilots for small businesses</span></li>
       </ul>
     </div>
     <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
 
-<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
-  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
-  <div class="consent-bar-actions">
-    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
-    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
-  </div>
-</div>
 
 <script src="/assets/site.js" defer></script>
 </body>

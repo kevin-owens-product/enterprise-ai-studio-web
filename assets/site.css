@@ -71,7 +71,7 @@ img { max-width: 100%; height: auto; }
 .logo { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--on-navy); text-decoration: none; white-space: nowrap; }
 .logo span { color: var(--accent-on-navy); }
 .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
-.nav-links a { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .15s; }
+.nav-links a { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; transition: color .15s; }
 .nav-links a:hover { color: var(--on-navy); }
 .nav-links a[aria-current="page"] { color: var(--on-navy); }
 .nav-links a.btn-nav {
@@ -83,7 +83,7 @@ img { max-width: 100%; height: auto; }
 
 .nav-toggle { display: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav { min-height: var(--nav-h); }
   .nav-toggle {
     display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
@@ -92,9 +92,10 @@ img { max-width: 100%; height: auto; }
     border-radius: 10px; cursor: pointer;
   }
   .nav-toggle .bar { display: block; width: 18px; height: 2px; background: var(--on-navy); border-radius: 1px; transition: transform .2s, opacity .2s; }
-  .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
-  .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  /* child 1 is the visually-hidden "Menu" label, so the bars are children 2-4 */
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(4) { transform: translateY(-7px) rotate(-45deg); }
 
   .nav-links { display: none; }
   body.menu-open { overflow: hidden; }
@@ -130,6 +131,8 @@ img { max-width: 100%; height: auto; }
 }
 .hero .btn-ghost:hover, .navy-band .btn-ghost:hover, .checklist-results .btn-ghost:hover { border-color: var(--on-navy); }
 .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn[hidden] { display: none; }
+.cta-row:not(:has(> :not([hidden]))) { display: none; }
 
 /* ---------- Hero (navy band) ---------- */
 .hero {
@@ -460,6 +463,12 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
 .footer-links { display: flex; gap: 10px 24px; flex-wrap: wrap; max-width: 560px; }
 .footer-links a { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
 .footer-links a:hover { color: var(--on-navy); }
+.footer-link-button {
+  background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+  font: inherit; font-size: 14px; color: var(--on-navy-muted); text-decoration: none;
+}
+.footer-link-button:hover { color: var(--on-navy); text-decoration: underline; }
+.footer-link-button[hidden] { display: none; }
 .footer-meta { font-size: 13px; margin-top: 28px; color: var(--on-navy-muted); }
 .footer-meta a { color: var(--on-navy); text-decoration: none; }
 .footer-meta a:hover { text-decoration: underline; }
@@ -611,3 +620,42 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
 a.card:hover, .card:hover { box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06), 0 12px 28px -10px rgba(15, 23, 42, 0.18); }
 a.card:hover { transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) { a.card:hover { transform: none; } }
+
+/* 2026-11 standout pass: compact consent card in the bottom-right corner on
+   desktop so it no longer floats over the hero stats on first load. */
+@media (min-width: 721px) {
+  .consent-bar {
+    left: auto; right: 20px; bottom: 20px; margin: 0; max-width: 360px;
+    flex-direction: column; align-items: stretch; gap: 14px; padding: 18px 18px 16px;
+    border-radius: 18px; box-shadow: 0 24px 48px -16px rgba(10,14,26,.45);
+  }
+  .consent-bar-text { font-size: 13px; max-width: none; }
+  .consent-bar-actions { flex-wrap: nowrap; }
+  .consent-bar .btn { flex: 1; justify-content: center; padding: 8px 12px; }
+}
+
+/* 2026-11 QA pass: compact consent strip on phones. It sits flush at the
+   bottom (about 100px tall instead of a 163px card) and the page gets matching
+   bottom padding while it is open, so hero CTAs and the last footer links can
+   always be scrolled clear of it. */
+@media (max-width: 720px) {
+  .consent-bar {
+    left: 0; right: 0; bottom: 0; border-radius: 14px 14px 0 0; margin: 0; max-width: none;
+    flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+  .consent-bar-text { font-size: 12.5px; line-height: 1.4; flex: 1 1 100%; }
+  .consent-bar-actions { flex: 1 1 100%; flex-wrap: nowrap; gap: 8px; }
+  .consent-bar .btn { flex: 1; min-height: 40px; padding: 6px 12px; font-size: 13px; }
+  body:has(#consent-bar:not([hidden])) .site-footer { padding-bottom: 150px; }
+}
+@media (min-width: 721px) {
+  body:has(#consent-bar:not([hidden])) .site-footer { padding-bottom: 200px; }
+}
+
+/* Checklist reset: quiet text-style button beside the CTAs. */
+.checklist-reset {
+  background: transparent; color: var(--on-navy-muted);
+  border: 1px solid transparent; text-decoration: underline; text-underline-offset: 3px;
+}
+.checklist-reset:hover { color: var(--on-navy); box-shadow: none; }

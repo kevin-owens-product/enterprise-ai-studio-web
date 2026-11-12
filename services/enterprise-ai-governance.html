@@ -7,9 +7,11 @@
   <meta name="description" content="AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.">
   <meta property="og:title" content="Enterprise AI Governance — Enterprise AI Studio">
   <meta property="og:description" content="AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales reliably.">
+  <meta property="og:site_name" content="Enterprise AI Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enterpriseaistudio.com/services/enterprise-ai-governance">
   <meta property="og:image" content="https://enterpriseaistudio.com/og-image.png">
+  <meta property="og:image:alt" content="Enterprise AI Studio: production AI implementation for enterprise workflows.">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -44,9 +46,7 @@
     "description": "AI governance, security, and operating-model readiness. Design policies, audits, and infrastructure so your AI work survives security review and scales without surprises.",
     "provider": { "@type": "Organization", "name": "Enterprise AI Studio", "url": "https://enterpriseaistudio.com" },
     "serviceType": "AI Governance",
-    "areaServed": "US",
-    "priceRange": "$25,000 - $60,000",
-    "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 25000, "highPrice": 60000 }
+    "areaServed": ["United States", "United Kingdom", "European Union"]
   }
   </script>
   <!-- Structured Data: BreadcrumbList -->
@@ -80,6 +80,13 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
+  <div class="consent-bar-actions">
+    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
+    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
@@ -92,6 +99,7 @@
     </button>
     <ul class="nav-links" id="site-menu">
       <li><a href="/services">Services</a></li>
+      <li><a href="/pricing">How pricing works</a></li>
       <li><a href="/proof">Proof</a></li>
       <li><a href="/case-studies">Engagement patterns</a></li>
       <li><a href="/resources">Resources</a></li>
@@ -134,10 +142,10 @@
 
     <div class="detail-section">
       <h3>Pricing</h3>
-      <p><strong class="price-band">$25,000 – $60,000</strong> depending on scope and system complexity.</p>
-      <p><strong class="price-band">$25K–$35K:</strong> Single system, basic governance, no specific compliance requirements.</p>
-      <p><strong class="price-band">$35K–$50K:</strong> Multiple systems, SOC 2 or similar compliance needs, custom eval frameworks.</p>
-      <p><strong class="price-band">$50K–$60K:</strong> Complex integrations, HIPAA or financial regulation, vendor audit deep-dive, policy evolution consulting.</p>
+      <p>A fixed fee, quoted after the discovery call and set by scope and system complexity. <a href="/pricing">How pricing works</a>. Typical shapes:</p>
+      <p><strong>Focused:</strong> Single system, basic governance, no specific compliance requirements.</p>
+      <p><strong>Broader:</strong> Multiple systems, SOC 2 or similar compliance needs, custom eval frameworks.</p>
+      <p><strong>Regulated:</strong> Complex integrations, HIPAA or financial regulation, vendor audit deep-dive, policy evolution consulting.</p>
     </div>
   </div>
 </section>
@@ -228,13 +236,13 @@
     <h2 class="section-headline">Not sure this is the right shape?</h2>
     <div class="grid-2">
       <article class="card card-hover">
-        <p class="card-sub">4–8 weeks · $40K–$120K</p>
+        <p class="card-sub">4–8 weeks · fixed scope</p>
         <h3>AI Implementation Sprints</h3>
-        <p>One workflow, fully scoped, built, and shipped to production on a fixed timeline and a published price.</p>
+        <p>One workflow, fully scoped, built, and shipped to production on a fixed timeline and a fixed price.</p>
         <a class="card-link" href="/services/ai-implementation-sprints">See the sprint</a>
       </article>
       <article class="card card-hover">
-        <p class="card-sub">Ongoing · $8K–$30K / month</p>
+        <p class="card-sub">Ongoing · 20–80 hrs / month</p>
         <h3>Fractional AI Engineering</h3>
         <p>Senior AI engineering bandwidth on retainer when the work is continuous rather than a single fixed-scope build.</p>
         <a class="card-link" href="/services/fractional-ai-engineering">See the retainer</a>
@@ -251,7 +259,7 @@
       <p class="section-body" style="margin:0 auto;">Tell us about your current AI systems and compliance requirements. We'll assess and scope the engagement.</p>
 
       <div class="cta-row" style="margin-top:20px;">
-        <a class="btn btn-secondary" data-booking-link href="/contact#form">Pick a time</a>
+        <a class="btn btn-ghost" data-booking-link href="#contact">Request a time</a>
       </div>
 
       <form class="contact-form" data-contact-form="governance_contact" action="/api/inquiry" method="post">
@@ -321,16 +329,6 @@
               <option value="exploring">Exploring</option>
             </select>
           </div>
-          <div class="form-field">
-            <label for="budget">Budget band</label>
-            <select id="budget" name="budget">
-              <option value="">Select one…</option>
-              <option value="25k-60k">$25K–$60K (governance)</option>
-              <option value="40k-120k">$40K–$120K (sprint)</option>
-              <option value="8k-30k-month">$8K–$30K / month (retainer)</option>
-              <option value="not-sure">Not sure yet</option>
-            </select>
-          </div>
         </div>
         <div class="form-field">
           <label for="message">Tell us about your systems and compliance requirements *</label>
@@ -359,12 +357,15 @@
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="/services">Services</a>
+        <a href="/pricing">How pricing works</a>
         <a href="/proof">Proof</a>
         <a href="/case-studies">Engagement patterns</a>
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
         <a href="/privacy">Privacy</a>
+        <button type="button" class="footer-link-button" data-consent-open hidden>Cookie settings</button>
       </nav>
     </div>
     <div class="family-strip">
@@ -373,20 +374,13 @@
         <li><a href="https://kevinowens.com">Kevin Owens</a><span>Personal hub &amp; writing</span></li>
         <li><a href="https://productexec.co">ProductExec</a><span>AI value creation for PE</span></li>
         <li><span class="here">Enterprise AI Studio</span><span>AI implementation — you are here</span></li>
-        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>SMB pilots &amp; guides</span></li>
+        <li><a href="https://smartbizaihub.com">Smart Biz AI Hub</a><span>AI pilots for small businesses</span></li>
       </ul>
     </div>
     <p class="footer-meta">© 2026 Enterprise AI Studio · <a href="/contact#form">Contact the studio</a></p>
   </div>
 </footer>
 
-<div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
-  <p class="consent-bar-text">We use privacy-friendly analytics to see which pages help. Nothing is set until you choose — see our <a href="/privacy">privacy notice</a>.</p>
-  <div class="consent-bar-actions">
-    <button type="button" class="btn btn-primary consent-accept" data-consent="granted">Accept analytics</button>
-    <button type="button" class="btn btn-ghost consent-decline" data-consent="denied">Decline</button>
-  </div>
-</div>
 
 <script src="/assets/site.js" defer></script>
 </body>
