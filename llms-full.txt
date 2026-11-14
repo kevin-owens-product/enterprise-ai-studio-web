@@ -1212,7 +1212,7 @@ Try again in a few minutes, or message Kevin on LinkedIn.
 # How Pricing Works — Enterprise AI Studio
 
 URL: https://enterpriseaistudio.com/pricing
-Description: How Enterprise AI Studio prices AI implementation sprints, fractional AI engineering retainers, and AI governance: fixed scope, quoted in writing after a free 30-minute discovery call.
+Description: How Enterprise AI Studio scopes AI implementation sprints, fractional AI engineering and AI governance: fixed scope, quoted in writing after a discovery call.
 
 How pricing works
 
@@ -1488,7 +1488,7 @@ Ask for the eval-plan template
 # Engagement patterns — Enterprise AI Studio
 
 URL: https://enterpriseaistudio.com/case-studies
-Description: Illustrative engagement patterns for production AI in enterprise workflows: customer support agents, document intelligence, sales workflow analysis, internal knowledge assistants, and audit-grade governance.
+Description: Illustrative engagement patterns for production AI in enterprise workflows: support agents, document intelligence, knowledge assistants and governance.
 
 Engagement patterns
 
@@ -1618,7 +1618,7 @@ Take the readiness checklist
 # Enterprise AI FAQ — Scope, Pricing, Governance, Delivery
 
 URL: https://enterpriseaistudio.com/faq
-Description: Answers to the questions enterprise buyers actually ask: how a sprint is priced, how our data is handled, how evals work, who owns the code, how governance and security review are handled.
+Description: Answers to the questions enterprise buyers ask: how a sprint is scoped, how data is handled, how evals work, who owns the code, and how security review goes.
 
 FAQ
 
@@ -1780,7 +1780,7 @@ Request a time
 # Resources & Readiness Checklist — Enterprise AI Studio
 
 URL: https://enterpriseaistudio.com/resources
-Description: Free resources for enterprise AI buyers: the interactive AI Implementation Readiness Checklist — 25 scored questions across data, evals, governance, change management, and ops.
+Description: Free resources for enterprise AI buyers: the interactive AI Implementation Readiness Checklist, 25 scored questions across data, evals, governance and ops.
 
 Resources
 
@@ -1956,7 +1956,7 @@ Contact the studio
 # About — Enterprise AI Studio
 
 URL: https://enterpriseaistudio.com/about
-Description: Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer with deep experience shipping production AI for enterprise workflows. Operator-first model, model-agnostic builds, governance built in.
+Description: Enterprise AI Studio is led by Kevin Owens, a four-time Chief Product Officer who ships production AI for enterprise workflows, with governance built in.
 
 About the studio
 
