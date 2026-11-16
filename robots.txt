@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you
 
 # AI crawlers and answer engines are explicitly welcome.
 User-agent: GPTBot
