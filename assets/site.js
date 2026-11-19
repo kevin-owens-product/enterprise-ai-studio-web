@@ -80,6 +80,10 @@
       });
     }
   });
+  /* Plain calendar links written into the HTML (hero, footer, form). */
+  Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://calendar.app.google/"]:not([data-booking-link])'), function (a) {
+    a.addEventListener('click', function () { track('booking_click', { link_url: a.href }); });
+  });
   /* Arriving at /contact#form: focus the first field, not just scroll. */
   if (pageContactForm && window.location.hash === '#form' && pageContactForm.id === 'form') {
     window.addEventListener('load', function () {

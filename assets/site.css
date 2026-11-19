@@ -151,6 +151,9 @@ img { max-width: 100%; height: auto; }
 }
 .hero .lede { font-size: 18px; color: var(--on-navy-muted); max-width: 680px; margin-bottom: 36px; }
 .hero .cta-row { margin-bottom: 0; }
+.hero-booking { margin-top: 18px; font-size: 14px; }
+.hero-booking a { color: var(--on-navy); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 3px; }
+.hero-booking a:hover { text-decoration-color: currentColor; }
 .hero .hero-note { margin-top: 28px; font-size: 14px; color: var(--on-navy-muted); }
 
 /* Hero with delivery-loop schematic (home + proof) */
@@ -470,7 +473,7 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
 .footer-link-button:hover { color: var(--on-navy); text-decoration: underline; }
 .footer-link-button[hidden] { display: none; }
 .footer-meta { font-size: 13px; margin-top: 28px; color: var(--on-navy-muted); }
-.footer-meta a { color: var(--on-navy); text-decoration: none; }
+.footer-meta a { color: var(--on-navy); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 3px; }
 .footer-meta a:hover { text-decoration: underline; }
 
 .family-strip { border-top: 1px solid rgba(255,255,255,.12); margin-top: 40px; padding-top: 24px; }
