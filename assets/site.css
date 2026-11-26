@@ -82,6 +82,7 @@ img { max-width: 100%; height: auto; }
 .nav-links a.btn-nav:hover { background: var(--on-navy); color: var(--family-navy); }
 
 .nav-toggle { display: none; }
+.btn-nav-mobile { display: none; }
 
 @media (max-width: 1023px) {
   .nav { min-height: var(--nav-h); }
@@ -97,6 +98,11 @@ img { max-width: 100%; height: auto; }
   .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] .bar:nth-child(4) { transform: translateY(-7px) rotate(-45deg); }
 
+  .btn-nav-mobile {
+    display: inline-flex; align-items: center; margin-left: auto; min-height: 36px; padding: 6px 14px;
+    border-radius: 999px; background: #fff; color: var(--family-navy); font-size: 13px; font-weight: 600; text-decoration: none;
+  }
+  body.menu-open .btn-nav-mobile { visibility: hidden; }
   .nav-links { display: none; }
   body.menu-open { overflow: hidden; }
   .nav-links.open {
@@ -261,6 +267,8 @@ a.card { display: block; text-decoration: none; color: inherit; transition: bord
 .quote-card { padding: 24px; border-radius: 16px; background: var(--family-navy); color: var(--on-navy); }
 .quote-card p { color: var(--on-navy-muted); font-size: 15px; }
 .quote-card strong { display: block; margin-top: 18px; color: var(--accent-on-navy); font-family: var(--mono); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.principle-card strong { margin: 0 0 12px; }
+.principle-card p { color: var(--on-navy); font-size: 16px; line-height: 1.6; }
 
 /* Process steps */
 .process-step { padding: 22px 24px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 12px 12px 0; }
@@ -514,7 +522,12 @@ li[data-pillar-score] strong.full { color: var(--success-on-navy); }
 .consent-bar .btn { padding: 9px 18px; font-size: 14px; }
 .consent-bar .btn-ghost { border-color: rgba(237,239,244,.42); color: var(--on-navy); }
 .consent-bar .btn-ghost:hover { border-color: var(--on-navy); }
-@media (max-width: 640px) { .consent-bar { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 640px) {
+  .consent-bar { flex-direction: column; align-items: stretch; gap: 10px; left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; }
+  .consent-bar-text { font-size: 13px; }
+  .consent-bar-actions { flex-wrap: nowrap; }
+  .consent-bar .btn { flex: 1; padding: 8px 12px; font-size: 13px; }
+}
 
 /* ---------- Extended contact form (role / size / timeline / budget) ---------- */
 .form-consent { margin-top: 12px; font-size: 13px; color: var(--ink-muted); }
